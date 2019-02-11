@@ -1,14 +1,16 @@
 package microcredito
 
-class TipoGarantia {
+class TipoDocumento {
     String descricao
     Date dataRegisto
     Date dataModif
     User userRegisto
     User userModif
 
+    static  hasMany = [clientes: Cliente]
+
     static constraints = {
-        descricao (nullable: false, blank: false, maxSize: 45)
+        descricao(blank:false, maxSize: 45)
     }
 
     static mapping = {
