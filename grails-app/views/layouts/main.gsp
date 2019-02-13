@@ -11,9 +11,9 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    %{--<!--[if lt IE 9]>--}%
+  <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+  %{--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--}%
   <![endif]-->
     <!-- Application -->
     %{--<asset:stylesheet src="application.css"/>--}%
@@ -30,7 +30,6 @@
        folder instead of downloading all of them to reduce the load. -->
     <asset:stylesheet src="_all-skins.min.css"/>
     <!-- Theme style -->
-    <asset:stylesheet src="AdminLTE.min.css"/>
     <!-- Google Font -->
     <asset:stylesheet src="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
 
@@ -43,10 +42,11 @@
 
 
     <asset:stylesheet src="fonts/material-icon/css/material-design-iconic-font.min.css"/>
-    <asset:stylesheet src="vendor/nouislider/nouislider.min.css"/>
     <asset:stylesheet src="style.css"/>
+    <asset:stylesheet src="AdminLTE.min.css"/>
 
-
+<asset:stylesheet src="iCheck/all.css"/>
+    %{--<link rel="stylesheet" href="../../plugins/iCheck/all.css">--}%
 
     %{--<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">--}%
     %{--<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">--}%
@@ -102,7 +102,7 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <asset:image src="user2-160x160.jpg" alt="User Image" class="img-circle"/>
+                                                %{--<asset:image src="user2-160x160.jpg" alt="User Image" class="img-circle"/>--}%
                                             </div>
                                             <h4>
                                                 Support Team
@@ -115,7 +115,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <asset:image src="user3-128x128.jpg" alt="User Image" class="img-circle"/>
+                                                %{--<asset:image src="user3-128x128.jpg" alt="User Image" class="img-circle"/>--}%
                                             </div>
                                             <h4>
                                                 EIZYSYS Design Team
@@ -288,13 +288,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <asset:image src="" alt="User Image" class="img-circle"/>
+                            %{--<asset:image src="" alt="User Image" class="img-circle"/>--}%
                             <span class="hidden-xs">Mabjaia Joao</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <asset:image src="" alt="User Image" class="img-circle"/>
+                                %{--<asset:image src="" alt="User Image" class="img-circle"/>--}%
 
                                 <p>
                                     Mabjaia Joao - Web Developer
@@ -543,18 +543,15 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Dashboard
-                <small>Version 2.0</small>
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ol>
             </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Dashboard</li>
-            </ol>
         </section>
 
         <!-- Main content -->
-        <section class="content">
-            <p>Todo conteudo devera estar aqui </p>
+        <section class="">
             <g:layoutBody/>
         </section>
         <!-- /.content -->
@@ -780,11 +777,19 @@
 <asset:javascript src="js/regular.min.js"/>
 <asset:javascript src="js/brands.min.js"/>
 
+<asset:javascript src="jquery-3.3.1.slim.min.js"/>
+
 <!-- jQuery 3 -->
 <asset:javascript src="jquery.min.js"/>
 <!-- Bootstrap 3.3.7 -->
 <asset:javascript src="bootstrap.min.js"/>
 <!-- FastClick -->
+
+<asset:javascript src="popper.min.js"/>
+%{--<asset:javascript src="jquery-3.3.1.min.js" />--}%
+%{--<asset:javascript src="bootstrap.min.js"/>--}%
+<asset:javascript src="bootstable.js" />
+
 <asset:javascript src="fastclick.js"/>
 <!-- AdminLTE App -->
 <asset:javascript src="adminlte.min.js"/>
@@ -798,9 +803,11 @@
 <!-- ChartJS -->
 <asset:javascript src="Chart.js"/>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<asset:javascript src="dashboard2.js"/>
+%{--<asset:javascript src="dashboard2.js"/>--}%
 <!-- AdminLTE for demo purposes -->
 <asset:javascript src="demo.js"/>
+
+<asset:javascript src="iCheck/icheck.min.js"/>
 
 <!-- formwizzard -->
 <asset:javascript src="vendor/jquery-validation/dist/jquery.validate.min.js"/>
@@ -810,6 +817,32 @@
 <asset:javascript src="vendor/nouislider/nouislider.min.js"/>
 <asset:javascript src="vendor/wnumb/wNumb.js"/>
 <asset:javascript src="main-wizzard.js"/>
+
+
+
+
+<script>
+    $(function () {
+        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+            checkboxClass: 'icheckbox_minimal-blue',
+            radioClass: 'iradio_minimal-blue'
+        });
+        //Red color scheme for iCheck
+        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+            checkboxClass: 'icheckbox_minimal-red',
+            radioClass: 'iradio_minimal-red'
+        });
+        //Flat red color scheme for iCheck
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+            checkboxClass: 'icheckbox_flat-green',
+            radioClass: 'iradio_flat-green'
+        });
+
+        // $('#makeEditable').SetEditable({ $addButton: $('#but_add')});
+    })
+</script>
+
+%{--<g:layoutBody/>--}%
 
 </body>
 </html>

@@ -2,21 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8634c9-ab4b-4d5f-b85a-89837da24759" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/DistritoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/GarantiaController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/MeioPagamentoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/MicroCreditoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/PerfilController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/PerfilPermissaoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/PermissaoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/PrestacaoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/ProvinciaController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/TipoDocumentoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/TipoGarantiaController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/TipoPrestacaoController.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/UserController.groovy" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/bootstable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/aero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/aero@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/blue@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/flat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/flat@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/green@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/grey@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/orange@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/pink@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/purple@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/red@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/flat/yellow@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/futurico/futurico.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/futurico/futurico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/futurico/futurico@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/icheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/icheck.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/line.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/line@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/line/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/aero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/aero@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/blue@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/green@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/grey@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/minimal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/minimal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/minimal@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/orange@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/pink@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/purple@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/red@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/minimal/yellow@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/polaris/polaris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/polaris/polaris.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/polaris/polaris@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/_all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/aero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/aero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/aero@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/blue@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/green@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/grey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/grey@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/orange@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/pink@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/purple@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/red@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/square.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/square@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/iCheck/square/yellow@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/conf/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/conf/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/TipoPrestacao.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/TipoPrestacao.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -40,20 +154,20 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/adminlte.gsp">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="794" column="20" selection-end-line="800" />
+            <state relative-caret-position="114">
+              <caret line="379" column="110" selection-start-line="379" selection-start-column="110" selection-end-line="379" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="85">
               <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
             </state>
           </provider>
@@ -62,32 +176,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+            <state relative-caret-position="14229">
+              <caret line="837" column="28" selection-start-line="837" selection-start-column="28" selection-end-line="837" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/User.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="1071">
+              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7463">
+              <caret line="439" column="22" selection-start-line="439" selection-start-column="22" selection-end-line="439" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>steps-uid-0</find>
+      <find>.steps</find>
+      <find>.content</find>
+      <find>list</find>
+      <find>.title</find>
+      <find>input</find>
+      <find>breadcrumb</find>
+      <find>main</find>
+      <find>vertic</find>
+      <find>vertical</find>
+      <find>content-header</find>
+      <find>content</find>
+      <find>SetEditable</find>
+      <find>fn</find>
+      <find>current</find>
+      <find>User</find>
+      <find>steps</find>
+      <find>submit_data</find>
+      <find>bEdit</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>content-wizzard</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,19 +249,34 @@
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Distrito.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/MicroCredito.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/User.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-steps/jquery.steps.js" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/TipoDocumento.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/ModalidadePagamento.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/TipoPrestacao.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="-31" />
+    <option name="y" value="10" />
     <option name="width" value="697" />
     <option name="height" value="775" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -145,21 +299,14 @@
               <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
               <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="microcredito" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Grails" />
     </panes>
   </component>
@@ -178,8 +325,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\MicroCredito\grails-app\assets\fonts" />
       <recent name="C:\xampp\htdocs\MicroCredito\grails-app\assets\javascripts" />
+      <recent name="C:\xampp\htdocs\MicroCredito\grails-app\assets\fonts" />
       <recent name="C:\xampp\htdocs\MicroCredito\grails-app\assets\stylesheets" />
       <recent name="C:\xampp\htdocs\MicroCredito\grails-app\controllers\microcredito" />
       <recent name="C:\xampp\htdocs\MicroCredito\grails-app\domain\microcredito" />
@@ -221,17 +368,19 @@
       <updated>1549867584154</updated>
       <workItem from="1549867592545" duration="811000" />
       <workItem from="1549873349734" duration="8056000" />
-      <workItem from="1549884432904" duration="7965000" />
+      <workItem from="1549884432904" duration="65383000" />
+      <workItem from="1550041729455" duration="568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16832000" />
+    <option name="totallyTimeSpent" value="74818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -250,8 +399,8 @@
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.36714977" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Grails Console" order="12" visible="true" weight="0.90660226" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Grails Console" order="12" visible="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32850242" />
@@ -267,6 +416,43 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32872504" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.36714977" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Grails Console" order="12" visible="true" weight="0.28663447" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32850242" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32850242" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout-to-restore>
   </component>
   <component name="TraitInjectorService">
     <option name="state">
@@ -512,55 +698,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/TipoGarantia.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/8.5.35/d1073d8f837d6f4c792af0e51744f11c9b9ddb6c/tomcat-jdbc-8.5.35-sources.jar!/org/apache/tomcat/jdbc/pool/PooledConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2798">
-          <caret line="291" selection-start-line="291" selection-end-line="291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/groovy/main/microcredito/BootStrap.class" />
-    <entry file="file://$PROJECT_DIR$/build/classes/groovy/main/microcredito/Application.class" />
-    <entry file="file://$PROJECT_DIR$/build/resources/main/META-INF/grails.build.info" />
-    <entry file="file://$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MicroCredito.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Garantia.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Provincia.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
@@ -576,27 +713,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Distrito.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -647,20 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/adminlte.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="794" column="20" selection-end-line="800" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/PermissaoController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -692,17 +799,281 @@
     <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/edit.gsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="428">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/adminlte.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+        <state relative-caret-position="369">
+          <caret line="794" column="20" selection-end-line="800" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/index.gsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/index.gsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/main-wizzard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="118" column="11" lean-forward="true" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-validation/dist/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-validation/dist/additional-methods.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/minimalist-picker/dobpicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/nouislider/nouislider.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1842" selection-start-column="1835" selection-end-column="1842" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/nouislider/nouislider.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-validation/dist/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-steps/jquery.steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="245" column="42" selection-start-line="245" selection-start-column="42" selection-end-line="245" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/wnumb/wNumb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/TipoDocumento.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/microcredito/EmprestimoService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/fields/2.2.8/12a8c8e0cbc47753f4bf9c256af20d2c3cf79146/fields-2.2.8-sources.jar!/grails/plugin/formfields/FormFieldsTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/ModalidadePagamento.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/TipoPrestacao.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="4132" column="12" lean-forward="true" selection-start-line="4132" selection-start-column="12" selection-end-line="4132" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/bootstable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="379" column="110" selection-start-line="379" selection-start-column="110" selection-end-line="379" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14229">
+          <caret line="837" column="28" selection-start-line="837" selection-start-column="28" selection-end-line="837" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7463">
+          <caret line="439" column="22" selection-start-line="439" selection-start-column="22" selection-end-line="439" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
         </state>
       </provider>
     </entry>

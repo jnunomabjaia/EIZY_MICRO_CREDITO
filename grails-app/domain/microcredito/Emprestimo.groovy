@@ -2,24 +2,25 @@ package microcredito
 
 class Emprestimo {
     Double valorPedido, taxaJuros
-    Date prazoPagamento
+    Date prazoPagamento, dataLimite
     String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado
     Boolean outroCredito, contaBancaria
     Cliente cliente
+    ModalidadePagamento modalidadePagamento
     Date dataRegisto
     Date dataModif
     User userRegisto
     User userModif
 
     static  hasMany = [prestacoes: Prestacao, garantias: Garantia]
-    static belongsTo = [cliente:Cliente]
+    static belongsTo = [cliente:Cliente, modalidadePagamento:ModalidadePagamento]
 
     static constraints = {
-        valorPedido(blank: false, min: 0.0)
-        taxaJuros (blank: false, min: 0.0)
+        valorPedido(blank: false)
+        taxaJuros (blank: false)
         prazoPagamento (min: new Date())
         cliente(nullable: false)
-        destinoCredito(blank: true, maxSize: 45)
+        destinoCredito(blank: true, maxSize: 45, inList: ['Negocio','Consumo'])
         tipoNegocio(blank: true, maxSize: 45)
         localNegocio(blank: true, maxSize: 45)
         experienciaNegocio(blank: true, maxSize: 100)

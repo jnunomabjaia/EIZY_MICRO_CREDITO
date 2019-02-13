@@ -2,7 +2,7 @@ package microcredito
 
 class Cliente {
     String codigo, apelido, nome, estadoCivil, nomeConjuge, tipoContrato, anoAdmissao, estado, nrDocumento, localEmissao,
-            contacto1, contacto2,email, testemunhas, endereco
+            contacto1, contacto2,email, testemunhas, endereco, tipoCasa
     int  nrDependentes, nrFilhos
     TipoDocumento tipoDocumento
     Date dataEmissao, dataValidade, dataRegisto, dataModif, userRegisto
@@ -21,6 +21,7 @@ class Cliente {
         tipoContrato(blank: true, maxSize: 100)
         anoAdmissao(blank: true)
         estado(inList: ["Activo", "Bloqueado", "Lista_Negra"], maxSize: 45)
+        estadoCivil(inList: ["Solteiro", "Casado", "Viuvo"], maxSize: 45)
         nrDocumento(blank: true, maxSize: 45)
         localEmissao(blank: true, maxSize: 45)
         contacto1(blank: true, maxSize: 45)
@@ -31,6 +32,7 @@ class Cliente {
         nrFilhos(blank: true, min:0)
         tipoDocumento(blank:false, nullable: false)
         avalista(nullable: true)
+        tipoCasa(nullable: false, inList: ['Propria','Arrendada','Outra'])
     }
 
     static mapping = {

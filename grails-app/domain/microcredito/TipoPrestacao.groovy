@@ -7,6 +7,8 @@ class TipoPrestacao {
     User   userRegisto
     User   userModif
 
+    List<Prestacao> prestacoes
+
     static hasMany = [prestacoes: Prestacao]
 
     static constraints = {

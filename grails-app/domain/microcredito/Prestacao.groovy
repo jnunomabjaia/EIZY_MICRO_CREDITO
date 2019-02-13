@@ -20,7 +20,7 @@ class Prestacao {
 
     static constraints = {
         numero(blank: false, maxSize: 45)
-        valor(blank: false, min: 0.0)
+        valor(blank: false)
         estado(inList: ["Pendente", "Vencido", "Pago"])
         prestacao(nullable: true)
         tipoPrestacao(nullable: false, blank: false)
