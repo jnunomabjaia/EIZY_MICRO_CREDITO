@@ -5,8 +5,8 @@ class Cliente {
             contacto1, contacto2,email, testemunhas, endereco, tipoCasa
     int  nrDependentes, nrFilhos
     TipoDocumento tipoDocumento
-    Date dataEmissao, dataValidade, dataRegisto, dataModif, userRegisto
-    User userModif
+    Date dataEmissao, dataValidade, dataRegisto, dataModif
+    User userModif, userRegisto
     Cliente avalista
     Distrito distrito
 
@@ -33,9 +33,28 @@ class Cliente {
         tipoDocumento(blank:false, nullable: false)
         avalista(nullable: true)
         tipoCasa(nullable: false, inList: ['Propria','Arrendada','Outra'])
+        dataEmissao(nullable: true, blank:true)
+        dataValidade(nullable: true, blank:true)
+        userRegisto(nullable: true, blank:true)
+        userModif(nullable: true, blank:true)
+        dataRegisto(nullable: true, blank:true)
+        dataModif(nullable: true, blank:true)
     }
+
+
+//    Property dataEmissao must be a valid Date
+//            Property dataValidade must be a valid Date
+//    Property [estado] of class [class microcredito.Cliente] cannot be null
+//Property [testemunhas] of class [class microcredito.Cliente] cannot be null
+//Property [dataModif] of class [class microcredito.Cliente] cannot be null
+//Property [userModif] of class [class microcredito.Cliente] cannot be null
+//Property [codigo] of class [class microcredito.Cliente] cannot be null
+//Property [userRegisto] of class [class microcredito.Cliente] cannot be null
+//Property [dataRegisto] of class [class microcredito.Cliente] cannot be null
+
 
     static mapping = {
         dataRegisto defaultValue: "now()"
+        dataModif defaultValue: "now()"
     }
 }

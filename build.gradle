@@ -47,7 +47,8 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.16.Final"
     compile "org.grails.plugins:gsp"
     compile "org.grails.plugins:mysql-connectorj:8.0.14"
-    
+    compile "org.grails.plugins:ajax-tags:1.0.0"
+
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"

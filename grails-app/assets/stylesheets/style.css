@@ -561,7 +561,7 @@ fieldset {
 
 /*# sourceMappingURL=style.css.map */
 
-input[type=text],input[type=number], #estado_civil,#tipo_documento,#selectDistrito, #provincia , #tipo_casa{
+input[type=text],input[type=number], #estadoCivil,#tipoDocumento,#distrito, #provincia , #tipo_casa{
   border-color: #769cad;
   border-radius: 5px;
   /*height: 20px;*/

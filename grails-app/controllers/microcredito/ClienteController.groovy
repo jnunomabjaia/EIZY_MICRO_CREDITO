@@ -1,5 +1,6 @@
 package microcredito
 
+import grails.converters.JSON
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
@@ -95,5 +96,52 @@ class ClienteController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+
+    def salvarCliente(){
+        Cliente cliente = new Cliente()
+        cliente.codigo = "codigo 123"
+        cliente.apelido = params.apelido
+        cliente.nome = params.nome
+        cliente.estadoCivil = params.estadoCivil
+        cliente.nomeConjuge = params.nomeConjuge
+        cliente.tipoContrato = params.tipoContrato
+        cliente.anoAdmissao = params.anoAdmissao
+        cliente.nrDependentes = params.nrDependentes.toInteger()
+        cliente.nrFilhos = params.nrFihos.toInteger()
+        cliente.estado = "Activo"
+        TipoDocumento tipoDocumento = TipoDocumento.get(params.tipoDocumento)
+        cliente.tipoDocumento = tipoDocumento
+        cliente.nrDocumento = params.nrDocumento
+        cliente.localEmissao = params.localEmissao
+
+        def dataEmissao = Date.parse("dd-MM-yyyy", params.dataEmissao).clearTime()
+        def dataValidade = Date.parse("dd-MM-yyyy", params.dataValidade)
+        cliente.dataEmissao = dataEmissao
+        cliente.dataValidade = dataValidade
+        cliente.contacto1 = params.contacto1
+        cliente.contacto2 = params.contacto2
+        cliente.email = params.email
+        cliente.testemunhas = "Fader, Joao"
+        cliente.endereco = params.endereco
+
+        Distrito dist = Distrito.get(3)
+        cliente.distrito = dist
+
+        User user = User.get(1)
+        cliente.userModif = user
+        cliente.userRegisto = user
+        cliente.tipoCasa = params.tipoCasa
+
+//        def rs = [:]
+        if(!cliente.hasErrors()) {
+            cliente.save()
+        }
+//            rs["msg"]="done"
+//        }else{
+//            rs["msg"]="Error"
+//        }
+        return  cliente
     }
 }

@@ -20,5 +20,6 @@ class User {
 
     static mapping = {
         dataRegisto defaultValue: "now()"
+        dataModif defaultValue: "now()"
     }
 }

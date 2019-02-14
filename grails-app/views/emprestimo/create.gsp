@@ -1,4 +1,3 @@
-%{--<%@ page import="microcredito.Cliente" %>--}%
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -16,243 +15,243 @@
     <div class="col-md-6">
         <div class="main">
             <div class="container">
-                <form method="POST" id="signup-form" class="signup-form" action="#">
-                 <div>
-                    <h3>Dados Pessoais</h3>
-                    <fieldset>
-                        <h4 class="wizzard-title"><i class="fa fa-user"></i>&nbsp;Dados Pessoais</h4>
-                        <hr class="hr">
-                        <div class="fieldset-content">
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="apelido">Apelido</label>
-                                    <input type="text" name="" id="apelido"  class="form-control"/>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="nome">Nomes</label>
-                                    <input type="text" name="" id="nome" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row  margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="estado_civil">Estado Civil</label>
-                                    <select id="estado_civil" name="estado_civil" class="form-control">
-                                        <option value="solteiro">Solteiro</option>
-                                        <option value="casado">Casado</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="nome_conjuge">Nome do Cônjuge</label>
-                                    <input type="text" name="nome_conjuge" id="nome_conjuge" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="tipo_documento">Tipo de Documento</label>
-                                    <select id="tipo_documento" name="tipo_documento" class="form-control">
-                                        <option value="solteiro">BI</option>
-                                        <option value="casado">Passporte</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="nr_documento">Nº do Documento</label>
-                                    <input type="text" name="" id="nr_documento" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="local_emissao">Local de Emissão</label>
-                                    <input type="text" name="local_emissao" id="local_emissao" class="form-control" />
-                                </div>
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="data_emissao">Data de Emissão</label>
-                                    <input type="text" name="data_emissao" id="data_emissao" class="form-control" />
-                                </div>
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="local_emissao">Data de validade</label>
-                                    <input type="text" name="local_emissao" id="data_validade" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="tipo_contrato">Tipo de Contrato</label>
-                                    <input type="text" name="tipo_contrato" id="tipo_contrato" class="form-control" />
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="ano_admissao">Ano de Admissão</label>
-                                    <input type="text" name="ano_admissao" id="ano_admissao" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="nr_fihos">Número de Filhos</label>
-                                    <input type="number" name="nr_fihos" id="nr_fihos" class="form-control" />
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="nr_dependentes">Número de Dependentes</label>
-                                    <input type="number" name="nr_dependentes" id="nr_dependentes" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <h3>Contacto e Endereço</h3>
-                    <fieldset>
-                        <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Contacto e Endereço</h4>
-                        <hr class="hr">
-                        <div class="fieldset-content">
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="contacto1">Contacto</label>
-                                    <input type="text" name="contacto1" id="contacto1"  class="form-control"/>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="contacto2">Contacto Opcional</label>
-                                    <input type="text" name="contacto2" id="contacto2" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-12">
-                                    <label class="form-label" for="email">Email</label>
-                                    <input type="text" name="email" id="email"  class="form-control"/>
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="provincia">Província</label>
-                                    <select id="provincia" class="form-control"></select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="selectDistrito">Distrito</label>
-                                    <select id="selectDistrito" class="form-control"></select>
-                                    <input type="hidden" name="distrito_id" id="distrito_id" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <div class="col-sm-12">
-                                    <label class="form-label" for="endereco">Endereço</label>
-                                    <input type="text" name="endereco" id="endereco"  class="form-control"/>
-                                </div>
-                            </div>
-                            <div class="row margin-bottom">
-                                <g:each var="inputt" in="${Cliente.constrainedProperties.tipoCasa.inList}">
-                                    <div class="form-group col-md-4">
-                                        <label class="form-label">
-                                            <input type="radio" name="tipoCasa" value="${inputt}" class="flat-red">&nbsp;
-                                            <g:if test="${inputt == 'Outra'}">
-                                                ${inputt}
-                                            </g:if>
-                                            <g:else>
-                                                Casa ${inputt}
-                                            </g:else>
-                                        </label>
+                <form id="signup-form" class="signup-form" action="salvar" method="POST">
+                    <div>
+                        <h3>Dados Pessoais</h3>
+                        <fieldset>
+                            <h4 class="wizzard-title"><i class="fa fa-user"></i>&nbsp;Dados Pessoais</h4>
+                            <hr class="hr">
+                            <div class="fieldset-content">
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="apelido">Apelido</label>
+                                        <input type="text" name="apelido" id="apelido"  class="form-control" value="Mac"/>
+                                        <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342"/>
+                                        <input type="hidden" name="testemunhas" id="testemunhas"  class="form-control" value="nanna"/>
                                     </div>
-                                </g:each>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="nome">Nomes</label>
+                                        <input type="text" name="nome" id="nome" class="form-control" value="Fader" />
+                                    </div>
+                                </div>
+                                <div class="row  margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="estadoCivil">Estado Civil</label>
+                                        <g:select id="estadoCivil" name="estadoCivil" from="${Cliente.constrainedProperties.estadoCivil.inList}" class="form-control"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="nomeConjuge">Nome do Cônjuge</label>
+                                        <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control" value="Sabes como e" />
+                                    </div>
+                                </div>
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
+                                        <g:select id="tipoDocumento" name="tipoDocumento" optionKey="id" optionValue="descricao"
+                                                  from="${tipoDocumentoList.list()}" class="form-control"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="nrDocumento">Nº do Documento</label>
+                                        <input type="text" name="nrDocumento" id="nrDocumento" class="form-control" value="1222222223"/>
+                                    </div>
+                                </div>
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="localEmissao">Local de Emissão</label>
+                                        <input type="text" name="localEmissao" id="localEmissao" class="form-control" value="Maputo" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="dataEmissao">Data de Emissão</label>
+                                        <input type="date" name="dataEmissao" id="dataEmissao" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="dataValidade">Data de validade</label>
+                                        <input type="date" name="dataValidade" id="dataValidade" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="tipoContrato">Tipo de Contrato</label>
+                                        <input type="text" name="tipoContrato" id="tipoContrato" class="form-control" value="Tiposs" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
+                                        <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control" value="2000" />
+                                    </div>
+                                </div>
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="nrFihos">Número de Filhos</label>
+                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control" value="4" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="nrDependentes">Número de Dependentes</label>
+                                        <input type="number" name="nrDependentes" id="nrDependentes" class="form-control" value="12" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </fieldset>
+                        </fieldset>
 
-                    <h3>Empréstimo</h3>
-                    <fieldset>
-                        <h4 class="wizzard-title"><i class="fa fa-file"></i>&nbsp;Empréstimo</h4>
-                        <hr class="hr">
-                        <div class="fieldset-content">
-                            <div class="row margin-bottom">
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="valor_pedido">Valor Pretendido</label>
-                                    <input type="text" name="valor_pedido" id="valor_pedido" class="form-control" />
+                        <h3>Contacto e Endereço</h3>
+                        <fieldset>
+                            <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Contacto e Endereço</h4>
+                            <hr class="hr">
+                            <div class="fieldset-content">
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="contacto1">Contacto</label>
+                                        <input type="text" name="contacto1" id="contacto1"  class="form-control" value="12334"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="contacto2">Contacto Opcional</label>
+                                        <input type="text" name="contacto2" id="contacto2" class="form-control" value="434534" />
+                                    </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="taxa_juros">Taxa de Juros</label>
-                                    <input type="text" name="taxa_juros" id="taxa_juros" class="form-control" />
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-12">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="text" name="email" id="email"  class="form-control" value="fader@gmail.com"/>
+                                    </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <label class="form-label" for="modo_pagamento">Modo de Pagamento</label>
-                                    <input type="text" name="modo_pagamento" id="modo_pagamento" class="form-control" />
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="provincia">Província</label>
+                                        <g:select id="provincia" name="provincia" optionKey="id"  optionValue="designacao"
+                                                  from="${provinciaList}" class="form-control"/>
+                                    </div>
+                                    <div class="col-sm-6" id="div-Distrito">
+                                        %{--<select id="distrito" name="distrito" class="form-control"></select>--}%
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="tipo_negocio">Tipo de Nogócio</label>
-                                    <input type="text" name="tipo_negocio" id="tipo_negocio" class="form-control" />
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-12">
+                                        <label class="form-label" for="endereco">Endereço</label>
+                                        <input type="text" name="endereco" id="endereco"  class="form-control" value="bairro polana case"/>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="local_negocio">Local de Nogócio</label>
-                                    <input type="text" name="local_negocio" id="local_negocio" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="row margin-bottom">
-                                <div class="col-sm-6 form-group">
-                                    <label class="form-label" for="experiencia_negocio">Experiência no negócio actual</label>
-                                    <input type="text" name="experiencia_negocio" id="experiencia_negocio" class="form-control" />
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label class="form-label" for="experiencia_negocio">Destino do Crédito</label>
-                                    <div class="row" style="padding-top: 4px">
-                                        <div class="col-sm-6">
+                                <div class="row margin-bottom">
+                                    <g:each var="inputt" in="${Cliente.constrainedProperties.tipoCasa.inList}">
+                                        <div class="form-group col-md-4">
                                             <label class="form-label">
-                                                <input type="radio" name="destino" value="" class="flat-red">&nbsp;Negocio
+                                                <input type="radio" checked name="tipoCasa" value="${inputt}" class="flat-red">&nbsp;
+                                                <g:if test="${inputt == 'Outra'}">
+                                                    ${inputt}
+                                                </g:if>
+                                                <g:else>
+                                                    Casa ${inputt}
+                                                </g:else>
                                             </label>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <label class="form-label">
-                                                <input type="radio" name="destino" value="" class="flat-red">&nbsp;Consumo
-                                            </label>
+                                    </g:each>
+                                </div>
+                                %{--<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
+                            </div>
+                        </fieldset>
+                        <h3>Empréstimo</h3>
+                        <fieldset>
+                            <h4 class="wizzard-title"><i class="fa fa-file"></i>&nbsp;Empréstimo</h4>
+                            <hr class="hr">
+                            <div class="fieldset-content">
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="valorPedido">Valor Pretendido</label>
+                                        <input type="text" name="valorPedido" id="valorPedido" class="form-control" value="1000" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="taxaJuros">Taxa de Juros</label>
+                                        <input type="text" name="taxaJuros" id="taxaJuros" class="form-control" value="20"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="modalidadePagamento">Modo de Pagamento</label>
+                                        <g:select id="modalidadePagamento" name="modalidadePagamento" optionKey="id"
+                                                  optionValue="descricao" from="${modoPagamentoList}" class="form-control"/>
+                                    </div>
+                                </div>
+
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="tipoNegocio">Tipo de Nogócio</label>
+                                        <input type="text" name="tipoNegocio" id="tipoNegocio" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label" for="localNegocio">Local de Nogócio</label>
+                                        <input type="text" name="localNegocio" id="localNegocio" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6 form-group">
+                                        <label class="form-label" for="experienciaNegocio">Experiência no negócio actual</label>
+                                        <input type="text" name="experienciaNegocio" id="experienciaNegocio" class="form-control" />
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="destinoCredito">Destino do Crédito</label>
+                                        <div class="row" style="padding-top: 4px" id="destinoCredito">
+                                            <div class="col-sm-6">
+                                                <label class="form-label">
+                                                    <input checked type="radio" name="destinoCredito" value="Negocio" class="flat-red">&nbsp;Negocio
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label">
+                                                    <input type="radio" name="destinoCredito" value="Consumo" class="flat-red">&nbsp;Consumo
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row margin-bottom">
-                                <div class="col-sm-12">
-                                    <label class="form-label" for="outroCredito">Crédito Em Outras Instituições</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <input type="checkbox" class="flat-red form-check" data-input="outroCredito">
-                                        </span>
-                                        <input type="text" name="outroCredito" id="outroCredito" class="form-control" placeholder="Se sim, Indique os Nomes das Instituições">
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-12">
+                                        <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" class="flat-red form-check" data-input="outroCredito">
+                                            </span>
+                                            <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
+                                                   placeholder="Se sim, Indique os Nomes das Instituições"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row margin-bottom">
-                                <div class="col-sm-9">
-                                    <label class="form-label" for="instituicoesCredito">Conta Bancária</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <input type="checkbox" class="flat-red form-check" data-input="instituicoesCredito">
-                                        </span>
-                                        <input type="text" id="instituicoesCredito" name="instituicoesCredito" class="form-control"
-                                               placeholder="Se sim, em que bancos">
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-9">
+                                        <label class="form-label" for="bancos">Conta Bancária</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input type="checkbox" class="flat-red form-check" data-input="instituicoesCredito">
+                                            </span>
+                                            <input type="text" id="bancos" name="bancos" class="form-control"
+                                                   placeholder="Se sim, em que bancos">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
+                                        <button type="button" class="btn btn-default" style="width: 100%" id="btn-testemunhas">
+                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <label class="form-label" for="btn-testemunhas">&nbsp;</label>
-                                    <button type="button" class="btn btn-default" style="width: 100%" id="btn-testemunhas">
-                                        <i class="fa fa-users"></i>&nbsp;Testemunhas
-                                    </button>
-                                </div>
+                                <button type="submit" class="btn btn-success">Save</button>
                             </div>
-                        </div>
-                    </fieldset>
+                        </fieldset>
 
-                     <h3>Garantia</h3>
-                     <fieldset>
-                         <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Garantia</h4>
-                         <hr class="hr">
-                         <div class="fieldset-content">
-                             <div class="row margin-bottom">
-                                 <div class="col-sm-12">
-                                     <label class="form-label" for="relacaoBens">Relação de bens</label>
-                                     <input type="text" name="relacaoBens" id="relacaoBens" class="form-control" />
+                        <h3>Garantia</h3>
+                        <fieldset>
+                             <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Garantia</h4>
+                             <hr class="hr">
+                             <div class="fieldset-content">
+                                 <div class="row margin-bottom">
+                                     <div class="col-sm-12">
+                                         <label class="form-label" for="relacaoBens">Relação de bens</label>
+                                         <input type="text" name="relacaoBens" id="relacaoBens" class="form-control" />
+                                     </div>
                                  </div>
                              </div>
-                         </div>
-                     </fieldset>
-                 </div>
+                         </fieldset>
+                    </div>
                 </form>
             </div>
         </div>
@@ -302,7 +301,9 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        // alert('')
+
+        // $('input[type=radio]:first').setAttribute('checked','checked');
+
         $('#btn-testemunhas').click(function () {
             $('#modal-testemunhas').modal({
                 show:true, backdrop: "static"
@@ -316,7 +317,21 @@
             if(rowCount === 1){
                 $('#bEdit').trigger('click');
             }
-        })
+        });
+
+        /*buscar distritos de uma determinada provincia*/
+        $('#provincia').on('change',function () {
+            var provinciaId = $(this).val();
+            $.ajax({
+                method: 'POST',
+                url: 'getDistrito', //metodo na controller
+                data: {'id': provinciaId},
+                success: function (data) {
+                    $('#div-Distrito').html(data) //renderiza combo de distritos
+                }
+            });
+        });
+        $('#provincia').val($('#provincia').val()).trigger('change'); //prenche combo de distritos ao abrir a pagina
     })
 </script>
 

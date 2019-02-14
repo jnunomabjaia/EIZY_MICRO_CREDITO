@@ -818,9 +818,6 @@
 <asset:javascript src="vendor/wnumb/wNumb.js"/>
 <asset:javascript src="main-wizzard.js"/>
 
-
-
-
 <script>
     $(function () {
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
