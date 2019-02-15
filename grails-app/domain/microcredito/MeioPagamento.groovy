@@ -12,8 +12,4 @@ class MeioPagamento {
     static constraints = {
         descricao(blank: false, maxSize: 45)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-    }
 }

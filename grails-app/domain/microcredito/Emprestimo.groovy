@@ -4,7 +4,7 @@ class Emprestimo {
     Double valorPedido, taxaJuros, valorApagar
     Integer nrPrestacoes
     Date prazoPagamento, dataInicioPagamento
-    String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado
+    String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado, nrProcesso
     Boolean outroCredito, contaBancaria
     Cliente cliente
     ModalidadePagamento modalidadePagamento
@@ -28,9 +28,6 @@ class Emprestimo {
         bancos(blank: true, nullable: true, maxSize: 500)
         estado(inList: ["Aberto", "Suspenso", "Fechado"])
         dataInicioPagamento(nullable: true, blank: true)
-    }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
+        nrProcesso(nullable: false)
     }
 }

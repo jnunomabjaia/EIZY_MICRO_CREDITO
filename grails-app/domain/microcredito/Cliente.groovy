@@ -40,21 +40,4 @@ class Cliente {
         dataRegisto(nullable: true, blank:true)
         dataModif(nullable: true, blank:true)
     }
-
-
-//    Property dataEmissao must be a valid Date
-//            Property dataValidade must be a valid Date
-//    Property [estado] of class [class microcredito.Cliente] cannot be null
-//Property [testemunhas] of class [class microcredito.Cliente] cannot be null
-//Property [dataModif] of class [class microcredito.Cliente] cannot be null
-//Property [userModif] of class [class microcredito.Cliente] cannot be null
-//Property [codigo] of class [class microcredito.Cliente] cannot be null
-//Property [userRegisto] of class [class microcredito.Cliente] cannot be null
-//Property [dataRegisto] of class [class microcredito.Cliente] cannot be null
-
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-        dataModif defaultValue: "now()"
-    }
 }

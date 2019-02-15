@@ -69,7 +69,6 @@ bootRun {
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
 
-
 assets {
     minifyJs = true
     minifyCss = true

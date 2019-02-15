@@ -15,7 +15,7 @@
     <div class="col-md-6">
         <div class="main">
             <div class="container">
-                <form id="signup-form" class="signup-form" action="salvar" method="POST">
+                <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off">
                     <div>
                         <h3>Dados Pessoais</h3>
                         <fieldset>
@@ -27,8 +27,7 @@
                                         <label class="form-label" for="apelido">Apelido</label>
                                         <input type="text" name="apelido" id="apelido"  class="form-control" value="Mac"/>
                                         <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342"/>
-                                        <input type="text" name="testemunhas" id="testemunhas"  class="form-control" value="nanna"/>
-                                        %{--<g:hiddenField name="testemunhas" id="testemunhas">--}%
+                                        <g:hiddenField name="testemunhas" id="testemunhas"/>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nome">Nomes</label>
@@ -194,15 +193,15 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="tipoNegocio">Tipo de Nogócio</label>
-                                        <input type="text" name="tipoNegocio" id="tipoNegocio" class="form-control" />
+                                        <input type="text" name="tipoNegocio" id="tipoNegocio" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="localNegocio">Local de Nogócio</label>
-                                        <input type="text" name="localNegocio" id="localNegocio" class="form-control" />
+                                        <input type="text" name="localNegocio" id="localNegocio" class="form-control"/>
                                     </div>
                                 </div>
 
-                                <div class="row margin-bottom">
+                                <div class="row">
                                     <div class="col-sm-6 form-group">
                                         <label class="form-label" for="experienciaNegocio">Experiência no negócio actual</label>
                                         <input type="text" name="experienciaNegocio" id="experienciaNegocio" class="form-control" />
@@ -233,7 +232,7 @@
                                                 <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
                                             </span>
                                             <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
-                                                   placeholder="Se sim, Indique os Nomes das Instituições"
+                                                   placeholder="Nomes das Instituições"
                                             >
                                         </div>
                                         <input type="hidden" id="outroCredito" name="outroCredito">
@@ -248,7 +247,7 @@
                                                 <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
                                             </span>
                                             <input type="text" id="bancos" name="bancos" class="form-control"
-                                                   placeholder="Se sim, em que bancos">
+                                                   placeholder="Em que bancos">
                                         </div>
                                         <input type="hidden" id="contaBancaria" name="contaBancaria">
                                     </div>
@@ -261,7 +260,6 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success">Save</button>
-
                         </fieldset>
 
                         <h3>Garantia</h3>
@@ -311,12 +309,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Fader</td>
-                        <td>Polana</td>
-                        <td>234234324</td>
-                        <td>filho</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -334,7 +326,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         
-        $('#btn-testemunhas').click(function () {
+        $('#btn-testemunhas').click(function () {               //open testemunhas pop-up
             $('#modal-testemunhas').modal({
                 show:true, backdrop: "static"
             })
@@ -445,7 +437,13 @@
             };
             $('#testemunhas').val(JSON.stringify(myObj));
             // alert(JSON.stringify(myObj));
-        })
+        });
+        
+        //submit do formuario
+        // $('#signup-form').submit(function () {
+        //     event.preventDefault();
+        //     console.log( $( this ).serialize() );
+        // });
     })
 </script>
 

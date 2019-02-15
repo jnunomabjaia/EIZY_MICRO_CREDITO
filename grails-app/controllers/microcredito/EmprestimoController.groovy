@@ -150,10 +150,9 @@ class EmprestimoController {
     }
 
     def salvarEmprestimo(){
-
-//        ClienteController clienteController = new ClienteController();
-//        Cliente cliente = clienteController.salvarCliente()
-        Cliente cliente = Cliente.get(1)
+        ClienteController clienteController = new ClienteController();
+        Cliente cliente = clienteController.salvarCliente()
+//        Cliente cliente = Cliente.get(1)
         Emprestimo emprestimo1 = new Emprestimo()
         emprestimo1.valorPedido=params.valorPedido.toDouble()
         emprestimo1.taxaJuros=params.taxaJuros.toDouble()
@@ -184,8 +183,6 @@ class EmprestimoController {
         }
         return emprestimo1
     }
-
-
 }
 
 

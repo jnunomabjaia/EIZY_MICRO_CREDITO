@@ -98,10 +98,9 @@ class ClienteController {
         }
     }
 
-
     def salvarCliente(){
         Cliente cliente = new Cliente()
-        cliente.codigo = "codigo 123"
+        cliente.codigo = "codigo"
         cliente.apelido = params.apelido
         cliente.nome = params.nome
         cliente.estadoCivil = params.estadoCivil
@@ -121,11 +120,11 @@ class ClienteController {
         cliente.contacto1 = params.contacto1
         cliente.contacto2 = params.contacto2
         cliente.email = params.email
-        cliente.testemunhas = "Fader, Joao"
+        cliente.testemunhas = params.testemunhas
         cliente.endereco = params.endereco
         cliente.tipoCasa = params.tipoCasa
 
-        Distrito dist = Distrito.get(3)
+        Distrito dist = Distrito.get(params.distrito)
         cliente.distrito = dist
 
         User user = User.get(1)
@@ -134,14 +133,9 @@ class ClienteController {
         cliente.dataRegisto = new Date()
         cliente.dataModif = new Date()
 
-//        def rs = [:]
         if(!cliente.hasErrors()) {
             cliente.save()
         }
-//            rs["msg"]="done"
-//        }else{
-//            rs["msg"]="Error"
-//        }
         return  cliente
     }
 }

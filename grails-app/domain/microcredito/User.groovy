@@ -17,9 +17,4 @@ class User {
         userModif(nullable: true, blank: true)
         userRegisto(nullable: true, blank: true)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-        dataModif defaultValue: "now()"
-    }
 }

@@ -10,8 +10,4 @@ class TipoGarantia {
     static constraints = {
         descricao (nullable: false, blank: false, maxSize: 45)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-    }
 }

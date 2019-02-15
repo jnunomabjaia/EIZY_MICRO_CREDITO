@@ -23,8 +23,4 @@ class MicroCredito {
         endereco(blank: true, maxSize: 500)
         distrito(nullable: true)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-    }
 }

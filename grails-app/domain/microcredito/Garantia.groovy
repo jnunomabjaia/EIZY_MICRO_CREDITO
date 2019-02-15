@@ -20,8 +20,4 @@ class Garantia {
         foto(nullable: false, blank: false, maxSize: 200)
         tipoGarantia(nullable: false)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-    }
 }

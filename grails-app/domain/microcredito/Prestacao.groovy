@@ -1,10 +1,10 @@
 package microcredito
 
 class Prestacao {
-    String numero
+    String numero, observacao
     Double valor
     Date dataLimite
-    Date dataPagamento
+    Date dataPagamento, dataParcela
     String estado
     Prestacao prestacao
     TipoPrestacao tipoPrestacao
@@ -27,11 +27,7 @@ class Prestacao {
         meioPagamento(nullable: true, blank: true)
         emprestimo(nullable: false, blank: false)
         dataPagamento(nullable: true, blank: true)
+        dataParcela(nullable: true, blank: true)
+        observacao(nullable: true, blank: true)
     }
-
-    static mapping = {
-        dataRegisto defaultValue: "now()"
-        dataPagamento defaultValue: "now()"
-    }
-
 }
