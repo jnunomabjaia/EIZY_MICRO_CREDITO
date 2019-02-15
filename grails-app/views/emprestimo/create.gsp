@@ -27,17 +27,20 @@
                                         <label class="form-label" for="apelido">Apelido</label>
                                         <input type="text" name="apelido" id="apelido"  class="form-control" value="Mac"/>
                                         <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342"/>
-                                        <input type="hidden" name="testemunhas" id="testemunhas"  class="form-control" value="nanna"/>
+                                        <input type="text" name="testemunhas" id="testemunhas"  class="form-control" value="nanna"/>
+                                        %{--<g:hiddenField name="testemunhas" id="testemunhas">--}%
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nome">Nomes</label>
-                                        <input type="text" name="nome" id="nome" class="form-control" value="Fader" />
+                                        <input type="text" name="nome" id="nome" class="form-control dis" value="Fader" />
                                     </div>
                                 </div>
                                 <div class="row  margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="estadoCivil">Estado Civil</label>
-                                        <g:select id="estadoCivil" name="estadoCivil" from="${Cliente.constrainedProperties.estadoCivil.inList}" class="form-control"/>
+                                        <g:select  class="form-control select" id="estadoCivil" name="estadoCivil"
+                                                   from="${Cliente.constrainedProperties.estadoCivil.inList}"
+                                        />
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nomeConjuge">Nome do Cônjuge</label>
@@ -48,7 +51,8 @@
                                     <div class="col-sm-6">
                                         <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
                                         <g:select id="tipoDocumento" name="tipoDocumento" optionKey="id" optionValue="descricao"
-                                                  from="${tipoDocumentoList.list()}" class="form-control"/>
+                                                  from="${tipoDocumentoList.list()}" class="form-control select"
+                                        />
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nrDocumento">Nº do Documento</label>
@@ -62,11 +66,11 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="dataEmissao">Data de Emissão</label>
-                                        <input type="date" name="dataEmissao" id="dataEmissao" class="form-control" />
+                                        <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select" />
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="dataValidade">Data de validade</label>
-                                        <input type="date" name="dataValidade" id="dataValidade" class="form-control" />
+                                        <input type="date" name="dataValidade" id="dataValidade" class="form-control select" />
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
@@ -117,7 +121,7 @@
                                     <div class="col-sm-6">
                                         <label class="form-label" for="provincia">Província</label>
                                         <g:select id="provincia" name="provincia" optionKey="id"  optionValue="designacao"
-                                                  from="${provinciaList}" class="form-control"/>
+                                                  from="${provinciaList}" class="form-control select"/>
                                     </div>
                                     <div class="col-sm-6" id="div-Distrito">
                                         %{--<select id="distrito" name="distrito" class="form-control"></select>--}%
@@ -144,7 +148,6 @@
                                         </div>
                                     </g:each>
                                 </div>
-                                %{--<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
                             </div>
                         </fieldset>
                         <h3>Empréstimo</h3>
@@ -155,25 +158,45 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="valorPedido">Valor Pretendido</label>
-                                        <input type="text" name="valorPedido" id="valorPedido" class="form-control" value="1000" />
+                                        <input type="number" min="0" name="valorPedido" id="valorPedido" class="form-control input-valor" value="0" />
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label" for="taxaJuros">Taxa de Juros</label>
-                                        <input type="text" name="taxaJuros" id="taxaJuros" class="form-control" value="20"/>
+                                        <label class="form-label" for="taxaJuros">Taxa de Juros (%)</label>
+                                        <input type="number" min="0" max="100" name="taxaJuros" id="taxaJuros" class="form-control input-valor" value="0"/>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label" for="modalidadePagamento">Modo de Pagamento</label>
-                                        <g:select id="modalidadePagamento" name="modalidadePagamento" optionKey="id"
-                                                  optionValue="descricao" from="${modoPagamentoList}" class="form-control"/>
+                                        <label class="form-label" for="valorApagar">Valor a Pagar</label>
+                                        <input type="text" readonly name="valorApagar" id="valorApagar" class="form-control" value="0" />
                                     </div>
                                 </div>
 
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="modalidadePagamento">Modo de Pagamento</label>
+                                        <g:select id="modalidadePagamento" name="modalidadePagamento" optionKey="descricao"
+                                              optionValue="descricao" from="${modoPagamentoList}" class="form-control select"
+                                        />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="nrPrestacoes">Numero de Prestações</label>
+                                        <input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor" value="1"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="valorPorPrestacao">Valor Por Prestação</label>
+                                        <input readonly type="text" name="valorPorPrestacao" id="valorPorPrestacao" class="form-control" title="Valor a pagar por prestação" />
+                                    </div>
+                                </div>
+
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="dataInicioPagamento">Data Iniciol para Pagamento</label>
+                                        <input  type="date" name="dataInicioPagamento" id="dataInicioPagamento" class="form-control select" value="2019-02-15"/>
+                                    </div>
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="tipoNegocio">Tipo de Nogócio</label>
                                         <input type="text" name="tipoNegocio" id="tipoNegocio" class="form-control" />
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="localNegocio">Local de Nogócio</label>
                                         <input type="text" name="localNegocio" id="localNegocio" class="form-control" />
                                     </div>
@@ -207,12 +230,13 @@
                                         <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <input type="checkbox" class="flat-red form-check" data-input="outroCredito">
+                                                <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
                                             </span>
                                             <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
                                                    placeholder="Se sim, Indique os Nomes das Instituições"
                                             >
                                         </div>
+                                        <input type="hidden" id="outroCredito" name="outroCredito">
                                     </div>
                                 </div>
 
@@ -221,11 +245,12 @@
                                         <label class="form-label" for="bancos">Conta Bancária</label>
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <input type="checkbox" class="flat-red form-check" data-input="instituicoesCredito">
+                                                <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
                                             </span>
                                             <input type="text" id="bancos" name="bancos" class="form-control"
                                                    placeholder="Se sim, em que bancos">
                                         </div>
+                                        <input type="hidden" id="contaBancaria" name="contaBancaria">
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="form-label" for="btn-testemunhas">&nbsp;</label>
@@ -234,8 +259,9 @@
                                         </button>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-success">Save</button>
                             </div>
+                            <button type="submit" class="btn btn-success">Save</button>
+
                         </fieldset>
 
                         <h3>Garantia</h3>
@@ -275,21 +301,27 @@
                         <i class="fa fa-plus"></i>&nbsp;Adicionar
                     </button>
                 </span>
-                <table class="table table-bordered" id="makeEditable">
+                <table class="table table-bordered" id="tabelaTestemunha">
                     <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Endereço</th>
+                        <th>Endereco</th>
                         <th>Contacto</th>
                         <th>Grau de Parantesco</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <tr>
+                        <td>Fader</td>
+                        <td>Polana</td>
+                        <td>234234324</td>
+                        <td>filho</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-save"></i>&nbsp;Salvar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="btn-saveTestemunhas"><i class="fa fa-save"></i>&nbsp;Salvar</button>
             </div>
         </div>
     </div>
@@ -301,19 +333,18 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-
-        // $('input[type=radio]:first').setAttribute('checked','checked');
-
+        
         $('#btn-testemunhas').click(function () {
             $('#modal-testemunhas').modal({
                 show:true, backdrop: "static"
             })
         });
 
-        $('#makeEditable').SetEditable({ $addButton: $('#but_add')});
+        /*tabela de testemunhas*/
+        $('#tabelaTestemunha').SetEditable({ $addButton: $('#but_add')}); //habilita tabela de testemunhas para que seja editevel
 
         $('#but_add').click(function () {
-            var rowCount = $('#makeEditable >tbody >tr').length;
+            var rowCount = $('#tabelaTestemunha >tbody >tr').length;
             if(rowCount === 1){
                 $('#bEdit').trigger('click');
             }
@@ -332,6 +363,89 @@
             });
         });
         $('#provincia').val($('#provincia').val()).trigger('change'); //prenche combo de distritos ao abrir a pagina
+        
+        /*credito em outras instituicoes e conta bancaria*/
+        $('.form-check').on('ifChanged',function () {
+            var value = $(this).iCheck('update')[0].checked; //verica o check se esta selecioonado ou nao e retorna o valor[true|false]
+            $("#"+$(this).attr('data-id')).val(value); //poe o valor no input boolean
+            if(value){
+                $("#"+$(this).attr('data-input')).removeAttr('readonly') //habilita input
+            }else{
+                $("#"+$(this).attr('data-input')).prop('readonly',true) //desabiita input
+            }
+        });
+        $('.form-check').trigger('ifChanged'); //inicializar os checks
+
+        $('.input-valor').on('input',function () {
+            calculoValorApagar()
+        });
+
+        function calculoValorApagar() {
+            valorPedido = $('#valorPedido').val();
+            percent = $('#taxaJuros').val()/100; // valor em percentagem
+            if(valorPedido === ''){
+                $('#valorApagar').val(0);
+                return
+            }
+            valorApagar = parseFloat(valorPedido)+ parseFloat(valorPedido*percent); // calculo de valor total a pagar
+            $('#valorApagar').val(valorApagar.toFixed(2));
+
+            /*valor por gpagar*/
+            nrPrestacoes = $('#nrPrestacoes').val();
+            valorPorPrestacao = valorApagar/nrPrestacoes;                //caculo de valor a pagar por prestacao
+            $('#valorPorPrestacao').val(valorPorPrestacao.toFixed(2))    //formatacao de valor
+        }
+
+        $('#dataInicioPagamento').val(formatDate(new Date()));
+        function formatDate(date) {
+            var day = date.getDate()+1; //dia seguinte
+            if(date.getMonth() < 9){
+                monthIndex = '0'+parseInt(date.getMonth()+1);  // mes corrente 0=Janeiro, 1=Fereveiro
+            }else{
+                monthIndex = date.getMonth()+1;
+            }
+            var year = date.getFullYear();
+            return year + '-' + monthIndex + '-' + day;
+        }
+
+        $('#modalidadePagamento').on('change',function () {
+        modalidade = $(this).val();                         //get value of modaidadadepagamento input
+            if(modalidade === 'Diaria'){                    //prestacao diaria
+                $('#nrPrestacoes').attr({"min":1,"max":13});
+                $('#nrPrestacoes').val(1)
+            }else if(modalidade === 'Semanal'){             //prestacao semanal
+                $('#nrPrestacoes').attr({"min":3, "max":4});
+                $('#nrPrestacoes').val(3)
+            }else {                                         //prestacao mensal
+                console.log(modalidade)
+            }
+            calculoValorApagar();
+        });
+
+        $('#btn-saveTestemunhas').click(function () {
+            var myRows = [];
+            var headersText = [];
+            var $headers = $("th");
+
+            $("#tabelaTestemunha tbody tr").each(function(index) {
+                $cells = $(this).find("td");
+                myRows[index] = {};
+
+                $cells.each(function(cellIndex) {
+                    if(headersText[cellIndex] === undefined) { // Set the header text
+                        headersText[cellIndex] = $($headers[cellIndex]).text();
+                    }
+                    // Update the row object with the header/cell combo
+                    myRows[index][headersText[cellIndex]] = $(this).text();
+                });
+            });
+
+            var myObj = {
+                "Testemunhas": myRows
+            };
+            $('#testemunhas').val(JSON.stringify(myObj));
+            // alert(JSON.stringify(myObj));
+        })
     })
 </script>
 

@@ -42,8 +42,8 @@
 
 
     <asset:stylesheet src="fonts/material-icon/css/material-design-iconic-font.min.css"/>
-    <asset:stylesheet src="style.css"/>
     <asset:stylesheet src="AdminLTE.min.css"/>
+    <asset:stylesheet src="style.css"/>
 
 <asset:stylesheet src="iCheck/all.css"/>
     %{--<link rel="stylesheet" href="../../plugins/iCheck/all.css">--}%

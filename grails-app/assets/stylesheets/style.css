@@ -80,7 +80,7 @@ p.desc {
 .form-label {
   display: block;
   width: 100%;
-  font-size: 16px;
+  font-size: 14.3px;
 }
 
 /*.text-input {*/
@@ -190,8 +190,8 @@ input .form-control{
     background-color: #f8f8f8;
 }
 .content {
-  height: 100%;
-  /*height: 700%;*/
+  /*height: 100%;*/
+  height: 590px;
   background-color: transparent;
 }
 .vertical .actions{
@@ -561,11 +561,16 @@ fieldset {
 
 /*# sourceMappingURL=style.css.map */
 
-input[type=text],input[type=number], #estadoCivil,#tipoDocumento,#distrito, #provincia , #tipo_casa{
-  border-color: #769cad;
+input[type=text],input[type=number]{
+  /*border-color: #769cad;*/
   border-radius: 5px;
   /*height: 20px;*/
 }
+
+.select{
+  border-radius: 5px;
+}
+
 .hr{
   border-color: #0f0f0f;
 }

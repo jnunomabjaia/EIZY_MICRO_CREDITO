@@ -116,15 +116,14 @@ class ClienteController {
         cliente.nrDocumento = params.nrDocumento
         cliente.localEmissao = params.localEmissao
 
-        def dataEmissao = Date.parse("dd-MM-yyyy", params.dataEmissao).clearTime()
-        def dataValidade = Date.parse("dd-MM-yyyy", params.dataValidade)
-        cliente.dataEmissao = dataEmissao
-        cliente.dataValidade = dataValidade
+        cliente.dataEmissao =  Date.parse("yyyy-MM-dd", params.dataEmissao)
+        cliente.dataValidade = Date.parse("yyyy-MM-dd", params.dataValidade)
         cliente.contacto1 = params.contacto1
         cliente.contacto2 = params.contacto2
         cliente.email = params.email
         cliente.testemunhas = "Fader, Joao"
         cliente.endereco = params.endereco
+        cliente.tipoCasa = params.tipoCasa
 
         Distrito dist = Distrito.get(3)
         cliente.distrito = dist
@@ -132,7 +131,8 @@ class ClienteController {
         User user = User.get(1)
         cliente.userModif = user
         cliente.userRegisto = user
-        cliente.tipoCasa = params.tipoCasa
+        cliente.dataRegisto = new Date()
+        cliente.dataModif = new Date()
 
 //        def rs = [:]
         if(!cliente.hasErrors()) {

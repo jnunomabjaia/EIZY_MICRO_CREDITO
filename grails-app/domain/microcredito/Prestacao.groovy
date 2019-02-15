@@ -23,10 +23,10 @@ class Prestacao {
         valor(blank: false)
         estado(inList: ["Pendente", "Vencido", "Pago"])
         prestacao(nullable: true)
-        tipoPrestacao(nullable: false, blank: false)
-        meioPagamento(nullable: false, blank: false)
+        tipoPrestacao(nullable: true, blank: true)
+        meioPagamento(nullable: true, blank: true)
         emprestimo(nullable: false, blank: false)
-        dataLimite(min: new Date())
+        dataPagamento(nullable: true, blank: true)
     }
 
     static mapping = {

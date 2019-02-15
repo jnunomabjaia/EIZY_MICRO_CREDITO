@@ -1,8 +1,9 @@
 package microcredito
 
 class Emprestimo {
-    Double valorPedido, taxaJuros
-    Date prazoPagamento
+    Double valorPedido, taxaJuros, valorApagar
+    Integer nrPrestacoes
+    Date prazoPagamento, dataInicioPagamento
     String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado
     Boolean outroCredito, contaBancaria
     Cliente cliente
@@ -22,12 +23,11 @@ class Emprestimo {
         destinoCredito(blank: true, maxSize: 45, inList: ['Negocio','Consumo'])
         tipoNegocio(blank: true, maxSize: 45)
         localNegocio(blank: true, maxSize: 45)
-        experienciaNegocio(blank: true, maxSize: 100)
-        instituicoescredito(blank: true, maxSize: 500)
-        bancos(blank: true, maxSize: 500)
+        experienciaNegocio(blank: true,nullable: true, maxSize: 100)
+        instituicoescredito(blank: true,nullable: true, maxSize: 500)
+        bancos(blank: true, nullable: true, maxSize: 500)
         estado(inList: ["Aberto", "Suspenso", "Fechado"])
-        outroCredito(nullable: true)
-        contaBancaria(nullable: true)
+        dataInicioPagamento(nullable: true, blank: true)
     }
 
     static mapping = {
