@@ -26,7 +26,9 @@ class EmprestimoController {
         respond new Emprestimo(params),
             model: ['tipoDocumentoList': TipoDocumento,
                     'provinciaList':Provincia.list(), 'distritoList':Distrito.list(),
-                    'modoPagamentoList':ModalidadePagamento.list()
+                    'modoPagamentoList':ModalidadePagamento.list(),
+                    'tipoCasaList':TipoCasa.list(),
+                    'destinoCredito':DestinoCredito.list()
         ]
     }
 
@@ -119,49 +121,54 @@ class EmprestimoController {
 
     def salvar(){
 
-        Emprestimo emprestimo = salvarEmprestimo()
-//
-        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+//        Emprestimo emprestimo = salvarEmprestimo()
+//        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         def rs = [:], cont = 0, nrDias = 0
+//
+//        while (cont < emprestimo.nrPrestacoes){
+//            Prestacao prestacao = new Prestacao()
+//            prestacao.valor = params.valorPorPrestacao.toDouble()
+//            prestacao.estado = "Pendente"
+//            prestacao.numero = "PreNow"+cont+""
+//            prestacao.emprestimo = emprestimo
+//            prestacao.dataRegisto = new Date()
+//            prestacao.dataModif = new Date()
+//            prestacao.userRegisto = emprestimo.userRegisto
+//            prestacao.userModif = emprestimo.userRegisto
+////            prestacao.tipoPrestacao = TipoPrestacao.get(1)
+////            prestacao.meioPagamento = MeioPagamento.get(1)
+//            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
+//            prestacao.save()
+//            cont+=1                                             //incrmenta o contador
+//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicoona dia diferenca
+//            emprestimo.prazoPagamento = prestacao.dataLimite
+//        }
+//        emprestimo.dataInicioPagamento = dataInicial
+//        emprestimo.nrProcesso =  numeroProcesso(emprestimo)
+//        emprestimo.save(flush:true)
 
-        while (cont < emprestimo.nrPrestacoes){
-            Prestacao prestacao = new Prestacao()
-            prestacao.valor = params.valorPorPrestacao.toDouble()
-            prestacao.estado = "Pendente"
-            prestacao.numero = "PreNow"+cont+""
-            prestacao.emprestimo = emprestimo
-            prestacao.dataRegisto = new Date()
-            prestacao.dataModif = new Date()
-            prestacao.userRegisto = emprestimo.userRegisto
-            prestacao.userModif = emprestimo.userRegisto
-            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
-            prestacao.save()
-            cont+=1                                             //incrmenta o contador
-            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicoona dia diferenca
-            emprestimo.prazoPagamento = prestacao.dataLimite
-        }
-        emprestimo.dataInicioPagamento = dataInicial
-        emprestimo.save(flush:true)
-
-        rs["msg"]="done"
+//        rs["msg"]=tipoCasa.size()
+        rs["msg"]="done".toUpperCase()
 //        rs["a"]=dataInicial
 //        rs["b"]=dataInicial+21
         render rs as JSON
     }
 
     def salvarEmprestimo(){
-        ClienteController clienteController = new ClienteController();
-        Cliente cliente = clienteController.salvarCliente()
-//        Cliente cliente = Cliente.get(1)
+//        ClienteController clienteController = new ClienteController();
+//        Cliente cliente = clienteController.salvarCliente()
+        Cliente cliente = Cliente.get(1)
+        ModalidadePagamento modalidadePagamento = ModalidadePagamento.findByDescricao(params.modalidadePagamento)
         Emprestimo emprestimo1 = new Emprestimo()
+        emprestimo1.nrProcesso = "nr"
         emprestimo1.valorPedido=params.valorPedido.toDouble()
         emprestimo1.taxaJuros=params.taxaJuros.toDouble()
         emprestimo1.valorApagar = params.valorApagar.toDouble()
         emprestimo1.nrPrestacoes = params.nrPrestacoes.toInteger()
         emprestimo1.userRegisto = cliente.userRegisto
         emprestimo1.userModif = cliente.userModif
-        emprestimo1.prazoPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         emprestimo1.dataInicioPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+        emprestimo1.prazoPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         emprestimo1.dataModif = new Date()
         emprestimo1.dataRegisto = new Date()
         emprestimo1.contaBancaria = params.contaBancaria.toBoolean()
@@ -174,14 +181,17 @@ class EmprestimoController {
         emprestimo1.tipoNegocio = params.tipoNegocio
         emprestimo1.estado = "Aberto"
         emprestimo1.cliente = cliente
-
-        ModalidadePagamento modalidadePagamento = ModalidadePagamento.findByDescricao(params.modalidadePagamento)
         emprestimo1.modalidadePagamento = modalidadePagamento
 
         if(!emprestimo1.hasErrors()){
             emprestimo1.save()
         }
         return emprestimo1
+    }
+
+    def numeroProcesso(Emprestimo emp){
+        def letraInicial= emp.modalidadePagamento.descricao.toUpperCase().take(1)
+        return letraInicial+emp.cliente.id+letraInicial+emp.nrPrestacoes
     }
 }
 

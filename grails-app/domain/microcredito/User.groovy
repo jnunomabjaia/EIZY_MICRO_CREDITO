@@ -1,7 +1,7 @@
 package microcredito
 
 class User {
-    String userName, password
+    String username, password
     Date dataRegisto
     Date dataModif
     User userRegisto
@@ -11,10 +11,12 @@ class User {
     static belongsTo = [perfil: Perfil]
 
     static constraints = {
-        userName(blank: false, maxSize: 45)
+        username(blank: false, maxSize: 45, unique: true)
         password(blank: false, maxSize: 500)
         perfil(nullable: false)
         userModif(nullable: true, blank: true)
         userRegisto(nullable: true, blank: true)
+        dataRegisto(nullable: true, blank: true)
+        dataModif(nullable: true, blank: true)
     }
 }

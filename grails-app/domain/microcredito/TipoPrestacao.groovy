@@ -2,10 +2,6 @@ package microcredito
 
 class TipoPrestacao {
     String descricao
-    Date   dataRegisto
-    Date   dataModif
-    User   userRegisto
-    User   userModif
 
     List<Prestacao> prestacoes
 
