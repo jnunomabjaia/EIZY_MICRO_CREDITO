@@ -135,29 +135,24 @@ class EmprestimoController {
 //            prestacao.dataModif = new Date()
 //            prestacao.userRegisto = emprestimo.userRegisto
 //            prestacao.userModif = emprestimo.userRegisto
-////            prestacao.tipoPrestacao = TipoPrestacao.get(1)
-////            prestacao.meioPagamento = MeioPagamento.get(1)
 //            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
 //            prestacao.save()
 //            cont+=1                                             //incrmenta o contador
-//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicoona dia diferenca
+//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
 //            emprestimo.prazoPagamento = prestacao.dataLimite
 //        }
 //        emprestimo.dataInicioPagamento = dataInicial
 //        emprestimo.nrProcesso =  numeroProcesso(emprestimo)
 //        emprestimo.save(flush:true)
-
-//        rs["msg"]=tipoCasa.size()
+//
         rs["msg"]="done".toUpperCase()
-//        rs["a"]=dataInicial
-//        rs["b"]=dataInicial+21
         render rs as JSON
     }
 
     def salvarEmprestimo(){
-//        ClienteController clienteController = new ClienteController();
-//        Cliente cliente = clienteController.salvarCliente()
-        Cliente cliente = Cliente.get(1)
+        ClienteController clienteController = new ClienteController();
+        Cliente cliente = clienteController.salvarCliente()
+//        Cliente cliente = Cliente.get(1)
         ModalidadePagamento modalidadePagamento = ModalidadePagamento.findByDescricao(params.modalidadePagamento)
         Emprestimo emprestimo1 = new Emprestimo()
         emprestimo1.nrProcesso = "nr"
@@ -194,10 +189,3 @@ class EmprestimoController {
         return letraInicial+emp.cliente.id+letraInicial+emp.nrPrestacoes
     }
 }
-
-
-//        rs["dataNow"]= new Date().format("yyyy-MM-dd")
-//        rs["dataAmanha"]=(new Date()+17).format("yyyy-MM-dd")
-
-//        rs["dataInicia"]=dataInicial.format("yyyy-MM-dd");
-//        rs["dataDepois"]=(dataInicial+3).format("yyyy-MM-dd");

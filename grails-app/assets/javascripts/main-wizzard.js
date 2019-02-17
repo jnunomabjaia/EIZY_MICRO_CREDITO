@@ -52,16 +52,16 @@
             return form.valid();
         },
         onFinished: function(event, currentIndex) {
-            alert('Submited');
+            // alert('Submited');
+            $(this).submit()
         },
         onStepChanged: function(event, currentIndex, priorIndex) {
-
             return true;
         }
     });
 
     jQuery.extend(jQuery.validator.messages, {
-        required: "",
+        required: "Campo Obrigatorio",
         remote: "",
         email: "",
         url: "",
@@ -73,16 +73,6 @@
         equalTo: ""
     });
 
-    $.dobPicker({
-        daySelector: '#birth_date',
-        monthSelector: '#birth_month',
-        yearSelector: '#birth_year',
-        dayDefault: '',
-        monthDefault: '',
-        yearDefault: '',
-        minimumAge: 0,
-        maximumAge: 120
-    });
     var marginSlider = document.getElementById('slider-margin');
     if (marginSlider != undefined) {
         noUiSlider.create(marginSlider, {

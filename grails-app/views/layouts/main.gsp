@@ -44,6 +44,7 @@
     <asset:stylesheet src="fonts/material-icon/css/material-design-iconic-font.min.css"/>
     <asset:stylesheet src="AdminLTE.min.css"/>
     <asset:stylesheet src="style.css"/>
+    %{--<asset:stylesheet src="style2.css"/>--}%
 
 <asset:stylesheet src="iCheck/all.css"/>
     %{--<link rel="stylesheet" href="../../plugins/iCheck/all.css">--}%
@@ -543,12 +544,30 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                <ol class="breadcrumb">
+                <ol class="breadcrumb" id="caminho">
                     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
                 </ol>
             </h1>
         </section>
+
+
+        %{--PreLoader--}%
+        <div class="page-loader-wrapper">
+            <div class="loader">
+                <div class="preloader">
+                    <div class="spinner-layer pl-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>Por Favor Aguarde...</p>
+            </div>
+        </div>
+        %{--End of Preloader--}%
 
         <!-- Main content -->
         <section class="">
@@ -820,6 +839,9 @@
 
 <script>
     $(function () {
+        setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+
+
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass: 'iradio_minimal-blue'

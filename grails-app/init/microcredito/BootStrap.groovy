@@ -41,9 +41,9 @@ class BootStrap {
 
         def listPerfil =["Developer"]
         for(int i = Perfil.findAllByDesignacaoInList(listPerfil).size(); i < listPerfil.size(); i++){
-            new Perfil("designacao":listPerfil.get(i)).save()
+           new Perfil("designacao":listPerfil.get(i)).save()
         }
-        new User("username:":"Fader","password":123456,"perfil":Perfil.get(1),"dataRegisto":new Date(),"dataModif":new Date()).save()
+        new User("username":"Fader","password":123456,"perfil":Perfil.get(1)).save()
     }
     def destroy = {
 

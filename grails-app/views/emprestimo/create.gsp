@@ -25,13 +25,13 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="apelido">Apelido</label>
-                                        <input type="text" name="apelido" id="apelido"  class="form-control" value="Mac"/>
-                                        <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342"/>
+                                        <input type="text" name="apelido" id="apelido"  class="form-control"  required>
+                                        <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
                                         <g:hiddenField name="testemunhas" id="testemunhas"/>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nome">Nomes</label>
-                                        <input type="text" name="nome" id="nome" class="form-control dis" value="Fader" />
+                                        <input type="text" name="nome" id="nome" class="form-control dis"  required/>
                                     </div>
                                 </div>
                                 <div class="row  margin-bottom">
@@ -43,26 +43,26 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nomeConjuge">Nome do Cônjuge</label>
-                                        <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control" value="Sabes como e" />
+                                        <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control" value="Ela Mesma" />
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
                                         <g:select id="tipoDocumento" name="tipoDocumento" optionKey="id" optionValue="descricao"
                                                   from="${tipoDocumentoList.list()}" class="form-control select"
                                         />
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="nrDocumento">Nº do Documento</label>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="nrDocumento">Número do Documento</label>
                                         <input type="text" name="nrDocumento" id="nrDocumento" class="form-control" value="1222222223"/>
                                     </div>
-                                </div>
-                                <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="localEmissao">Local de Emissão</label>
                                         <input type="text" name="localEmissao" id="localEmissao" class="form-control" value="Maputo" />
                                     </div>
+                                </div>
+                                <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="dataEmissao">Data de Emissão</label>
                                         <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select" />
@@ -71,25 +71,23 @@
                                         <label class="form-label" for="dataValidade">Data de validade</label>
                                         <input type="date" name="dataValidade" id="dataValidade" class="form-control select" />
                                     </div>
-                                </div>
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="tipoContrato">Tipo de Contrato</label>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="tipoContrato">Tipo de Contrato de Trabaho</label>
                                         <input type="text" name="tipoContrato" id="tipoContrato" class="form-control" value="Tiposs" />
                                     </div>
-                                    <div class="col-sm-6">
+                                </div>
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
                                         <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control" value="2000" />
                                     </div>
-                                </div>
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="nrFihos">Número de Filhos</label>
-                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control" value="4" />
-                                    </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="nrDependentes">Número de Dependentes</label>
                                         <input type="number" name="nrDependentes" id="nrDependentes" class="form-control" value="12" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="nrFihos">Número de Filhos</label>
+                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control" value="4" />
                                     </div>
                                 </div>
                             </div>
@@ -117,35 +115,26 @@
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label class="form-label" for="provincia">Província</label>
                                         <g:select id="provincia" name="provincia" optionKey="id"  optionValue="designacao"
                                                   from="${provinciaList}" class="form-control select"/>
                                     </div>
-                                    <div class="col-sm-6" id="div-Distrito">
+                                    <div class="col-sm-4" id="div-Distrito">
                                         %{--<select id="distrito" name="distrito" class="form-control"></select>--}%
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="tipoCasa">Casa</label>
+                                        <g:select id="tipoCasa" name="tipoCasa" optionKey="descricao"  optionValue="descricao"
+                                                  from="${tipoCasaList}" class="form-control select"
+                                        />
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
                                     <div class="col-sm-12">
-                                        <label class="form-label" for="endereco">Endereço</label>
-                                        <input type="text" name="endereco" id="endereco"  class="form-control" value="bairro polana case"/>
+                                        <label class="form-label" for="endereco">Morada</label>
+                                        <input type="text" name="endereco" id="endereco"  class="form-control" value="bairro polana case">
                                     </div>
-                                </div>
-                                <div class="row margin-bottom">
-                                    <g:each var="inputt" in="${Cliente.constrainedProperties.tipoCasa.inList}">
-                                        <div class="form-group col-md-4">
-                                            <label class="form-label">
-                                                <input type="radio" checked name="tipoCasa" value="${inputt}" class="flat-red">&nbsp;
-                                                <g:if test="${inputt == 'Outra'}">
-                                                    ${inputt}
-                                                </g:if>
-                                                <g:else>
-                                                    Casa ${inputt}
-                                                </g:else>
-                                            </label>
-                                        </div>
-                                    </g:each>
                                 </div>
                             </div>
                         </fieldset>
@@ -188,7 +177,7 @@
 
                                 <div class="row margin-bottom">
                                     <div class="col-sm-4">
-                                        <label class="form-label" for="dataInicioPagamento">Data Iniciol para Pagamento</label>
+                                        <label class="form-label" for="dataInicioPagamento">Data Inicial de Pagamento</label>
                                         <input  type="date" name="dataInicioPagamento" id="dataInicioPagamento" class="form-control select" value="2019-02-15"/>
                                     </div>
                                     <div class="col-sm-4">
@@ -202,25 +191,21 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-6 form-group">
-                                        <label class="form-label" for="experienciaNegocio">Experiência no negócio actual</label>
+                                    <div class="col-sm-4 form-group">
+                                        <label class="form-label" for="experienciaNegocio">Profissão</label>
                                         <input type="text" name="experienciaNegocio" id="experienciaNegocio" class="form-control" />
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <label class="form-label" for="destinoCredito">Destino do Crédito</label>
-                                        <div class="row" style="padding-top: 4px" id="destinoCredito">
-                                            <div class="col-sm-6">
-                                                <label class="form-label">
-                                                    <input checked type="radio" name="destinoCredito" value="Negocio" class="flat-red">&nbsp;Negocio
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label class="form-label">
-                                                    <input type="radio" name="destinoCredito" value="Consumo" class="flat-red">&nbsp;Consumo
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <g:select id="destinoCredito" name="destinoCredito" optionKey="descricao"  optionValue="descricao"
+                                                  from="${destinoCredito}" class="form-control select"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
+                                        <button type="button" class="btn btn-warning" style="width: 100%" id="btn-testemunhas" title="Adicionar Testemunhas">
+                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
+                                        </button>
                                     </div>
                                 </div>
 
@@ -240,7 +225,7 @@
                                 </div>
 
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-9">
+                                    <div class="col-sm-12">
                                         <label class="form-label" for="bancos">Conta Bancária</label>
                                         <div class="input-group">
                                             <span class="input-group-addon">
@@ -251,15 +236,9 @@
                                         </div>
                                         <input type="hidden" id="contaBancaria" name="contaBancaria">
                                     </div>
-                                    <div class="col-sm-3">
-                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
-                                        <button type="button" class="btn btn-default" style="width: 100%" id="btn-testemunhas">
-                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-success">Save</button>
+                            %{--<button type="submit" class="btn btn-success">Save</button>--}%
                         </fieldset>
 
                         <h3>Garantia</h3>
@@ -325,6 +304,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
         
         $('#btn-testemunhas').click(function () {               //open testemunhas pop-up
             $('#modal-testemunhas').modal({
@@ -388,8 +368,11 @@
             $('#valorPorPrestacao').val(valorPorPrestacao.toFixed(2))    //formatacao de valor
         }
 
-        $('#dataInicioPagamento').val(formatDate(new Date()));
-        function formatDate(date) {
+        $('#dataInicioPagamento').val(formatDataSeguinte(new Date()));
+        $('#dataEmissao').val(formatDataSeguinte(new Date()));
+        $('#dataValidade').val(formatDataSeguinte(new Date()));
+
+        function formatDataSeguinte(date) {
             var day = date.getDate()+1; //dia seguinte
             if(date.getMonth() < 9){
                 monthIndex = '0'+parseInt(date.getMonth()+1);  // mes corrente 0=Janeiro, 1=Fereveiro
@@ -439,11 +422,22 @@
             // alert(JSON.stringify(myObj));
         });
         
-        //submit do formuario
-        // $('#signup-form').submit(function () {
-        //     event.preventDefault();
-        //     console.log( $( this ).serialize() );
-        // });
+        $('#signup-form').submit(function () {
+            event.preventDefault();
+            // console.log( $( this ).serialize() );
+            // alert('shooo')
+            $.ajax({
+                method:'POST',
+                url:'salvar',
+                // data: {'id':id},
+                success: function (data) {
+                    alert(data.msg)
+                },
+                error: function () {
+                    alert('error')
+                }
+            });
+        });
     })
 </script>
 
