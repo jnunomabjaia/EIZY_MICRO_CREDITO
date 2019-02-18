@@ -251,25 +251,7 @@
                                      </div>
                                  </div>
                                  <div class="row" id="div-garantias">
-                                     <div class="col-sm-4" >
-                                         <div class="box box-warning">
-                                             <div class="box-header with-border">
-                                                 <h3 class="box-title">1ª Garantia</h3>
-                                                 <div class="box-tools pull-right">
-                                                     <button type="button" class="btn btn-box-tool btn-add-upload" ><i class="fa fa-plus"></i>
-                                                     </button>
-                                                 </div>
-                                             </div>
-                                             <div class="box-body">
-                                                 <input placeholder="Tipo de garantia" type="text" class="form-control mb-1">
-                                                 <input placeholder="Descricao" type="text" class="form-control mb-1">
-                                                 <input placeholder="Localização" type="text" class="form-control mb-1">
-                                                 <input placeholder="valor" type="text" class="form-control mb-1">
-                                                 <label for="file" class="btn btn-sm btn-primary form-control" title="Upload de Foto">Upload</label>
-                                                 <input type="file" id="file" class="hidden">
-                                             </div>
-                                         </div>
-                                     </div>
+                                     %{--as divs de garantias estarao aqui--}%
                                  </div>
                              </div>
                          </fieldset>
@@ -458,8 +440,9 @@
             });
         });
 
-        $(document).on('click','.btn-add-upload',function () {
-            index = $('.btn-add-upload').length+1;
+        function appendGarantia(){
+            index = $('.btn-add-upload').length+1; //conta divs de garantia que ja existem
+            if(index === 4) return
             $.ajax({
                 method: 'POST',
                 url: 'addGarantiaForm',
@@ -468,7 +451,16 @@
                     $('#div-garantias').append(data);
                 }
             });
-        })
+        }
+
+        $(document).on('click','.btn-add-upload',function () {
+            appendGarantia() //adicona outra div de garantia
+        });
+        $(document).on('click','.btn-remove-upload',function () {
+            boxId = $(this).attr('data-id');
+
+        });
+        appendGarantia()    //adiciona primeira div de garantia
     })
 </script>
 
