@@ -65,6 +65,9 @@ grails:
             maxsize: 1000
     controllers:
         defaultScope: singleton
+        upload:
+            maxFileSize: 209715200
+            maxRequestSize: 209715200
     converters:
         encoding: UTF-8
     views:
@@ -98,8 +101,9 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: update
             url: jdbc:mysql://localhost/micro_credito
+        uploadFolder: "D:/My Bag/upload/"
     test:
         dataSource:
             dbCreate: update

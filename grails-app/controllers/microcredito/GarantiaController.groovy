@@ -1,6 +1,11 @@
 package microcredito
 
+import grails.converters.JSON
 import grails.validation.ValidationException
+import org.grails.core.io.ResourceLocator
+
+import javax.annotation.Resource
+
 import static org.springframework.http.HttpStatus.*
 
 class GarantiaController {
@@ -95,5 +100,41 @@ class GarantiaController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    ResourceLocator r1l
+
+    def upload(){
+//        def file = request.getFile('file')
+//        def file = params.file
+        def rs = [:]
+//        if(file.empty){
+//            rs["msg"]="vazio"
+//        }else{
+//            File f = grailsApplication.mainContext.getResource(file.originalFilename).file  //indica o diretorio dentro do project
+//            file.transferTo(f)                                                              //transfere o file para diretorio indicado acima
+//            f.renameTo(new File('grails-app/assets/images/'+file.originalFilename))         //remove o file para um diretorio especifico
+//            rs["msg"]= "Done"
+//        }
+//        rs["msg"]=file
+//        render rs as JSON
+
+
+//        def files = request.getFiles('file[]')
+//        for (def fi: files){
+//            File f = grailsApplication.mainContext.getResource(fi.originalFilename).file  //indica o diretorio dentro do project
+//            fi.transferTo(f)                                                              //transfere o file para diretorio indicado acima
+//            f.renameTo(new File('grails-app/assets/images/'+fi.originalFilename))
+//        }
+
+        request.getMultiFileMap().file.each{
+//            println it.originalFilename                                                     //'it' e filme
+            File f = grailsApplication.mainContext.getResource(it.originalFilename).file    //indica o diretorio dentro do project
+            it.transferTo(f)
+            f.renameTo(new File('grails-app/assets/images/upload/'+it.originalFilename))    //transfere o file para diretorio indicado acima
+        }
+
+        rs["msg"]="Done"
+        render rs as JSON
     }
 }

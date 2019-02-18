@@ -10,7 +10,9 @@
     <title>Registar Emprestimo</title>
 </head>
 <body>
-
+<div class="js-sweetalert hidden">
+    <button class="btn btn-primary" id="btnSuccess" data-type="success"></button>
+</div>
 <div class="row">
     <div class="col-md-6">
         <div class="main">
@@ -25,13 +27,13 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="apelido">Apelido</label>
-                                        <input type="text" name="apelido" id="apelido"  class="form-control"  required>
+                                        <input type="text" name="apelido" id="apelido"  class="form-control"  required value="Macuvele">
                                         <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
                                         <g:hiddenField name="testemunhas" id="testemunhas"/>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nome">Nomes</label>
-                                        <input type="text" name="nome" id="nome" class="form-control dis"  required/>
+                                        <input type="text" name="nome" id="nome" class="form-control dis"  required value="Fader"/>
                                     </div>
                                 </div>
                                 <div class="row  margin-bottom">
@@ -101,17 +103,17 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="contacto1">Contacto</label>
-                                        <input type="text" name="contacto1" id="contacto1"  class="form-control" value="12334"/>
+                                        <input type="number" name="contacto1" id="contacto1"  class="form-control" value="12334" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="contacto2">Contacto Opcional</label>
-                                        <input type="text" name="contacto2" id="contacto2" class="form-control" value="434534" />
+                                        <input type="number" name="contacto2" id="contacto2" class="form-control" value="434534" />
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
                                     <div class="col-sm-12">
                                         <label class="form-label" for="email">Email</label>
-                                        <input type="text" name="email" id="email"  class="form-control" value="fader@gmail.com"/>
+                                        <input type="email" name="email" id="email"  class="form-control" value="fader@gmail.com"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
@@ -153,7 +155,7 @@
                                         <input type="number" min="0" max="100" name="taxaJuros" id="taxaJuros" class="form-control input-valor" value="0"/>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label" for="valorApagar">Valor a Pagar</label>
+                                        <label class="form-label" for="valorApagar">Valor Disposto a Pagar</label>
                                         <input type="text" readonly name="valorApagar" id="valorApagar" class="form-control" value="0" />
                                     </div>
                                 </div>
@@ -210,29 +212,25 @@
                                 </div>
 
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
                                         <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
                                             </span>
                                             <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
-                                                   placeholder="Nomes das Instituições"
-                                            >
+                                                   placeholder="Nomes das Instituições">
                                         </div>
                                         <input type="hidden" id="outroCredito" name="outroCredito">
                                     </div>
-                                </div>
 
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
                                         <label class="form-label" for="bancos">Conta Bancária</label>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
                                             </span>
-                                            <input type="text" id="bancos" name="bancos" class="form-control"
-                                                   placeholder="Em que bancos">
+                                            <input type="text" id="bancos" name="bancos" class="form-control" placeholder="Em que bancos">
                                         </div>
                                         <input type="hidden" id="contaBancaria" name="contaBancaria">
                                     </div>
@@ -252,6 +250,27 @@
                                          <input type="text" name="relacaoBens" id="relacaoBens" class="form-control" />
                                      </div>
                                  </div>
+                                 <div class="row" id="div-garantias">
+                                     <div class="col-sm-4" >
+                                         <div class="box box-warning">
+                                             <div class="box-header with-border">
+                                                 <h3 class="box-title">1ª Garantia</h3>
+                                                 <div class="box-tools pull-right">
+                                                     <button type="button" class="btn btn-box-tool btn-add-upload" ><i class="fa fa-plus"></i>
+                                                     </button>
+                                                 </div>
+                                             </div>
+                                             <div class="box-body">
+                                                 <input placeholder="Tipo de garantia" type="text" class="form-control mb-1">
+                                                 <input placeholder="Descricao" type="text" class="form-control mb-1">
+                                                 <input placeholder="Localização" type="text" class="form-control mb-1">
+                                                 <input placeholder="valor" type="text" class="form-control mb-1">
+                                                 <label for="file" class="btn btn-sm btn-primary form-control" title="Upload de Foto">Upload</label>
+                                                 <input type="file" id="file" class="hidden">
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
                              </div>
                          </fieldset>
                     </div>
@@ -263,7 +282,7 @@
         <p>sadddddddddddd</p>
     </div>
 </div>
-
+%{--modal de testemunha--}%
 <div class="modal fade" id="modal-testemunhas">
     <div class="modal-dialog">
         <div class="modal-content modal-lg">
@@ -304,6 +323,8 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        // $('#btnSuccess').trigger('click');
+
         $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
         
         $('#btn-testemunhas').click(function () {               //open testemunhas pop-up
@@ -424,86 +445,33 @@
         
         $('#signup-form').submit(function () {
             event.preventDefault();
-            // console.log( $( this ).serialize() );
-            // alert('shooo')
             $.ajax({
-                method:'POST',
-                url:'salvar',
-                // data: {'id':id},
+                method: 'POST',
+                url: 'salvar',
+                data: $(this).serialize(),
                 success: function (data) {
-                    alert(data.msg)
+                    $('#btnSuccess').trigger('click');
                 },
                 error: function () {
                     alert('error')
                 }
             });
         });
+
+        $(document).on('click','.btn-add-upload',function () {
+            index = $('.btn-add-upload').length+1;
+            $.ajax({
+                method: 'POST',
+                url: 'addGarantiaForm',
+                data: {'index':index},
+                success: function (data) {
+                    $('#div-garantias').append(data);
+                }
+            });
+        })
     })
 </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%{--<!DOCTYPE html>--}%
-%{--<html>--}%
-%{--<head>--}%
-    %{--<meta name="layout" content="main" />--}%
-    %{--<g:set var="entityName" value="${message(code: 'emprestimo.label', default: 'Emprestimo')}" />--}%
-    %{--<title><g:message code="default.create.label" args="[entityName]" /></title>--}%
-%{--</head>--}%
-%{--<body>--}%
-%{--<a href="#create-emprestimo" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>--}%
-%{--<div class="nav" role="navigation">--}%
-    %{--<ul>--}%
-        %{--<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>--}%
-        %{--<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>--}%
-    %{--</ul>--}%
-%{--</div>--}%
-%{--<div id="create-emprestimo" class="content scaffold-create" role="main">--}%
-    %{--<h1><g:message code="default.create.label" args="[entityName]" /></h1>--}%
-    %{--<g:if test="${flash.message}">--}%
-        %{--<div class="message" role="status">${flash.message}</div>--}%
-    %{--</g:if>--}%
-    %{--<g:hasErrors bean="${this.emprestimo}">--}%
-        %{--<ul class="errors" role="alert">--}%
-            %{--<g:eachError bean="${this.emprestimo}" var="error">--}%
-                %{--<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>--}%
-            %{--</g:eachError>--}%
-        %{--</ul>--}%
-    %{--</g:hasErrors>--}%
-    %{--<p>Formulario</p>--}%
-    %{--<g:form resource="${this.emprestimo}" method="POST">--}%
-        %{--<fieldset class="form">--}%
-            %{--<f:all bean="emprestimo"/>--}%
-            %{--<g:select name="estado" from="${this.emprestimo.constrainedProperties.estado.inList}" value="${emprestimo?.estado}"/>--}%
-        %{--</fieldset>--}%
-        %{--<fieldset class="buttons">--}%
-            %{--<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
-        %{--</fieldset>--}%
-    %{--</g:form>--}%
-%{--</div>--}%
-%{--</body>--}%
-%{--</html>--}%
-
-
-%{--<g:select id="tipo_casa" name="tipoCasa" from="${Cliente.constrainedProperties.tipoCasa.inList}" class="form-control"/>--}%

@@ -114,7 +114,6 @@ class ClienteController {
         cliente.tipoDocumento = tipoDocumento
         cliente.nrDocumento = params.nrDocumento
         cliente.localEmissao = params.localEmissao
-
         cliente.dataEmissao =  Date.parse("yyyy-MM-dd", params.dataEmissao)
         cliente.dataValidade = Date.parse("yyyy-MM-dd", params.dataValidade)
         cliente.contacto1 = params.contacto1

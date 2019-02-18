@@ -86,6 +86,7 @@
     <orderEntry type="library" name="Gradle: org.grails:grails-datastore-gorm-hibernate5:6.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.1.16.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.grails.plugins:mysql-connectorj:8.0.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.grails.plugins:ajax-tags:1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.1.11" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-datastore-web:6.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-events-compat:3.3.2" level="project" />
@@ -98,7 +99,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.tomcat:tomcat-jdbc:8.5.35" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-datastore-core:6.1.11.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.bertramlabs.plugins:asset-pipeline-grails:2.15.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.grails.plugins:ajax-tags:1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-databinding:3.3.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: io.methvin:directory-watcher:0.5.1" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:grails-codecs:3.3.9" level="project" />
@@ -154,16 +154,16 @@
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-logging-log4j:8.5.2" level="project" />
     <orderEntry type="library" name="Gradle: org.grails:scaffolding-core:1.1.1" level="project" />
     <orderEntry type="library" name="Gradle: javax.el:javax.el-api:2.2.4" level="project" />
-    <orderEntry type="library" name="Gradle: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.el:el-api:2.1.2-b03" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.35" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.11" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.bertramlabs.plugins:asset-pipeline-core:2.15.1" level="project" />
-    <orderEntry type="library" name="Gradle: opensymphony:sitemesh:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.11" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: net.java.dev.jna:jna:4.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: commons-validator:commons-validator:1.5.1" level="project" />
+    <orderEntry type="library" name="Gradle: opensymphony:sitemesh:2.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.guava:guava:23.0" level="project" />
+    <orderEntry type="library" name="Gradle: commons-validator:commons-validator:1.5.1" level="project" />
     <orderEntry type="library" name="Gradle: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />

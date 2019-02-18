@@ -9,14 +9,6 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
     <!--<asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>-->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    %{--<!--[if lt IE 9]>--}%
-  <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-  %{--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--}%
-  <![endif]-->
-    <!-- Application -->
-    %{--<asset:stylesheet src="application.css"/>--}%
     <!-- Bootstrap 3.3.7 -->
     <asset:stylesheet src="bootstrap.min.css"/>
 
@@ -47,6 +39,7 @@
     %{--<asset:stylesheet src="style2.css"/>--}%
 
 <asset:stylesheet src="iCheck/all.css"/>
+<asset:stylesheet src="sweetalert/sweetalert.css"/>
     %{--<link rel="stylesheet" href="../../plugins/iCheck/all.css">--}%
 
     %{--<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">--}%
@@ -153,6 +146,7 @@
                                         <a href="#">
                                             <div class="pull-left">
                                                 <asset:image src="user4-128x128.jpg" alt="User Image" class="img-circle"/>
+
                                             </div>
                                             <h4>
                                                 Reviewers
@@ -836,6 +830,8 @@
 <asset:javascript src="vendor/nouislider/nouislider.min.js"/>
 <asset:javascript src="vendor/wnumb/wNumb.js"/>
 <asset:javascript src="main-wizzard.js"/>
+<asset:javascript src="sweetalert/sweetalert.min.js"/>
+<asset:javascript src="sweetalert/dialogs.js"/>
 
 <script>
     $(function () {

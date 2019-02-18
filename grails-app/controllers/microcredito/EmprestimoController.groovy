@@ -121,30 +121,31 @@ class EmprestimoController {
 
     def salvar(){
 
-//        Emprestimo emprestimo = salvarEmprestimo()
-//        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+        Emprestimo emprestimo = salvarEmprestimo()
+        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         def rs = [:], cont = 0, nrDias = 0
-//
-//        while (cont < emprestimo.nrPrestacoes){
-//            Prestacao prestacao = new Prestacao()
-//            prestacao.valor = params.valorPorPrestacao.toDouble()
-//            prestacao.estado = "Pendente"
-//            prestacao.numero = "PreNow"+cont+""
-//            prestacao.emprestimo = emprestimo
-//            prestacao.dataRegisto = new Date()
-//            prestacao.dataModif = new Date()
-//            prestacao.userRegisto = emprestimo.userRegisto
-//            prestacao.userModif = emprestimo.userRegisto
-//            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
-//            prestacao.save()
-//            cont+=1                                             //incrmenta o contador
-//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
-//            emprestimo.prazoPagamento = prestacao.dataLimite
-//        }
-//        emprestimo.dataInicioPagamento = dataInicial
-//        emprestimo.nrProcesso =  numeroProcesso(emprestimo)
-//        emprestimo.save(flush:true)
-//
+
+        while (cont < emprestimo.nrPrestacoes){
+            Prestacao prestacao = new Prestacao()
+            prestacao.valor = params.valorPorPrestacao.toDouble()
+            prestacao.estado = "Pendente"
+            prestacao.numero = "Pre_"+emprestimo.id+"_"+cont
+            prestacao.emprestimo = emprestimo
+            prestacao.dataRegisto = new Date()
+            prestacao.dataModif = new Date()
+            prestacao.userRegisto = emprestimo.userRegisto
+            prestacao.userModif = emprestimo.userRegisto
+            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
+            prestacao.save()
+            cont+=1                                             //incrmenta o contador
+            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
+            emprestimo.prazoPagamento = prestacao.dataLimite
+        }
+        emprestimo.dataInicioPagamento = dataInicial
+        emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
+        emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
+        emprestimo.save(flush:true)
+
         rs["msg"]="done".toUpperCase()
         render rs as JSON
     }
@@ -187,5 +188,9 @@ class EmprestimoController {
     def numeroProcesso(Emprestimo emp){
         def letraInicial= emp.modalidadePagamento.descricao.toUpperCase().take(1)
         return letraInicial+emp.cliente.id+letraInicial+emp.nrPrestacoes
+    }
+
+    def addGarantiaForm(){
+        render(template: "/garantia/form")
     }
 }

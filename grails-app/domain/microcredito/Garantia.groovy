@@ -14,10 +14,10 @@ class Garantia {
     static belongsTo = [emprestimo: Emprestimo, tipoGarantia: TipoGarantia]
 
     static constraints = {
-        valor(blank: false, min: 0.0)
+        valor(nullable: true)
         descricao (nullable: false, blank: false, maxSize: 45)
-        localizacao (nullable: false, blank: false, maxSize: 45)
-        foto(nullable: false, blank: false, maxSize: 200)
+        localizacao (nullable: true, blank: false, maxSize: 45)
+        foto(nullable: true, blank: false, maxSize: 300)
         tipoGarantia(nullable: false)
     }
 }
