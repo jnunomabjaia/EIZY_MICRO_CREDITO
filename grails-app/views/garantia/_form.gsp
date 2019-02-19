@@ -13,7 +13,7 @@
             <textarea placeholder="Descricao" name="descricao${params.index}" class="mb-1 form-control" rows="3"></textarea>
             <input placeholder="Localização" name="localizacao${params.index}" type="text" class="form-control mb-1">
             <input placeholder="valor" name="valor${params.index}" type="number" class="form-control mb-2">
-            <label for="file-${params.index}" id="label-file-${params.index}" class="btn btn-sm btn-primary form-control" title="Carregar Foto">Upload</label>
+            <label for="file-${params.index}" id="label-file-${params.index}" class="btn btn-sm btn-primary form-control" title="Carregar Foto">Foto</label>
             <input type="file" id="file-${params.index}" name="foto${params.index}" accept="image/*" class="hidden input-upload">
         </div>
     </div>

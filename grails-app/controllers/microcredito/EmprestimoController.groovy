@@ -121,33 +121,35 @@ class EmprestimoController {
 
     def salvar(){
 
-        Emprestimo emprestimo = salvarEmprestimo()
-        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+//        Emprestimo emprestimo = salvarEmprestimo()
+//        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         def rs = [:], cont = 0, nrDias = 0
+//
+//        while (cont < emprestimo.nrPrestacoes){
+//            Prestacao prestacao = new Prestacao()
+//            prestacao.valor = params.valorPorPrestacao.toDouble()
+//            prestacao.estado = "Pendente"
+//            prestacao.numero = "Pre_"+emprestimo.id+"_"+cont
+//            prestacao.emprestimo = emprestimo
+//            prestacao.dataRegisto = new Date()
+//            prestacao.dataModif = new Date()
+//            prestacao.userRegisto = emprestimo.userRegisto
+//            prestacao.userModif = emprestimo.userRegisto
+//            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
+//            prestacao.save()
+//            cont+=1                                             //incrmenta o contador
+//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
+//            emprestimo.prazoPagamento = prestacao.dataLimite
+//        }
+//        emprestimo.dataInicioPagamento = dataInicial
+//        emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
+//        emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
+//        salvarGarantia(emprestimo)                              //salva as garantias
+//        emprestimo.save(flush:true)
 
-        while (cont < emprestimo.nrPrestacoes){
-            Prestacao prestacao = new Prestacao()
-            prestacao.valor = params.valorPorPrestacao.toDouble()
-            prestacao.estado = "Pendente"
-            prestacao.numero = "Pre_"+emprestimo.id+"_"+cont
-            prestacao.emprestimo = emprestimo
-            prestacao.dataRegisto = new Date()
-            prestacao.dataModif = new Date()
-            prestacao.userRegisto = emprestimo.userRegisto
-            prestacao.userModif = emprestimo.userRegisto
-            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
-            prestacao.save()
-            cont+=1                                             //incrmenta o contador
-            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
-            emprestimo.prazoPagamento = prestacao.dataLimite
-        }
-        emprestimo.dataInicioPagamento = dataInicial
-        emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
-        emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
-        salvarGarantia(emprestimo)                              //salva as garantias
-        emprestimo.save(flush:true)
-
+        salvarGarantia(Emprestimo.get(3))                              //salva as garantias
         rs["msg"]="Done"
+//        rs["msg"]=System.currentTimeMillis()
         render rs as JSON
     }
 
@@ -215,6 +217,7 @@ class EmprestimoController {
             def fullNameQuebra = fileUpload.originalFilename.toString().split("\\.")                //quebra o nome original comm ..
             def extensao = fullNameQuebra[fullNameQuebra.length-1]                                      //leva a extensao da foto que fica na ultima posicao
             def nomeFoto = 'IMG_' + new Date().format("yyyyMMHHMMss")+indexString+'.'+extensao
+//            def nomeFoto = 'IMG_' + System.currentTimeMillis()+indexString+'.'+extensao
             File destino = grailsApplication.mainContext.getResource(fileUpload.originalFilename).file  //indica o diretorio dentro do project
             fileUpload.transferTo(destino)                                                              //transfere o file para diretorio statico
             destino.renameTo(new File('grails-app/assets/images/upload/'+nomeFoto))  //transfere o file para diretorio dinamico(especificada por mim)

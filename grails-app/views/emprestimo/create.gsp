@@ -253,7 +253,7 @@
                                  <div class="row" id="div-garantias">
                                      %{--as divs de garantias estarao aqui--}%
                                  </div>
-                                 <input type="text" id="nrGarantias" name="nrGarantias">
+                                 <input type="hidden" id="nrGarantias" name="nrGarantias">
                                  <button type="submit" class="btn btn-primary" id="btnTest">TesteForm</button>
                              </div>
                          </fieldset>
@@ -428,19 +428,19 @@
         });
         
         // $('#signup-form').submit(function () {
-            // event.preventDefault();
-            // $.ajax({
-            //     method: 'POST',
-            //     url: 'salvarGarantia',
-            //     // url: 'salvar',
-            //     data: $(this).serialize(),
-            //     success: function (data) {
-            //         $('#btnSuccess').trigger('click');
-            //     },
-            //     error: function () {
-            //         alert('error')
-            //     }
-            // });
+        //     event.preventDefault();
+        //     $.ajax({
+        //         method: 'POST',
+        //         // url: 'salvarGarantia',
+        //         url: 'salvar',
+        //         data: $(this).serialize(),
+        //         success: function (data) {
+        //             $('#btnSuccess').trigger('click');
+        //         },
+        //         error: function () {
+        //             alert('error')
+        //         }
+        //     });
         // });
 
         /*Funcao que adiciona div de nova garantia*/
@@ -479,7 +479,7 @@
         $(document).on('change','.input-upload',function () {       //acao de input file depois de selecioonar o file
             labelUpload =  $('#label-'+$(this).attr('id'));
             if ($(this).get(0).files.length === 0) {
-                labelUpload.html('Upload');     //caso nao selecionar um file
+                labelUpload.html('Foto');     //caso nao selecionar um file
                 labelUpload.prop('title','Carregar Foto');
                 labelUpload.removeClass('btn-success');
                 labelUpload.addClass('btn-primary');
