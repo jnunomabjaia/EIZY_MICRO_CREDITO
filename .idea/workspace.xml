@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8634c9-ab4b-4d5f-b85a-89837da24759" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/conf/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/conf/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Garantia.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Garantia.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/init/microcredito/BootStrap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/init/microcredito/BootStrap.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" afterDir="false" />
     </list>
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="216" column="22" selection-start-line="216" selection-start-column="22" selection-end-line="216" selection-end-column="22" />
+            <state relative-caret-position="408">
+              <caret line="222" column="51" lean-forward="true" selection-start-line="222" selection-start-column="51" selection-end-line="222" selection-end-column="51" />
               <folding>
                 <element signature="e#22#51#0" expanded="true" />
               </folding>
@@ -71,20 +67,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="255">
+              <caret line="15" column="148" selection-start-line="15" selection-start-column="144" selection-end-line="15" selection-end-column="148" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="425">
+              <caret line="257" column="35" lean-forward="true" selection-start-line="257" selection-start-column="35" selection-end-line="257" selection-end-column="35" />
               <folding>
                 <element signature="e#18299#19719#0#HTML" />
               </folding>
@@ -191,9 +187,9 @@
         <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
         <option value="$PROJECT_DIR$/grails-app/init/microcredito/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Garantia.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" />
       </list>
     </option>
   </component>
@@ -219,32 +215,6 @@
             <path>
               <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
               <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,7 +284,7 @@
       <workItem from="1549884432904" duration="65383000" />
       <workItem from="1550041729455" duration="37035000" />
       <workItem from="1550126560413" duration="21008000" />
-      <workItem from="1550174702328" duration="160624000" />
+      <workItem from="1550174702328" duration="163027000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de form de testemunhas">
       <created>1550042486383</created>
@@ -379,11 +349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550548461727</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="upload success">
+      <created>1550580767209</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550580767209</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292917000" />
+    <option name="totallyTimeSpent" value="295320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -758,21 +735,10 @@
     <MESSAGE value="test de upload de file" />
     <MESSAGE value="render de box de garantia" />
     <MESSAGE value="combo de tipo de garantia" />
-    <option name="LAST_COMMIT_MESSAGE" value="combo de tipo de garantia" />
+    <MESSAGE value="upload success" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload success" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/images/apple-touch-icon-retina.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-steps/jquery.steps.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/vendor/jquery-validation/dist/localization/messages_bn_BD.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1052,16 +1018,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/assets/images/upload/pic.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#18299#19719#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/images/upload/IMG_2019021402352.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1081,20 +1037,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/images/upload/IMG_2019021402041.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/images/upload/IMG_2019021402501.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="148" selection-start-line="15" selection-start-column="144" selection-end-line="15" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="216" column="22" selection-start-line="216" selection-start-column="22" selection-end-line="216" selection-end-column="22" />
+        <state relative-caret-position="408">
+          <caret line="222" column="51" lean-forward="true" selection-start-line="222" selection-start-column="51" selection-end-line="222" selection-end-column="51" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="425">
+          <caret line="257" column="35" lean-forward="true" selection-start-line="257" selection-start-column="35" selection-end-line="257" selection-end-column="35" />
+          <folding>
+            <element signature="e#18299#19719#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
