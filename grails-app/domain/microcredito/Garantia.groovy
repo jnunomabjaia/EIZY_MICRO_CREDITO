@@ -15,7 +15,7 @@ class Garantia {
 
     static constraints = {
         valor(nullable: true)
-        descricao (nullable: false, blank: false, maxSize: 45)
+        descricao (nullable: false, blank: false, maxSize: 45, unique: true)
         localizacao (nullable: true, blank: false, maxSize: 45)
         foto(nullable: true, blank: false, maxSize: 300)
         tipoGarantia(nullable: false)

@@ -27,7 +27,7 @@ class BootStrap {
         }
 
         // Registo de tipos de Prestacao
-        def listTipoPestacao =["Renda Normal","Multa","Parcelamento","Taxa de Concessao"]
+        def listTipoPestacao =["Renda Normal","Multa","Parcela","Taxa de Concessao"]
         for(int i = TipoPrestacao.findAllByDescricaoInList(listTipoPestacao).size(); i < listTipoPestacao.size(); i++){
             new TipoPrestacao("descricao":listTipoPestacao.get(i)).save()
         }
@@ -45,6 +45,7 @@ class BootStrap {
         }
         new User("username":"Fader","password":123456,"perfil":Perfil.get(1)).save()
 
+        //Registo de Tipos de garantia
         def listTipoGarantia =["Carro","Congelador","Geleira","Televisao"]
         for(int i = TipoGarantia.findAllByDescricaoInList(listTipoGarantia).size(); i < listTipoGarantia.size(); i++){
             new TipoGarantia("descricao":listTipoGarantia.get(i),"dataRegisto":new Date(),'dataModif':new Date(),

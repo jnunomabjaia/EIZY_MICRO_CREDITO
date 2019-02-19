@@ -17,7 +17,7 @@
     <div class="col-md-6">
         <div class="main">
             <div class="container">
-                <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off">
+                <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div>
                         <h3>Dados Pessoais</h3>
                         <fieldset>
@@ -253,6 +253,8 @@
                                  <div class="row" id="div-garantias">
                                      %{--as divs de garantias estarao aqui--}%
                                  </div>
+                                 <input type="text" id="nrGarantias" name="nrGarantias">
+                                 <button type="submit" class="btn btn-primary" id="btnTest">TesteForm</button>
                              </div>
                          </fieldset>
                     </div>
@@ -425,33 +427,36 @@
             // alert(JSON.stringify(myObj));
         });
         
-        $('#signup-form').submit(function () {
-            event.preventDefault();
-            $.ajax({
-                method: 'POST',
-                url: 'salvar',
-                data: $(this).serialize(),
-                success: function (data) {
-                    $('#btnSuccess').trigger('click');
-                },
-                error: function () {
-                    alert('error')
-                }
-            });
-        });
+        // $('#signup-form').submit(function () {
+            // event.preventDefault();
+            // $.ajax({
+            //     method: 'POST',
+            //     url: 'salvarGarantia',
+            //     // url: 'salvar',
+            //     data: $(this).serialize(),
+            //     success: function (data) {
+            //         $('#btnSuccess').trigger('click');
+            //     },
+            //     error: function () {
+            //         alert('error')
+            //     }
+            // });
+        // });
 
+        /*Funcao que adiciona div de nova garantia*/
         function appendGarantia(){
             index = $('.btn-add-garantia').length+1; //conta divs de garantia que ja existem
-            if(index === 4) return
+            if(index === 4) return;                     //apenas so aceita 3 divs de garantia
             $.ajax({
                 method: 'POST',
                 url: 'addGarantiaForm',
                 data: {'index':index},
                 success: function (data) {
                     $('#div-garantias').append(data);
-                    $('#btn-remove-1').remove()         //desabilita/apaga button de remover box-garantia
+                    // $('#btn-remove-1').remove()         //desabilita/apaga button de remover box-garantia
                 }
             });
+            $('#nrGarantias').val(index)
         }
 
         $(document).on('click','.btn-add-garantia',function () {
@@ -459,17 +464,34 @@
         });
         $(document).on('click','.btn-remove-garantia',function () {
             boxId = $(this).attr('data-id');
-
             if(boxId == 2 && $('.btn-add-garantia').length === 3){
                 $('#box-title-nr-3').text(boxId+'ª');               //actualiza o titulo de divs de garantia
                 $('#box-title-nr-3').attr('id','box-title-nr-2');
                 $('#btn-remove-3').attr('data-id','2');             //mudanca de data-id
                 $('#btn-remove-3').attr('id','btn-remove-2');       //
                 $('#box-garantia-3').attr('id','box-garantia-2');
+                $('#form-garantia-3').attr('id','form-garantia-2');
             }
             $('#box-garantia-'+boxId).remove();                     //remove o box de garantia usando id da div mae
         });
-        appendGarantia()                                            //adiciona primeira div de garantia na inicializacao
+        appendGarantia();                                            //adiciona primeira div de garantia na inicializacao
+
+        $(document).on('change','.input-upload',function () {       //acao de input file depois de selecioonar o file
+            labelUpload =  $('#label-'+$(this).attr('id'));
+            if ($(this).get(0).files.length === 0) {
+                labelUpload.html('Upload');     //caso nao selecionar um file
+                labelUpload.prop('title','Carregar Foto');
+                labelUpload.removeClass('btn-success');
+                labelUpload.addClass('btn-primary');
+            }else{
+                fileName = $(this).val().split('\\');
+                labelUpload.html('&nbsp;'+fileName[fileName.length-1].substr(0, 20)); //poe o nome do selected file na label e limita o string em 30 characters
+                labelUpload.prop('title','Foto Carregada: '+fileName[fileName.length-1]);
+                labelUpload.removeClass('btn-primary');
+                labelUpload.addClass('btn-success');
+                labelUpload.prepend('<i class="fa fa-check"></i>')
+            }
+        })
     })
 </script>
 

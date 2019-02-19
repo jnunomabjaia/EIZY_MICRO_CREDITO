@@ -144,16 +144,17 @@ class EmprestimoController {
         emprestimo.dataInicioPagamento = dataInicial
         emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
         emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
+        salvarGarantia(emprestimo)                              //salva as garantias
         emprestimo.save(flush:true)
 
-        rs["msg"]="done".toUpperCase()
+        rs["msg"]="Done"
         render rs as JSON
     }
 
     def salvarEmprestimo(){
-        ClienteController clienteController = new ClienteController();
-        Cliente cliente = clienteController.salvarCliente()
-//        Cliente cliente = Cliente.get(1)
+//        ClienteController clienteController = new ClienteController();
+//        Cliente cliente = clienteController.salvarCliente()
+        Cliente cliente = Cliente.get(1)
         ModalidadePagamento modalidadePagamento = ModalidadePagamento.findByDescricao(params.modalidadePagamento)
         Emprestimo emprestimo1 = new Emprestimo()
         emprestimo1.nrProcesso = "nr"
@@ -192,5 +193,34 @@ class EmprestimoController {
 
     def addGarantiaForm(){
         render(template: "/garantia/form", model: ['tipoGarantiaList':TipoGarantia.list()])
+    }
+
+    def salvarGarantia(Emprestimo emprestimo){
+        def nrGarantia = params.nrGarantias.toInteger()+1
+        def index = 1
+        while(nrGarantia > index){
+            def indexString = index.toString()
+            Garantia garantia = new Garantia()
+            TipoGarantia tipoGarantia = TipoGarantia.findByDescricao(params.get('tipoGarantia'+indexString).toString())
+            garantia.tipoGarantia = tipoGarantia
+            garantia.descricao = params.get('descricao'+indexString)
+            garantia.localizacao = params.get('localizacao'+indexString)
+            garantia.valor = Double.parseDouble(params.get('valor'+indexString).toString())
+            garantia.dataRegisto = new Date()
+            garantia.dataModif = new Date()
+            garantia.userRegisto = emprestimo.userRegisto
+            garantia.userModif = emprestimo.userModif
+            garantia.emprestimo = emprestimo
+            def fileUpload = request.getFile('foto'+indexString)
+            def fullNameQuebra = fileUpload.originalFilename.toString().split("\\.")                //quebra o nome original comm ..
+            def extensao = fullNameQuebra[fullNameQuebra.length-1]                                      //leva a extensao da foto que fica na ultima posicao
+            def nomeFoto = 'IMG_' + new Date().format("yyyyMMHHMMss")+indexString+'.'+extensao
+            File destino = grailsApplication.mainContext.getResource(fileUpload.originalFilename).file  //indica o diretorio dentro do project
+            fileUpload.transferTo(destino)                                                              //transfere o file para diretorio statico
+            destino.renameTo(new File('grails-app/assets/images/upload/'+nomeFoto))  //transfere o file para diretorio dinamico(especificada por mim)
+            garantia.foto = nomeFoto
+            garantia.save()
+            index+=1
+        }
     }
 }
