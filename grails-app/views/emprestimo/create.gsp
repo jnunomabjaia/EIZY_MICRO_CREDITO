@@ -201,7 +201,7 @@
                                     <div class="col-md-4">
                                         <label class="form-label" for="destinoCredito">Destino do Crédito</label>
                                         <g:select id="destinoCredito" name="destinoCredito" optionKey="descricao"  optionValue="descricao"
-                                                  from="${destinoCredito}" class="form-control select"/>
+                                                  from="${destinoCreditoList}" class="form-control select"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="btn-testemunhas">&nbsp;</label>
@@ -441,7 +441,7 @@
         });
 
         function appendGarantia(){
-            index = $('.btn-add-upload').length+1; //conta divs de garantia que ja existem
+            index = $('.btn-add-garantia').length+1; //conta divs de garantia que ja existem
             if(index === 4) return
             $.ajax({
                 method: 'POST',
@@ -449,18 +449,27 @@
                 data: {'index':index},
                 success: function (data) {
                     $('#div-garantias').append(data);
+                    $('#btn-remove-1').remove()         //desabilita/apaga button de remover box-garantia
                 }
             });
         }
 
-        $(document).on('click','.btn-add-upload',function () {
+        $(document).on('click','.btn-add-garantia',function () {
             appendGarantia() //adicona outra div de garantia
         });
-        $(document).on('click','.btn-remove-upload',function () {
+        $(document).on('click','.btn-remove-garantia',function () {
             boxId = $(this).attr('data-id');
 
+            if(boxId == 2 && $('.btn-add-garantia').length === 3){
+                $('#box-title-nr-3').text(boxId+'ª');               //actualiza o titulo de divs de garantia
+                $('#box-title-nr-3').attr('id','box-title-nr-2');
+                $('#btn-remove-3').attr('data-id','2');             //mudanca de data-id
+                $('#btn-remove-3').attr('id','btn-remove-2');       //
+                $('#box-garantia-3').attr('id','box-garantia-2');
+            }
+            $('#box-garantia-'+boxId).remove();                     //remove o box de garantia usando id da div mae
         });
-        appendGarantia()    //adiciona primeira div de garantia
+        appendGarantia()                                            //adiciona primeira div de garantia na inicializacao
     })
 </script>
 

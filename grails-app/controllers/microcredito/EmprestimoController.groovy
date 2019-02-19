@@ -28,7 +28,7 @@ class EmprestimoController {
                     'provinciaList':Provincia.list(), 'distritoList':Distrito.list(),
                     'modoPagamentoList':ModalidadePagamento.list(),
                     'tipoCasaList':TipoCasa.list(),
-                    'destinoCredito':DestinoCredito.list()
+                    'destinoCreditoList':DestinoCredito.list(),
         ]
     }
 
@@ -191,6 +191,6 @@ class EmprestimoController {
     }
 
     def addGarantiaForm(){
-        render(template: "/garantia/form")
+        render(template: "/garantia/form", model: ['tipoGarantiaList':TipoGarantia.list()])
     }
 }

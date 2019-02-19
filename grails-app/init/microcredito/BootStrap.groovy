@@ -44,6 +44,13 @@ class BootStrap {
            new Perfil("designacao":listPerfil.get(i)).save()
         }
         new User("username":"Fader","password":123456,"perfil":Perfil.get(1)).save()
+
+        def listTipoGarantia =["Carro","Congelador","Geleira","Televisao"]
+        for(int i = TipoGarantia.findAllByDescricaoInList(listTipoGarantia).size(); i < listTipoGarantia.size(); i++){
+            new TipoGarantia("descricao":listTipoGarantia.get(i),"dataRegisto":new Date(),'dataModif':new Date(),
+                      "userRegisto":User.get(1),"userModif": User.get(1)
+            ).save()
+        }
     }
     def destroy = {
 
