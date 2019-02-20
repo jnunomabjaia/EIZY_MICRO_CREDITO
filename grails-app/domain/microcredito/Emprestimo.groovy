@@ -4,7 +4,7 @@ class Emprestimo {
     Double valorPedido, taxaJuros, valorApagar
     Integer nrPrestacoes
     Date prazoPagamento, dataInicioPagamento
-    String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado, nrProcesso
+    String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado, nrProcesso,relecaoBens
     Boolean outroCredito, contaBancaria
     Cliente cliente
     ModalidadePagamento modalidadePagamento
@@ -29,5 +29,10 @@ class Emprestimo {
         estado(inList: ["Aberto", "Suspenso", "Fechado"])
         dataInicioPagamento(nullable: true, blank: true)
         nrProcesso(nullable: false)
+        relecaoBens(nullable: true, maxSize: 500)
+    }
+
+    static mapping = {
+        relecaoBens type: "text"
     }
 }

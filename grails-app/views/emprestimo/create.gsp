@@ -10,6 +10,7 @@
     <title>Registar Emprestimo</title>
 </head>
 <body>
+<h6>${status}</h6>
 <div class="js-sweetalert hidden">
     <button class="btn btn-primary" id="btnSuccess" data-type="success"></button>
 </div>
@@ -17,6 +18,7 @@
     <div class="col-md-6">
         <div class="main">
             <div class="container">
+                %{--<g:formRemote name="formulario" id="signup-form" class="signup-form" url="[action:'salvar']" onSuccess="carro(data)">--}%
                 <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div>
                         <h3>Dados Pessoais</h3>
@@ -254,12 +256,13 @@
                                      %{--as divs de garantias estarao aqui--}%
                                  </div>
                                  <input type="hidden" id="nrGarantias" name="nrGarantias">
-                                 <button type="submit" class="btn btn-primary" id="btnTest">TesteForm</button>
+                                 %{--<button type="submit" class="btn btn-primary" id="btnTest">TesteForm</button>--}%
                              </div>
                          </fieldset>
                     </div>
                 </form>
-            </div>
+                %{--</g:formRemote>--}%
+                </div>
         </div>
     </div>
     <div class="col-md-6">
@@ -307,8 +310,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        // $('#btnSuccess').trigger('click');
-
         $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
         
         $('#btn-testemunhas').click(function () {               //open testemunhas pop-up
@@ -423,10 +424,9 @@
             var myObj = {
                 "Testemunhas": myRows
             };
-            $('#testemunhas').val(JSON.stringify(myObj));
-            // alert(JSON.stringify(myObj));
+            $('#testemunhas').val(JSON.stringify(myObj)); //prenche o input de testemunhas com dados da tabela no formato JSON
         });
-        
+
         // $('#signup-form').submit(function () {
         //     event.preventDefault();
         //     $.ajax({
@@ -435,13 +435,39 @@
         //         url: 'salvar',
         //         data: $(this).serialize(),
         //         success: function (data) {
-        //             $('#btnSuccess').trigger('click');
+        //             console.log(data)
+        //             // $('#btnSuccess').trigger('click');
         //         },
         //         error: function () {
         //             alert('error')
         //         }
         //     });
         // });
+        $('#signup-form').submit(function () {
+            event.preventDefault();
+            var form_data = new FormData(this);                         //pega todos valores[inputs] no form
+            var nrGarantias = parseInt($('#nrGarantias').val());      //busca nr de garantia k pretende-se salvar
+            for(var id=1; id < nrGarantias+1; id++){
+                var inputFile = $("#file-"+id).prop("files")[0];
+                form_data.append("foto"+id, inputFile);
+            }
+            $.ajax({
+                url: 'salvar',
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,
+                type: 'POST',
+                success: function(data){
+                    // console.log(data);
+                    $('#btnSuccess').trigger('click');
+                },
+                error: function () {
+                    alert('error')
+                }
+            });
+        });
 
         /*Funcao que adiciona div de nova garantia*/
         function appendGarantia(){
@@ -491,7 +517,7 @@
                 labelUpload.addClass('btn-success');
                 labelUpload.prepend('<i class="fa fa-check"></i>')
             }
-        })
+        });
     })
 </script>
 
