@@ -11,50 +11,31 @@
 
     <!-- Bootstrap 3.3.7 -->
     <asset:stylesheet src="bootstrap.min.css"/>
-
     <!-- Ionicons -->
-    <asset:stylesheet src="ionicons.css"/>
     <asset:stylesheet src="ionicons.min.css"/>
-
     <!-- jvectormap -->
     <asset:stylesheet src="jquery-jvectormap.css"/>
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
+    <!-- AdminLTE Skins. Choose a skin from the css/skins -->
     <asset:stylesheet src="_all-skins.min.css"/>
-    <!-- Theme style -->
-    <!-- Google Font -->
-    <asset:stylesheet src="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
-
 
     <asset:stylesheet src="css/solid.min.css"/>
+
     <asset:stylesheet src="css/fontawesome.min.css"/>
+
     <asset:stylesheet src="css/v4-shims.min.css"/>
-
     <!-- formwizzard -->
-
+    <asset:stylesheet src="bootstrap-daterangepicker/daterangepicker.js"/>
 
     <asset:stylesheet src="fonts/material-icon/css/material-design-iconic-font.min.css"/>
+
     <asset:stylesheet src="AdminLTE.min.css"/>
+
+    <asset:stylesheet src="iCheck/all.css"/>
+
+    <asset:stylesheet src="sweetalert/sweetalert.css"/>
+
     <asset:stylesheet src="style.css"/>
-    %{--<asset:stylesheet src="style2.css"/>--}%
 
-<asset:stylesheet src="iCheck/all.css"/>
-<asset:stylesheet src="sweetalert/sweetalert.css"/>
-    %{--<link rel="stylesheet" href="../../plugins/iCheck/all.css">--}%
-
-    %{--<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">--}%
-    %{--<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">--}%
-
-    <!-- Font Awesome -->
-    %{--
-    <asset:stylesheet src="css/all.min.css"/>
-    <asset:stylesheet src="css/brands.min.css"/>
-    <asset:stylesheet src="css/fontawesome.min.css"/>
-    <asset:stylesheet src="css/regular.min.css"/>
-    <asset:stylesheet src="css/solid.min.css"/>
-    <asset:stylesheet src="css/svg-with-js.min.css"/>
-    <asset:stylesheet src="css/v4-shims.min.css"/>
-    --}%
     <g:layoutHead/>
 </head>
 
@@ -775,32 +756,27 @@
 
 
 
-%{--<asset:javascript src="application.js"/>--}%
-<!-- js fontawsome -->
-%{--
-<asset:javascript src="js/all.min.js"/>
-<asset:javascript src="js/fontawesome.min.js"/>
-<asset:javascript src="js/brands.min.js"/>
-<asset:javascript src="js/regular.min.js"/>
-<asset:javascript src="js/solid.min.js"/>
-<asset:javascript src="js/v4-shims.min.js"/>
---}%
-<asset:javascript src="js/v4-shims.min.js"/>
-<asset:javascript src="js/solid.min.js"/>
-<asset:javascript src="js/regular.min.js"/>
-<asset:javascript src="js/brands.min.js"/>
+%{--<asset:javascript src="js/v4-shims.min.js"/>--}%
+%{--<asset:javascript src="js/solid.min.js"/>--}%
+%{--<asset:javascript src="js/regular.min.js"/>--}%
+%{--<asset:javascript src="js/brands.min.js"/>--}%
 
 <asset:javascript src="jquery-3.3.1.slim.min.js"/>
+
+
 
 <!-- jQuery 3 -->
 <asset:javascript src="jquery.min.js"/>
 <!-- Bootstrap 3.3.7 -->
 <asset:javascript src="bootstrap.min.js"/>
-<!-- FastClick -->
 
+<asset:javascript src="moment/min/moment.min.js"/>
+
+<asset:javascript src="bootstrap-daterangepicker/daterangepicker.js"/>
+
+<!-- FastClick -->
 <asset:javascript src="popper.min.js"/>
-%{--<asset:javascript src="jquery-3.3.1.min.js" />--}%
-%{--<asset:javascript src="bootstrap.min.js"/>--}%
+
 <asset:javascript src="bootstable.js" />
 
 <asset:javascript src="fastclick.js"/>
@@ -815,9 +791,7 @@
 <asset:javascript src="jquery.slimscroll.min.js"/>
 <!-- ChartJS -->
 <asset:javascript src="Chart.js"/>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-%{--<asset:javascript src="dashboard2.js"/>--}%
-<!-- AdminLTE for demo purposes -->
+
 <asset:javascript src="demo.js"/>
 
 <asset:javascript src="iCheck/icheck.min.js"/>
@@ -832,11 +806,9 @@
 <asset:javascript src="main-wizzard.js"/>
 <asset:javascript src="sweetalert/sweetalert.min.js"/>
 <asset:javascript src="sweetalert/dialogs.js"/>
-
 <script>
     $(function () {
         setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
-
 
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
@@ -852,6 +824,24 @@
             checkboxClass: 'icheckbox_flat-green',
             radioClass: 'iradio_flat-green'
         });
+
+        // $('#daterange-btn').daterangepicker(
+        //     {
+        //         ranges   : {
+        //             'Today'       : [moment(), moment()],
+        //             'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        //             'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+        //             'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        //             'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+        //             'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        //         },
+        //         startDate: moment().subtract(29, 'days'),
+        //         endDate  : moment()
+        //     },
+        //     function (start, end) {
+        //         $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+        //     }
+        // )
 
         // $('#makeEditable').SetEditable({ $addButton: $('#but_add')});
     })

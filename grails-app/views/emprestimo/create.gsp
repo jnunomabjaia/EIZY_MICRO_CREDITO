@@ -12,13 +12,13 @@
 <body>
 <h6>${status}</h6>
 <div class="js-sweetalert hidden">
-    <button class="btn btn-primary" id="btnSuccess" data-type="success"></button>
+    %{--<button class="btn btn-primary" id="btnSuccess" data-type="success"></button>--}%
+    <button class="btn btn-primary" id="btnSuccess" data-type="ajax-loader"></button>
 </div>
 <div class="row">
     <div class="col-md-6">
         <div class="main">
             <div class="container">
-                %{--<g:formRemote name="formulario" id="signup-form" class="signup-form" url="[action:'salvar']" onSuccess="carro(data)">--}%
                 <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div>
                         <h3>Dados Pessoais</h3>
@@ -29,13 +29,13 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="apelido">Apelido</label>
-                                        <input type="text" name="apelido" id="apelido"  class="form-control"  required value="Macuvele">
+                                        <input type="text" name="apelido" id="apelido" class="form-control"  required >
                                         <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
                                         <g:hiddenField name="testemunhas" id="testemunhas"/>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nome">Nomes</label>
-                                        <input type="text" name="nome" id="nome" class="form-control dis"  required value="Fader"/>
+                                        <input type="text" name="nome" id="nome" class="form-control dis" />
                                     </div>
                                 </div>
                                 <div class="row  margin-bottom">
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nomeConjuge">Nome do Cônjuge</label>
-                                        <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control" value="Ela Mesma" />
+                                        <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
@@ -59,11 +59,11 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="nrDocumento">Número do Documento</label>
-                                        <input type="text" name="nrDocumento" id="nrDocumento" class="form-control" value="1222222223"/>
+                                        <input type="text" name="nrDocumento" id="nrDocumento" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="localEmissao">Local de Emissão</label>
-                                        <input type="text" name="localEmissao" id="localEmissao" class="form-control" value="Maputo" />
+                                        <input type="text" name="localEmissao" id="localEmissao" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
@@ -83,15 +83,15 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
-                                        <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control" value="2000" />
+                                        <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="nrDependentes">Número de Dependentes</label>
-                                        <input type="number" name="nrDependentes" id="nrDependentes" class="form-control" value="12" />
+                                        <input type="number" name="nrDependentes" id="nrDependentes" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="nrFihos">Número de Filhos</label>
-                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control" value="4" />
+                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control"/>
                                     </div>
                                 </div>
                             </div>
@@ -105,17 +105,17 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
                                         <label class="form-label" for="contacto1">Contacto</label>
-                                        <input type="number" name="contacto1" id="contacto1"  class="form-control" value="12334" required>
+                                        <input type="text" name="contacto1" id="contacto1"  class="form-control contacto" >
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="contacto2">Contacto Opcional</label>
-                                        <input type="number" name="contacto2" id="contacto2" class="form-control" value="434534" />
+                                        <input type="text" name="contacto2" id="contacto2" class="form-control contacto"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
                                     <div class="col-sm-12">
                                         <label class="form-label" for="email">Email</label>
-                                        <input type="email" name="email" id="email"  class="form-control" value="fader@gmail.com"/>
+                                        <input type="email" name="email" id="email"  class="form-control select"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
@@ -150,15 +150,15 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="valorPedido">Valor Pretendido</label>
-                                        <input type="number" min="0" name="valorPedido" id="valorPedido" class="form-control input-valor" value="0" />
+                                        <input type="number" min="0" name="valorPedido" id="valorPedido" class="form-control input-valor" />
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="taxaJuros">Taxa de Juros (%)</label>
-                                        <input type="number" min="0" max="100" name="taxaJuros" id="taxaJuros" class="form-control input-valor" value="0"/>
+                                        <input type="number" min="0" max="100" name="taxaJuros" id="taxaJuros" class="form-control input-valor"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="valorApagar">Valor Disposto a Pagar</label>
-                                        <input type="text" readonly name="valorApagar" id="valorApagar" class="form-control" value="0" />
+                                        <input type="text" readonly name="valorApagar" id="valorApagar" class="form-control"/>
                                     </div>
                                 </div>
 
@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="nrPrestacoes">Numero de Prestações</label>
-                                        <input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor" value="1"/>
+                                        <input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="valorPorPrestacao">Valor Por Prestação</label>
@@ -182,7 +182,7 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-4">
                                         <label class="form-label" for="dataInicioPagamento">Data Inicial de Pagamento</label>
-                                        <input  type="date" name="dataInicioPagamento" id="dataInicioPagamento" class="form-control select" value="2019-02-15"/>
+                                        <input  type="date" name="dataInicioPagamento" id="dataInicioPagamento" class="form-control select"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="tipoNegocio">Tipo de Nogócio</label>
@@ -249,7 +249,8 @@
                                  <div class="row margin-bottom">
                                      <div class="col-sm-12">
                                          <label class="form-label" for="relacaoBens">Relação de bens</label>
-                                         <input type="text" name="relacaoBens" id="relacaoBens" class="form-control" />
+                                         <textarea name="relacaoBens" id="relacaoBens" class="form-control" rows="2">
+                                         </textarea>
                                      </div>
                                  </div>
                                  <div class="row" id="div-garantias">
@@ -261,8 +262,7 @@
                          </fieldset>
                     </div>
                 </form>
-                %{--</g:formRemote>--}%
-                </div>
+            </div>
         </div>
     </div>
     <div class="col-md-6">
@@ -272,7 +272,7 @@
 %{--modal de testemunha--}%
 <div class="modal fade" id="modal-testemunhas">
     <div class="modal-dialog">
-        <div class="modal-content modal-lg">
+        <div class="modal-content modal-lg centered">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
@@ -427,22 +427,6 @@
             $('#testemunhas').val(JSON.stringify(myObj)); //prenche o input de testemunhas com dados da tabela no formato JSON
         });
 
-        // $('#signup-form').submit(function () {
-        //     event.preventDefault();
-        //     $.ajax({
-        //         method: 'POST',
-        //         // url: 'salvarGarantia',
-        //         url: 'salvar',
-        //         data: $(this).serialize(),
-        //         success: function (data) {
-        //             console.log(data)
-        //             // $('#btnSuccess').trigger('click');
-        //         },
-        //         error: function () {
-        //             alert('error')
-        //         }
-        //     });
-        // });
         $('#signup-form').submit(function () {
             event.preventDefault();
             var form_data = new FormData(this);                         //pega todos valores[inputs] no form
@@ -451,21 +435,43 @@
                 var inputFile = $("#file-"+id).prop("files")[0];
                 form_data.append("foto"+id, inputFile);
             }
-            $.ajax({
-                url: 'salvar',
-                dataType: 'text',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: form_data,
-                type: 'POST',
-                success: function(data){
-                    // console.log(data);
-                    $('#btnSuccess').trigger('click');
-                },
-                error: function () {
-                    alert('error')
-                }
+
+            swal({
+                title: "Salvar Emprestimo?",
+                imageUrl: "../../assets/question.png",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true
+            }, function () {
+                $.ajax({
+                    url: 'salvar',
+                    dataType: 'text',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: form_data,
+                    type: 'POST',
+                    success: function(data){
+                        setTimeout(function () {
+                            swal({
+                                title: "Certo!",
+                                text: "Emprestimo Salvo com Sucesso!",
+                                timer: 2500,
+                                type:  "success",
+                                showConfirmButton: false
+                            });
+                            $(this).trigger('reset');
+                            for (var r=1; r < 4; r++) {
+                                $('.actions ul li:first-child a').trigger('click');
+                            }
+                        }, 4000);
+                    },
+                    error: function () {
+                        setTimeout(function () {
+                            swal("Cancelled", "Ocorreu erro ao salvar Emprestimo", "error");
+                        }, 2000);
+                    }
+                });
             });
         });
 
@@ -518,9 +524,52 @@
                 labelUpload.prepend('<i class="fa fa-check"></i>')
             }
         });
-    })
-</script>
 
+        $.fn.inputFilter = function(inputFilter) {
+            return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                }
+            });
+        };
+
+        $(".contacto").inputFilter(function(value) {
+            return /^\d*$/.test(value) && (value === "" || value.length <= 9)
+        });
+
+        /*Remocao de label de erro*/
+        $('input').on('focusin', function () {
+            $('#'+$(this).attr('id')+'-error').remove();
+        });
+
+        // var regex = /^[a-zA-Z]*$/;
+        // keypress
+        $('#apelido').on('keyup',function () {
+            try {
+                if (window.event) {
+                    charCode = window.event.keyCode;
+                }else if (e) {
+                    charCode = e.which;
+                }else {
+                    return true;
+                }
+
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode === 32) {
+                    return true;
+                }else {
+                    return false;
+                }
+            } catch (err) {
+                alert(err.Description);
+            }
+        })
+    });
+</script>
 </body>
 
 </html>

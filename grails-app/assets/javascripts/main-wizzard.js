@@ -6,6 +6,7 @@
     form.validate({
         errorPlacement: function errorPlacement(error, element) {
             element.before(error);
+            // element.after(error);
         },
         rules: {
             email: {
@@ -29,23 +30,25 @@
             current: ''
         },
         onStepChanging: function(event, currentIndex, newIndex) {
-            if (currentIndex === 0) {
-                form.parent().parent().parent().append('<div class="footer footer-' + currentIndex + '"></div>');
-            }
-            if (currentIndex === 1) {
-                form.parent().parent().parent().find('.footer').removeClass('footer-0').addClass('footer-' + currentIndex + '');
-            }
-            if (currentIndex === 2) {
-                form.parent().parent().parent().find('.footer').removeClass('footer-1').addClass('footer-' + currentIndex + '');
-            }
-            if (currentIndex === 3) {
-                form.parent().parent().parent().find('.footer').removeClass('footer-2').addClass('footer-' + currentIndex + '');
-            }
-            // if(currentIndex === 4) {
-            //     form.parent().parent().parent().append('<div class="footer" style="height:752px;"></div>');
+            // if (currentIndex === 0) {
+            //     form.parent().parent().parent().append('<div class="footer footer-' + currentIndex + '"></div>');
             // }
-            form.validate().settings.ignore = ":disabled,:hidden";
-            return form.valid();
+            // if (currentIndex === 1) {
+            //     form.parent().parent().parent().find('.footer').removeClass('footer-0').addClass('footer-' + currentIndex + '');
+            // }
+            // if (currentIndex === 2) {
+            //     form.parent().parent().parent().find('.footer').removeClass('footer-1').addClass('footer-' + currentIndex + '');
+            // }
+            // if (currentIndex === 3) {
+            //     form.parent().parent().parent().find('.footer').removeClass('footer-2').addClass('footer-' + currentIndex + '');
+            // }
+
+            if(currentIndex < newIndex ){       //validar so quando faz next
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            }else{                              //nao valida
+                return true
+            }
         },
         onFinishing: function(event, currentIndex) {
             form.validate().settings.ignore = ":disabled";
@@ -53,7 +56,7 @@
         },
         onFinished: function(event, currentIndex) {
             // alert('Submited');
-            $(this).submit()
+            $(this).submit();
         },
         onStepChanged: function(event, currentIndex, priorIndex) {
             return true;
