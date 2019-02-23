@@ -1,6 +1,6 @@
 package microcredito
 
-class ModalidadePagamento {
+class ModoPagamento {
 
     String descricao
     Integer nrDias

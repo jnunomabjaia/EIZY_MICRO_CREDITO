@@ -26,9 +26,10 @@ class EmprestimoController {
         respond new Emprestimo(params),
             model: ['tipoDocumentoList': TipoDocumento,
                     'provinciaList':Provincia.list(), 'distritoList':Distrito.list(),
-                    'modoPagamentoList':ModalidadePagamento.list(),
+                    'modoPagamentoList':ModoPagamento.list(),
                     'tipoCasaList':TipoCasa.list(),
                     'destinoCreditoList':DestinoCredito.list(),
+                    'cliente': Cliente
         ]
     }
 
@@ -154,7 +155,7 @@ class EmprestimoController {
     def salvarEmprestimo(){
         Cliente cliente = new ClienteController().salvarCliente()
 //        Cliente cliente = Cliente.get(1)
-        ModalidadePagamento modalidadePagamento = ModalidadePagamento.findByDescricao(params.modalidadePagamento)
+        ModoPagamento modoPagamento = ModoPagamento.findByDescricao(params.modalidadePagamento)
         Emprestimo emprestimo1 = new Emprestimo()
         emprestimo1.nrProcesso = "nr"
         emprestimo1.valorPedido=params.valorPedido.toDouble()
@@ -178,7 +179,7 @@ class EmprestimoController {
         emprestimo1.estado = "Aberto"
         emprestimo1.relecaoBens = params.relacaoBens
         emprestimo1.cliente = cliente
-        emprestimo1.modalidadePagamento = modalidadePagamento
+        emprestimo1.modoPagamento = modoPagamento
 
         if(!emprestimo1.hasErrors()){
             emprestimo1.save()

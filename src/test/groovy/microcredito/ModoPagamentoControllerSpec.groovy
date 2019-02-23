@@ -5,7 +5,7 @@ import grails.testing.web.controllers.ControllerUnitTest
 import grails.validation.ValidationException
 import spock.lang.*
 
-class ModalidadePagamentoControllerSpec extends Specification implements ControllerUnitTest<ModalidadePagamentoController>, DomainUnitTest<ModalidadePagamento> {
+class ModoPagamentoControllerSpec extends Specification implements ControllerUnitTest<ModalidadePagamentoController>, DomainUnitTest<ModoPagamento> {
 
     def populateValidParams(params) {
         assert params != null
@@ -52,7 +52,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the save action correctly persists"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * save(_ as ModalidadePagamento)
+            1 * save(_ as ModoPagamento)
         }
 
         when:"The save action is executed with a valid instance"
@@ -60,7 +60,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
         request.contentType = FORM_CONTENT_TYPE
         request.method = 'POST'
         populateValidParams(params)
-        def modalidadePagamento = new ModalidadePagamento(params)
+        def modalidadePagamento = new ModoPagamento(params)
         modalidadePagamento.id = 1
 
         controller.save(modalidadePagamento)
@@ -73,7 +73,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the save action with an invalid instance"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * save(_ as ModalidadePagamento) >> { ModalidadePagamento modalidadePagamento ->
+            1 * save(_ as ModoPagamento) >> { ModoPagamento modalidadePagamento ->
                 throw new ValidationException("Invalid instance", modalidadePagamento.errors)
             }
         }
@@ -81,7 +81,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
         when:"The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
         request.method = 'POST'
-        def modalidadePagamento = new ModalidadePagamento()
+        def modalidadePagamento = new ModoPagamento()
         controller.save(modalidadePagamento)
 
         then:"The create view is rendered again with the correct model"
@@ -105,14 +105,14 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the show action with a valid id"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * get(2) >> new ModalidadePagamento()
+            1 * get(2) >> new ModoPagamento()
         }
 
         when:"A domain instance is passed to the show action"
         controller.show(2)
 
         then:"A model is populated containing the domain instance"
-        model.modalidadePagamento instanceof ModalidadePagamento
+        model.modalidadePagamento instanceof ModoPagamento
     }
 
     void "Test the edit action with a null id"() {
@@ -131,14 +131,14 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the edit action with a valid id"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * get(2) >> new ModalidadePagamento()
+            1 * get(2) >> new ModoPagamento()
         }
 
         when:"A domain instance is passed to the show action"
         controller.edit(2)
 
         then:"A model is populated containing the domain instance"
-        model.modalidadePagamento instanceof ModalidadePagamento
+        model.modalidadePagamento instanceof ModoPagamento
     }
 
 
@@ -156,7 +156,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the update action correctly persists"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * save(_ as ModalidadePagamento)
+            1 * save(_ as ModoPagamento)
         }
 
         when:"The save action is executed with a valid instance"
@@ -164,7 +164,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
         request.contentType = FORM_CONTENT_TYPE
         request.method = 'PUT'
         populateValidParams(params)
-        def modalidadePagamento = new ModalidadePagamento(params)
+        def modalidadePagamento = new ModoPagamento(params)
         modalidadePagamento.id = 1
 
         controller.update(modalidadePagamento)
@@ -177,7 +177,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
     void "Test the update action with an invalid instance"() {
         given:
         controller.modalidadePagamentoService = Mock(ModalidadePagamentoService) {
-            1 * save(_ as ModalidadePagamento) >> { ModalidadePagamento modalidadePagamento ->
+            1 * save(_ as ModoPagamento) >> { ModoPagamento modalidadePagamento ->
                 throw new ValidationException("Invalid instance", modalidadePagamento.errors)
             }
         }
@@ -185,7 +185,7 @@ class ModalidadePagamentoControllerSpec extends Specification implements Control
         when:"The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
         request.method = 'PUT'
-        controller.update(new ModalidadePagamento())
+        controller.update(new ModoPagamento())
 
         then:"The edit view is rendered again with the correct model"
         model.modalidadePagamento != null

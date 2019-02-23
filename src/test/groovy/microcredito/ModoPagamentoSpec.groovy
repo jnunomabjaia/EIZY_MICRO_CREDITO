@@ -3,7 +3,7 @@ package microcredito
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class ModalidadePagamentoSpec extends Specification implements DomainUnitTest<ModalidadePagamento> {
+class ModoPagamentoSpec extends Specification implements DomainUnitTest<ModoPagamento> {
 
     def setup() {
     }

@@ -35,8 +35,8 @@ class BootStrap {
         //Registo de modalidades de pagamento
         def listModalidades =["Diaria","Semanal","Mensal"]
         def listDias =[1,7,30]
-        for(int i = ModalidadePagamento.findAllByDescricaoInList(listModalidades).size(); i < listModalidades.size(); i++){
-            new ModalidadePagamento("descricao":listModalidades.get(i),"nrDias":listDias.get(i)).save()
+        for(int i = ModoPagamento.findAllByDescricaoInList(listModalidades).size(); i < listModalidades.size(); i++){
+            new ModoPagamento("descricao":listModalidades.get(i),"nrDias":listDias.get(i)).save()
         }
 
         def listPerfil =["Developer"]

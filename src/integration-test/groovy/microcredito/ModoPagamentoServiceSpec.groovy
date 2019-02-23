@@ -7,18 +7,18 @@ import org.hibernate.SessionFactory
 
 @Integration
 @Rollback
-class ModalidadePagamentoServiceSpec extends Specification {
+class ModoPagamentoServiceSpec extends Specification {
 
     ModalidadePagamentoService modalidadePagamentoService
     SessionFactory sessionFactory
 
     private Long setupData() {
         // TODO: Populate valid domain instances and return a valid ID
-        //new ModalidadePagamento(...).save(flush: true, failOnError: true)
-        //new ModalidadePagamento(...).save(flush: true, failOnError: true)
-        //ModalidadePagamento modalidadePagamento = new ModalidadePagamento(...).save(flush: true, failOnError: true)
-        //new ModalidadePagamento(...).save(flush: true, failOnError: true)
-        //new ModalidadePagamento(...).save(flush: true, failOnError: true)
+        //new ModoPagamento(...).save(flush: true, failOnError: true)
+        //new ModoPagamento(...).save(flush: true, failOnError: true)
+        //ModoPagamento modalidadePagamento = new ModoPagamento(...).save(flush: true, failOnError: true)
+        //new ModoPagamento(...).save(flush: true, failOnError: true)
+        //new ModoPagamento(...).save(flush: true, failOnError: true)
         assert false, "TODO: Provide a setupData() implementation for this generated test suite"
         //modalidadePagamento.id
     }
@@ -34,7 +34,7 @@ class ModalidadePagamentoServiceSpec extends Specification {
         setupData()
 
         when:
-        List<ModalidadePagamento> modalidadePagamentoList = modalidadePagamentoService.list(max: 2, offset: 2)
+        List<ModoPagamento> modalidadePagamentoList = modalidadePagamentoService.list(max: 2, offset: 2)
 
         then:
         modalidadePagamentoList.size() == 2
@@ -65,7 +65,7 @@ class ModalidadePagamentoServiceSpec extends Specification {
     void "test save"() {
         when:
         assert false, "TODO: Provide a valid instance to save"
-        ModalidadePagamento modalidadePagamento = new ModalidadePagamento()
+        ModoPagamento modalidadePagamento = new ModoPagamento()
         modalidadePagamentoService.save(modalidadePagamento)
 
         then:

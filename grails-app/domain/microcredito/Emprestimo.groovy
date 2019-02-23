@@ -7,14 +7,14 @@ class Emprestimo {
     String destinoCredito, tipoNegocio, localNegocio, experienciaNegocio, instituicoescredito, bancos, estado, nrProcesso,relecaoBens
     Boolean outroCredito, contaBancaria
     Cliente cliente
-    ModalidadePagamento modalidadePagamento
+    ModoPagamento modoPagamento
     Date dataRegisto
     Date dataModif
     User userRegisto
     User userModif
 
     static  hasMany = [prestacoes: Prestacao, garantias: Garantia]
-    static belongsTo = [cliente:Cliente, modalidadePagamento:ModalidadePagamento]
+    static belongsTo = [cliente:Cliente, modoPagamento:ModoPagamento]
 
     static constraints = {
         valorPedido(blank: false)

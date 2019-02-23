@@ -19,10 +19,10 @@ class ModalidadePagamentoController {
     }
 
     def create() {
-        respond new ModalidadePagamento(params)
+        respond new ModoPagamento(params)
     }
 
-    def save(ModalidadePagamento modalidadePagamento) {
+    def save(ModoPagamento modalidadePagamento) {
         if (modalidadePagamento == null) {
             notFound()
             return
@@ -37,7 +37,7 @@ class ModalidadePagamentoController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'modalidadePagamento.label', default: 'ModalidadePagamento'), modalidadePagamento.id])
+                flash.message = message(code: 'default.created.message', args: [message(code: 'modalidadePagamento.label', default: 'ModoPagamento'), modalidadePagamento.id])
                 redirect modalidadePagamento
             }
             '*' { respond modalidadePagamento, [status: CREATED] }
@@ -48,7 +48,7 @@ class ModalidadePagamentoController {
         respond modalidadePagamentoService.get(id)
     }
 
-    def update(ModalidadePagamento modalidadePagamento) {
+    def update(ModoPagamento modalidadePagamento) {
         if (modalidadePagamento == null) {
             notFound()
             return
@@ -63,7 +63,7 @@ class ModalidadePagamentoController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'modalidadePagamento.label', default: 'ModalidadePagamento'), modalidadePagamento.id])
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'modalidadePagamento.label', default: 'ModoPagamento'), modalidadePagamento.id])
                 redirect modalidadePagamento
             }
             '*'{ respond modalidadePagamento, [status: OK] }
@@ -80,7 +80,7 @@ class ModalidadePagamentoController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'modalidadePagamento.label', default: 'ModalidadePagamento'), id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'modalidadePagamento.label', default: 'ModoPagamento'), id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -90,7 +90,7 @@ class ModalidadePagamentoController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'modalidadePagamento.label', default: 'ModalidadePagamento'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'modalidadePagamento.label', default: 'ModoPagamento'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

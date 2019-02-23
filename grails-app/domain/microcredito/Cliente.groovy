@@ -34,4 +34,9 @@ class Cliente {
         tipoDocumento(blank:false, nullable: false)
         avalista(nullable: true)
     }
+
+    String getNomeCompleto(){
+        return "$nome $apelido"
+    }
+    static transients = ['nomeCompleto']
 }

@@ -26,6 +26,8 @@
     <!-- formwizzard -->
     <asset:stylesheet src="bootstrap-daterangepicker/daterangepicker.js"/>
 
+    <asset:stylesheet src="select2/select2.min.css"/>
+
     <asset:stylesheet src="fonts/material-icon/css/material-design-iconic-font.min.css"/>
 
     <asset:stylesheet src="AdminLTE.min.css"/>
@@ -769,6 +771,8 @@
 <asset:javascript src="jquery.min.js"/>
 <!-- Bootstrap 3.3.7 -->
 <asset:javascript src="bootstrap.min.js"/>
+
+<asset:javascript src="select2/select2.full.min.js"/>
 
 <asset:javascript src="moment/min/moment.min.js"/>
 

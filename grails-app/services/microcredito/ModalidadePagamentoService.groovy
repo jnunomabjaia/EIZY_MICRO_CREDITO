@@ -2,17 +2,17 @@ package microcredito
 
 import grails.gorm.services.Service
 
-@Service(ModalidadePagamento)
+@Service(ModoPagamento)
 interface ModalidadePagamentoService {
 
-    ModalidadePagamento get(Serializable id)
+    ModoPagamento get(Serializable id)
 
-    List<ModalidadePagamento> list(Map args)
+    List<ModoPagamento> list(Map args)
 
     Long count()
 
     void delete(Serializable id)
 
-    ModalidadePagamento save(ModalidadePagamento modalidadePagamento)
+    ModoPagamento save(ModoPagamento modalidadePagamento)
 
 }
