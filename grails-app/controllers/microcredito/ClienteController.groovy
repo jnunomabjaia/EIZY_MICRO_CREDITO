@@ -2,6 +2,11 @@ package microcredito
 
 import grails.converters.JSON
 import grails.validation.ValidationException
+import groovy.json.JsonSlurper
+import org.grails.web.json.JSONObject
+
+import java.lang.annotation.Target
+
 import static org.springframework.http.HttpStatus.*
 
 class ClienteController {
@@ -11,8 +16,12 @@ class ClienteController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+
+        def obj = new JsonSlurper().parseText(Cliente.get(6).testemunhas)
+        println obj.Nome
+
         params.max = Math.min(max ?: 10, 100)
-        respond clienteService.list(params), model:[clienteCount: clienteService.count()]
+        respond clienteService.list(params), model:[clienteCount: clienteService.count(), munhas:obj]
     }
 
     def show(Long id) {
@@ -98,17 +107,32 @@ class ClienteController {
         }
     }
 
+    def retornaInt(def input){
+        if(input == null || input == ""){
+            return 0
+        }else{
+            return input.toInteger()
+        }
+    }
+
+    def retornaDouble(def input){
+        if(input == null || input == ""){
+            return 0
+        }else{
+            return input.toDouble()
+        }
+    }
+
     def salvarCliente(){
         Cliente cliente = new Cliente()
+        cliente.nome = params.nomeCompleto
         cliente.codigo = "codigo"
-        cliente.apelido = params.apelido
-        cliente.nome = params.nome
         cliente.estadoCivil = params.estadoCivil
         cliente.nomeConjuge = params.nomeConjuge
         cliente.tipoContrato = params.tipoContrato
         cliente.anoAdmissao = params.anoAdmissao
-        cliente.nrDependentes = params.nrDependentes.toInteger()
-        cliente.nrFilhos = params.nrFihos.toInteger()
+        cliente.nrDependentes = retornaInt(params.nrDependentes)
+        cliente.nrFilhos = retornaInt(params.nrFihos)
         cliente.estado = "Activo"
         TipoDocumento tipoDocumento = TipoDocumento.get(params.tipoDocumento)
         cliente.tipoDocumento = tipoDocumento
@@ -122,6 +146,8 @@ class ClienteController {
         cliente.testemunhas = params.testemunhas
         cliente.endereco = params.endereco
         cliente.tipoCasa = params.tipoCasa
+        cliente.amplitude = retornaDouble(params.amplitude)
+        cliente.longitude = retornaDouble(params.longitude)
 
         Distrito dist = Distrito.get(params.distrito)
         cliente.distrito = dist
@@ -132,9 +158,22 @@ class ClienteController {
         cliente.dataRegisto = new Date()
         cliente.dataModif = new Date()
 
+        Cliente avalista = Cliente.get(params.avalista)
+        cliente.avalista = avalista
+
         if(!cliente.hasErrors()) {
             cliente.save()
         }
         return  cliente
+    }
+
+    def salvarAvalista(){
+//        salvarCliente()
+//        render(template: "avalistaCombo", model: ['cliente': Cliente])
+
+        def cliente = Cliente.get(1)
+        bindData(cliente, params,[exclude:['nome','nrFilhos','nrDependentes']])
+        println cliente.nome
+        render "ssss"
     }
 }

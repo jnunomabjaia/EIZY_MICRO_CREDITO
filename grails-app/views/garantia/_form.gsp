@@ -8,13 +8,25 @@
             </div>
         </div>
         <div class="box-body">
-            <g:select id="tipoGarantia" name="tipoGarantia${params.index}" optionKey="descricao"  optionValue="descricao" title="Tipo de garantia"
-              from="${tipoGarantiaList}" class="form-control select mb-1" />
+            <div class="input-group input-group-sm mb-2">
+                <g:select id="tipoGarantia" name="tipoGarantia${params.index}" optionKey="descricao"  optionValue="descricao" title="Tipo de garantia"
+                          from="${tipoGarantiaList}" class="form-control select" />
+                <span class="input-group-btn p-0">
+                    <button type="button" class="btn btn-info btn-flat" id="btn-add-tipoGarantia" title="Adicionar Outro Tipo de Garantia">Add</button>
+                </span>
+            </div>
+
             <textarea placeholder="Descricao" name="descricao${params.index}" class="mb-1 form-control select" rows="3"></textarea>
             <input placeholder="Localização" name="localizacao${params.index}" type="text" class="form-control mb-1">
-            <input placeholder="valor" name="valor${params.index}" type="number" class="form-control mb-2">
+            <input placeholder="valor" name="valor${params.index}" type="text" class="form-control mb-2">
             <label for="file-${params.index}" id="label-file-${params.index}" class="btn btn-sm btn-primary form-control" title="Carregar Foto">Foto</label>
             <input type="file" id="file-${params.index}" name="foto${params.index}" accept="image/*" class="hidden input-upload">
             </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#tipoGarantia').selectpicker();
+    });
+</script>

@@ -10,6 +10,7 @@
     <!--<asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>-->
 
     <!-- Bootstrap 3.3.7 -->
+    %{--<asset:stylesheet src="bootstrap.min.css"/>--}%
     <asset:stylesheet src="bootstrap.min.css"/>
     <!-- Ionicons -->
     <asset:stylesheet src="ionicons.min.css"/>
@@ -37,6 +38,10 @@
     <asset:stylesheet src="sweetalert/sweetalert.css"/>
 
     <asset:stylesheet src="style.css"/>
+
+    <asset:stylesheet src="bootstrap-select/css/bootstrap-select.css"/>
+
+    <asset:stylesheet src="jquery-editable-select/jquery-editable-select.css"/>
 
     <g:layoutHead/>
 </head>
@@ -800,6 +805,9 @@
 
 <asset:javascript src="iCheck/icheck.min.js"/>
 
+<asset:javascript src="bootstrap-select/js/bootstrap-select.js"/>
+<asset:javascript src="jquery-editable-select/jquery-editable-select.js"/>
+
 <!-- formwizzard -->
 <asset:javascript src="vendor/jquery-validation/dist/jquery.validate.min.js"/>
 <asset:javascript src="vendor/jquery-validation/dist/additional-methods.min.js"/>
@@ -813,6 +821,7 @@
 <script>
     $(function () {
         setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+        $('select').selectpicker();
 
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',

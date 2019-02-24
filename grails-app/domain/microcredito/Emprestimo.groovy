@@ -17,22 +17,20 @@ class Emprestimo {
     static belongsTo = [cliente:Cliente, modoPagamento:ModoPagamento]
 
     static constraints = {
-        valorPedido(blank: false)
-        taxaJuros (blank: false)
-        cliente(nullable: false)
         destinoCredito(blank: true, maxSize: 45, inList: ['Negocio','Consumo'])
-        tipoNegocio(blank: true, maxSize: 45)
-        localNegocio(blank: true, maxSize: 45)
+        tipoNegocio(blank: true, nullable: true, maxSize: 45)
+        localNegocio(blank: true,nullable: true, maxSize: 45)
         experienciaNegocio(blank: true,nullable: true, maxSize: 100)
-        instituicoescredito(blank: true,nullable: true, maxSize: 500)
-        bancos(blank: true, nullable: true, maxSize: 500)
+        instituicoescredito(blank: true,nullable: true)
+        bancos(blank: true, nullable: true)
         estado(inList: ["Aberto", "Suspenso", "Fechado"])
         dataInicioPagamento(nullable: true, blank: true)
-        nrProcesso(nullable: false)
-        relecaoBens(nullable: true, maxSize: 500)
+        relecaoBens(nullable: true)
     }
 
     static mapping = {
         relecaoBens type: "text"
+        instituicoescredito type: "text"
+        bancos type: "text"
     }
 }

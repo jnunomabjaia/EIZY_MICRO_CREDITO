@@ -20,85 +20,124 @@
         <div class="main">
             <div class="container">
                 <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
+                    <g:hiddenField name="testemunhas" id="testemunhas"/>
+                    <g:hiddenField name="idCliente" id="idCliente" value="0"/>
                     <div>
                         <h3>Cliente</h3>
-                        <fieldset>
+                        <fieldset id="fieldset-cliente">
                             <h4 class="wizzard-title"><i class="fa fa-user"></i>&nbsp;Dados Pessoais</h4>
                             <hr class="hr">
                             <div class="fieldset-content">
                                 <div class="row margin-bottom">
+                                    <div class="col-sm-6 pr-0">
+                                        <label class="form-label" for="nomeCompleto">Nome Completo</label>
+                                        <div class="input-group">
+                                            <div class="has-feedback has-clear">
+                                                <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto">
+                                                <span id="clear-nomeCompleto" class="form-control-feedback fa fa-times"
+                                                    title="Limpar campo">
+                                                </span>
+                                            </div>
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default btn-open-modal"
+                                                        title="Selecionar Cliente ja Existente"
+                                                        data-modal="modal-cliente">Add
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="apelido">Apelido</label>
-                                        <input type="text" name="apelido" id="apelido" class="form-control">
-                                        <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
-                                        <g:hiddenField name="testemunhas" id="testemunhas"/>
+                                        <div class="row">
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
+                                                <g:select id="tipoDocumento" name="tipoDocumento" optionKey="id" optionValue="descricao"
+                                                          from="${tipoDocumentoList.list()}" class="form-control select"
+                                                />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label" for="nrDocumento">Nº do Documento</label>
+                                                <input type="text" name="nrDocumento" id="nrDocumento" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6 pr-0">
+                                        <label class="form-label" for="localEmissao">Local de Emissão</label>
+                                        <input type="text" name="localEmissao" id="localEmissao" class="form-control"/>
                                     </div>
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="nome">Nomes</label>
-                                        <input type="text" name="nome" id="nome" class="form-control dis" />
+                                        <div class="row">
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="dataEmissao">Data de Emissão</label>
+                                                <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select data-hoje" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label class="form-label" for="dataValidade">Data de validade</label>
+                                                <input type="date" name="dataValidade" id="dataValidade" class="form-control select data-hoje" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row  margin-bottom">
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="estadoCivil">Estado Civil</label>
-                                        <g:select  class="form-control select" id="estadoCivil" name="estadoCivil"
-                                                   from="${cliente.constrainedProperties.estadoCivil.inList}"
-                                        />
+                                        <div class="row">
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="nrDependentes">Nº de Dependentes</label>
+                                                <input type="number" name="nrDependentes" id="nrDependentes" class="form-control"/>
+                                            </div>
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="estadoCivil">Estado Civil</label>
+                                                <g:select  class="form-control select" id="estadoCivil" name="estadoCivil"
+                                                           from="${cliente.constrainedProperties.estadoCivil.inList}"
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div class="col-sm-6">
                                         <label class="form-label" for="nomeConjuge">Nome do Cônjuge</label>
                                         <input type="text" name="nomeConjuge" id="nomeConjuge" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
-                                        <g:select id="tipoDocumento" name="tipoDocumento" optionKey="id" optionValue="descricao"
-                                                  from="${tipoDocumentoList.list()}" class="form-control select"
-                                        />
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="nrFihos">Nº de Filhos</label>
+                                                <input type="number" name="nrFihos" id="nrFihos" class="form-control"/>
+                                            </div>
+
+                                            <div class="col-sm-6 pr-0">
+                                                <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
+                                                <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control" title="Ano de admissao no trabalho"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="nrDocumento">Número do Documento</label>
-                                        <input type="text" name="nrDocumento" id="nrDocumento" class="form-control"/>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="localEmissao">Local de Emissão</label>
-                                        <input type="text" name="localEmissao" id="localEmissao" class="form-control"/>
-                                    </div>
-                                </div>
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="dataEmissao">Data de Emissão</label>
-                                        <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select" />
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="dataValidade">Data de validade</label>
-                                        <input type="date" name="dataValidade" id="dataValidade" class="form-control select" />
-                                    </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <label class="form-label" for="tipoContrato">Tipo de Contrato de Trabaho</label>
-                                        <input type="text" name="tipoContrato" id="tipoContrato" class="form-control" value="Tiposs" />
+                                        <input type="text" name="tipoContrato" id="tipoContrato" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="row margin-bottom">
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
-                                        <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control"/>
+                                    <div class="col-sm-6 pr-0" id="div-avalista">
+                                        <g:render template="/cliente/avalistaCombo"/>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="nrDependentes">Número de Dependentes</label>
-                                        <input type="number" name="nrDependentes" id="nrDependentes" class="form-control"/>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <label class="form-label" for="nrFihos">Número de Filhos</label>
-                                        <input type="number" name="nrFihos" id="nrFihos" class="form-control"/>
+                                    <div class="col-sm-6 ">
+                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
+                                        <button type="button" class="btn btn-warning pl-0 btn-open-modal" data-modal="modal-testemunhas"style="width: 100%" id="btn-testemunhas" title="Adicionar Testemunhas">
+                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
 
                         <h3>Contacto e Endereço</h3>
-                        <fieldset>
+                        <fieldset id="fieldset-cont-endereco">
                             <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Contacto e Endereço</h4>
                             <hr class="hr">
                             <div class="fieldset-content">
@@ -133,7 +172,7 @@
                                         <div class="row">
                                             <div class="col-sm-12 pr-0">
                                                 <label class="form-label" for="endereco">Morada</label>
-                                                <textarea rows="5" class="form-control" name="endereco" id="endereco">
+                                                <textarea rows="5" class="form-control select" name="endereco" id="endereco">
 
                                                 </textarea>
                                             </div>
@@ -150,7 +189,7 @@
 
                                             <div class="col-sm-12 margin-bottom">
                                                 <label class="form-label" for="amplitude">Amplitude</label>
-                                                <input type="text" id="amplitude" name="mplitude"   class="form-control">
+                                                <input type="text" id="amplitude" name="amplitude"   class="form-control">
                                             </div>
 
                                             <div class="col-sm-12 mb-5">
@@ -182,8 +221,8 @@
                                         <input type="text" readonly name="valorApagar" id="valorApagar" class="form-control"/>
                                     </div>
                                     <div class="col-sm-3 pl-3">
-                                        <label class="form-label" for="modalidadePagamento">Modo de Pagamento</label>
-                                        <g:select id="modalidadePagamento" name="modalidadePagamento" optionKey="nrDias"
+                                        <label class="form-label" for="modoPagamento">Modo de Pagamento</label>
+                                        <g:select id="modoPagamento" name="modoPagamento" optionKey="descricao"
                                                   optionValue="descricao" from="${modoPagamentoList}" class="form-control select"
                                         />
                                     </div>
@@ -192,7 +231,8 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-3 pr-0">
                                         <label class="form-label" for="nrPrestacoes">Numero de Prestações</label>
-                                        <input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor" value="1" min="1" max="13"/>
+                                        %{--<input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor" value="1" min="1" max="13"/>--}%
+                                        <input type="number" name="nrPrestacoes" id="nrPrestacoes" class="form-control input-valor"/>
                                     </div>
                                     <div class="col-sm-3 pr-0">
                                         <label class="form-label" for="valorPorPrestacao">Valor Por Prestação</label>
@@ -215,58 +255,46 @@
                                         <input type="text" name="tipoNegocio" id="tipoNegocio" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label" for="localNegocio">Local de Nogócio</label>
+                                        <label class="form-label" for="localNegocio">Local do Nogócio</label>
                                         <input type="text" name="localNegocio" id="localNegocio" class="form-control"/>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="form-label" for="experienciaNegocio">Profissão</label>
-                                        <input type="text" name="experienciaNegocio" id="experienciaNegocio" class="form-control" />
+                                        <input type="text" name="experienciaNegocio" title="Experiencia no negocio actual" id="experienciaNegocio" class="form-control" />
                                     </div>
                                 </div>
 
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="avalista">Avalista</label>
-                                        <div class="input-group">
-                                            <g:select id="avalista" name="avalista" optionKey="id"  optionValue="nomeCompleto"
-                                                      from="${cliente.list()}" class="form-control select2" style="width: 100%;"
-                                            noSelection="${['null':'Selecione Avalista']}"
-                                            />
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-info btn-flat" id="btn-addAvalista">Adicionar</button>
-                                            </span>
+                                        <div class="row">
+                                            <div class="col-sm-12 mb-4">
+                                                <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
+                                                    </span>
+                                                    <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
+                                                           placeholder="Nomes das Instituições">
+                                                </div>
+                                                <input type="hidden" id="outroCredito" name="outroCredito">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <label class="form-label" for="bancos">Conta Bancária</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
+                                                    </span>
+                                                    <input type="text" id="bancos" name="bancos" class="form-control" placeholder="Em que bancos">
+                                                </div>
+                                                <input type="hidden" id="contaBancaria" name="contaBancaria">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
-                                        <button type="button" class="btn btn-warning" style="width: 100%" id="btn-testemunhas" title="Adicionar Testemunhas">
-                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
-                                            </span>
-                                            <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
-                                                   placeholder="Nomes das Instituições">
-                                        </div>
-                                        <input type="hidden" id="outroCredito" name="outroCredito">
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="bancos">Conta Bancária</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
-                                            </span>
-                                            <input type="text" id="bancos" name="bancos" class="form-control" placeholder="Em que bancos">
-                                        </div>
-                                        <input type="hidden" id="contaBancaria" name="contaBancaria">
+                                        <label class="form-label" for="relacaoBens">Relação de bens</label>
+                                        <textarea name="relacaoBens" id="relacaoBens" class="form-control select" rows="5">
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -278,13 +306,6 @@
                              <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Garantia</h4>
                              <hr class="hr">
                              <div class="fieldset-content">
-                                 <div class="row margin-bottom">
-                                     <div class="col-sm-12">
-                                         <label class="form-label" for="relacaoBens">Relação de bens</label>
-                                         <textarea name="relacaoBens" id="relacaoBens" class="form-control" rows="2">
-                                         </textarea>
-                                     </div>
-                                 </div>
                                  <div class="row" id="div-garantias">
                                      %{--as divs de garantias estarao aqui--}%
                                  </div>
@@ -301,16 +322,42 @@
         <p>sadddddddddddd</p>
     </div>
 </div>
+
+<div class="modal fade" id="modal-cliente">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content" style="border-radius: 5px; width: 35%">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label class="form-label" for="clienteSelecionado">Selecione o Cliente</label>
+                            <g:select id="clienteSelecionado" name="clienteSelecionado" optionKey="id"  optionValue="nome"
+                                      from="${cliente.list()}" class="form-control select2" data-size="13" style="width: 100%"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btn-select-cliente"><i class="fa fa-save"></i>&nbsp;Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="modal-avalista">
     <div class="vertical-alignment-helper">
         <div class="modal-dialog vertical-align-center">
             <div class="modal-content" style="border-radius: 5px">
                 <div class="modal-body m-0 p-0" id="avalista-corpo">
-                    <g:render template="/cliente/avalista"/>
+                    <form id="form-avalista">
+                        <g:render template="/cliente/avalista"/>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal" id="btn-saveAvalista"><i class="fa fa-save"></i>&nbsp;Salvar</button>
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal" id="btn-cancel-avalista">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btn-save-avalista"><i class="fa fa-save"></i>&nbsp;Salvar</button>
                 </div>
             </div>
         </div>
@@ -336,7 +383,7 @@
                             <th>Nome</th>
                             <th>Endereco</th>
                             <th>Contacto</th>
-                            <th>Grau de Parantesco</th>
+                            <th>Grau_de_Parentesco</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -359,6 +406,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.select2').select2();
+        // $('#nomeCompleto').editableSelect();
 
         $.fn.inputFilter = function(inputFilter) {
             return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
@@ -375,26 +423,69 @@
 
         $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
 
-        $('#btn-addAvalista').click(function () {               //open avalista pop-up
-            $('#modal-avalista').modal({
+        $('.btn-open-modal').click(function () {               //open testemunhas pop-up
+            $('#'+$(this).attr('data-modal')).modal({
                 show:true, backdrop: "static"
             })
         });
 
-        /*testemunhas*/
-        $('#btn-testemunhas').click(function () {               //open testemunhas pop-up
-            $('#modal-testemunhas').modal({
-                show:true, backdrop: "static"
-            })
+
+        $('#btn-select-cliente').click(function () {
+            clienteSelecionado = $('#clienteSelecionado option:selected').text();
+            clienteSelecionadoID = $('#clienteSelecionado').val();
+            $('#idCliente').val(clienteSelecionadoID);                          //guarda id do cliente selecionado no hidden input
+            $('#nomeCompleto').val(clienteSelecionado);                         //poe o nome do cliente selecionado no input
+            $('#nomeCompleto').prop('readOnly',true);                           //desabilita campo
+            // for(i=0;i<2;i++){$('.actions ul li:nth-child(2) a').trigger('click');}
+            $('#modal-cliente').modal('toggle');
+            $('#fieldset-cliente > .fieldset-content > input').prop('readOnly',true);
+            $('#nomeCompleto').trigger('propertychange');               //dispara para aparecer btn-clear
         });
 
-        /*tabela de testemunhas*/
+        $('#nomeCompleto').on('input propertychange',function () {
+            var visible = Boolean($(this).val());
+            $(this).siblings('#clear-nomeCompleto').toggleClass('hidden', !visible);
+        }).trigger('propertychange');
+
+        $('#clear-nomeCompleto').click(function () {
+            $(this).siblings('input[type="text"]').val('').trigger('propertychange').focus();   //limpa o testo
+
+            if(parseInt($('#idCliente').val()) !== 0){              //quando ja foi selecionado um cliente antes
+                console.log('limpa cliente selected');
+                $('#idCliente').val(0);                             //esvazia o input id do cliente
+                $('#nomeCompleto').removeAttr('readOnly');          //abilita o input
+            }
+        });
+
         $('#tabelaTestemunha').SetEditable({ $addButton: $('#but_add')}); //habilita tabela de testemunhas para que seja editevel
 
         $('#but_add').click(function () {
             var rowCount = $('#tabelaTestemunha >tbody >tr').length;
             if(rowCount === 1){
                 $('#bEdit').trigger('click');
+            }
+        });
+
+        $('#btn-saveTestemunhas').click(function () {
+            var myRows = [];
+            var headersText = [];
+            var $headers = $("th");
+
+            $("#tabelaTestemunha tbody tr").each(function(index) {
+                $cells = $(this).find("td:not(:last-child)");           //excluiu a ulmina coluna prk contem buttons
+                myRows[index] = {};
+
+                $cells.each(function(cellIndex) {
+                    if(headersText[cellIndex] === undefined) { // Set the header text
+                        headersText[cellIndex] = $($headers[cellIndex]).text();
+                    }
+                    myRows[index][headersText[cellIndex]] = $(this).text();
+                });
+            });
+
+            var rowCount = $('#tabelaTestemunha >tbody >tr').length;
+            if(rowCount >=1) {
+                $('#testemunhas').val(JSON.stringify(myRows)); //prenche o input de testemunhas com dados da tabela no formato JSON
             }
         });
 
@@ -407,7 +498,8 @@
                 url: 'getDistrito', //metodo na controller
                 data: {'id': provinciaId},
                 success: function (data) {
-                    $('#'+div).html(data) //renderiza combo de distritos
+                    $('#'+div).html(data); //renderiza combo de distritos
+                    $('select').selectpicker();
                 }
             });
         });
@@ -455,12 +547,11 @@
             $('#valorPorPrestacao').val(valorPorPrestacao.toFixed(2))    //formatacao de valor
         }
 
-        $('#dataInicioPagamento').val(formatDataSeguinte(new Date()));
-        $('#dataEmissao').val(formatDataSeguinte(new Date()));
-        $('#dataValidade').val(formatDataSeguinte(new Date()));
+        $('#dataInicioPagamento').val(formatDataHojeESeguinte(new Date(),1));
+        $('.data-hoje').val(formatDataHojeESeguinte(new Date(),0));
 
-        function formatDataSeguinte(date) {
-            var day = date.getDate()+1; //dia seguinte
+        function formatDataHojeESeguinte(date,i) {
+            var day = date.getDate()+i;     //dia
             if(date.getMonth() < 9){
                 monthIndex = '0'+parseInt(date.getMonth()+1);  // mes corrente 0=Janeiro, 1=Fereveiro
             }else{
@@ -470,43 +561,30 @@
             return year + '-' + monthIndex + '-' + day;
         }
 
-        $('#modalidadePagamento').on('change',function () {
-            modalidade = parseInt($(this).val());                         //get value of modaidadadepagamento input
-            if(modalidade === 1){                    //prestacao diaria
-                $('#nrPrestacoes').attr({"min":1,"max":13});
-                $('#nrPrestacoes').val(1)
-            }else if(modalidade === 7){             //prestacao semanal
-                $('#nrPrestacoes').attr({"min":3, "max":4});
-                $('#nrPrestacoes').val(3)
+        $('#modoPagamento').on('change',function () {
+            modoPagamento = $(this).val();                         //get value of modaidadadepagamento input
+            nrPrestacoesElement = $('#nrPrestacoes');
+            if(modoPagamento === 'Diaria'){                    //prestacao diaria
+                nrPrestacoesElement.attr({"min":1,"max":13});
+                nrPrestacoesElement.val(1);
+                nrPrestacoesElement.removeAttr('readOnly');
+                minimo = 1; maximo =13
+            }else if(modoPagamento === 'Semanal'){             //prestacao semanal
+                nrPrestacoesElement.attr({"min":3, "max":4});
+                nrPrestacoesElement.val(3);
+                minimo = 3; maximo =4;
+                nrPrestacoesElement.removeAttr('readOnly');
             }else {                                         //prestacao mensal
-                console.log(modalidade)
+                nrPrestacoesElement.prop('readOnly',true);
+                nrPrestacoesElement.val('')
             }
-            calculoValorApagar();
-        });
-
-        $('#btn-saveTestemunhas').click(function () {
-            var myRows = [];
-            var headersText = [];
-            var $headers = $("th");
-
-            $("#tabelaTestemunha tbody tr").each(function(index) {
-                $cells = $(this).find("td");
-                myRows[index] = {};
-
-                $cells.each(function(cellIndex) {
-                    if(headersText[cellIndex] === undefined) { // Set the header text
-                        headersText[cellIndex] = $($headers[cellIndex]).text();
-                    }
-                    // Update the row object with the header/cell combo
-                    myRows[index][headersText[cellIndex]] = $(this).text();
-                });
+            nrPrestacoesElement.inputFilter(function(value) {
+                return /^\d*$/.test(value) && (value === "" || (parseInt(value) <= maximo && parseInt(value) >=minimo ))
             });
 
-            var myObj = {
-                "Testemunhas": myRows
-            };
-            $('#testemunhas').val(JSON.stringify(myObj)); //prenche o input de testemunhas com dados da tabela no formato JSON
+            calculoValorApagar();
         });
+        $('#modoPagamento').val($('#modoPagamento').val()).trigger('change'); //prenche combo de distritos ao abrir a pagina
 
         $('#signup-form').submit(function () {
             event.preventDefault();
@@ -533,6 +611,7 @@
                     data: form_data,
                     type: 'POST',
                     success: function(data){
+                        $('#div-avalista').html(data);
                         setTimeout(function () {
                             swal({
                                 title: "Certo!",
@@ -541,16 +620,14 @@
                                 type:  "success",
                                 showConfirmButton: false
                             });
-                            $(this).trigger('reset');
+                            $('#signup-form').trigger('reset');
                             for (var r=1; r < 4; r++) {
                                 $('.actions ul li:first-child a').trigger('click');
                             }
                         }, 4000);
                     },
                     error: function () {
-                        setTimeout(function () {
-                            swal("Cancelled", "Ocorreu erro ao salvar Emprestimo", "error");
-                        }, 2000);
+                        swal("Erro", "Ocorreu algum erro ao salvar Emprestimo", "error");
                     }
                 });
             });
@@ -606,8 +683,13 @@
             }
         });
 
+        /*Formatao*/
         $(".contacto").inputFilter(function(value) {
             return /^\d*$/.test(value) && (value === "" || value.length <= 9)
+        });
+
+        $('#anoAdmissao').inputFilter(function(value) {
+            return /^\d*$/.test(value) && (value === "" || parseInt(value) <= new Date().getFullYear())
         });
 
         /*Remocao de label de erro*/
@@ -615,29 +697,110 @@
             $('#'+$(this).attr('id')+'-error').remove();
         });
 
-        // var regex = /^[a-zA-Z]*$/;
-        // keypress
-        $('#apelido').on('keyup',function () {
-            try {
-                if (window.event) {
-                    charCode = window.event.keyCode;
-                }else if (e) {
-                    charCode = e.which;
-                }else {
-                    return true;
-                }
 
-                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode === 32) {
-                    return true;
-                }else {
-                    return false;
+       $('#nomeCompleto').on('input',function () {
+           // alert($(this).val());
+       });
+
+        //Avalista
+        $(document).on('click','#btn-add-avalista',function () {
+            $('#modal-avalista').modal({
+                show:true, backdrop: "static"
+            })
+        });
+
+        $(document).on('click',"#btn-clean-alavista",function () {
+            $('#avalista').val($('#avalista option:first').val()).trigger('change');
+        });
+
+        $('#avalista').on('change',function () {                    //combo avalista
+            var visible = Boolean($(this).val());
+            $(this).siblings('#clear-avalista').toggleClass('hidden', !visible);
+        }).trigger('propertychange');
+
+        $('#clear-avalista').click(function () {
+            // $(this).siblings('input[type="text"]').val('').trigger('propertychange').focus();   //limpa o testo
+            $('#avalista').val($('#avalista option:first').val()).trigger('change');
+        });
+
+        $('#btn-cancel-avalista').click(function () {
+            $('#form-avalista').trigger('reset')
+        });
+        $('#btn-save-avalista').click(function () {
+           $('#form-avalista').trigger('submit')
+        });
+
+        $('#form-avalista').submit(function (x) {
+            x.preventDefault();
+            $.ajax({
+                url: '/cliente/salvarAvalista',
+                data: $(this).serialize(),
+                type: 'POST',
+                success: function (data) {
+                    // console.log(data)
+                    // $('#div-avalista').html(data);
+                    // $('#avalista').val($('#avalista option:last').val()).trigger('change');
+                    // $('#modal-avalista').modal('toggle');       //fecha o modal principal
+                    // swal({
+                    //     title: "Certo!",
+                    //     text: "Avalista Salvo com Sucesso!",
+                    //     timer: 2500,
+                    //     type:  "success",
+                    //     showConfirmButton: false
+                    // });
+                },
+                error: function () {
+                    swal("Erro", "Ocorreu algum erro ao salvar Avalista", "error");
                 }
-            } catch (err) {
-                alert(err.Description);
-            }
-        })
+            })
+        });
     });
 </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+%{--<div class="input-group">--}%
+/>
+%{--<div class="input-group-btn">--}%
+%{--<button type="button" class="btn btn-flat text-red transparent-pattern" id="btn-clean-alavista" title="Limpar Campo">X</button>--}%
+%{--<button type="button" class="btn btn-info btn-flat" id="btn-add-avalista" title="Selecionar Cliente ja Existente">Add</button>--}%
+%{--</div>--}%
+%{--<input type="text" class="form-control">--}%
+
+%{--</div>--}%
+
+
+
+
+// $('#nomeCompleto').on('keyup',function () {
+ //     try {
+ //         if (window.event) {
+ //             charCode = window.event.keyCode;
+ //         }else if (e) {
+ //             charCode = e.which;
+ //         }else {
+ //             return true;
+ //         }
+ //
+ //         if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode === 32) {
+ //             return true;
+ //         }else {
+ //             return false;
+ //         }
+ //     } catch (err) {
+ //         alert(err.Description);
+ //     }
+ // });

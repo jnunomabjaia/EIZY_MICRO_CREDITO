@@ -2594,11 +2594,33 @@ a.text-dark:hover, a.text-dark:focus {
   vertical-align: middle;
 }
 .vertical-align-center .modal-content {
-  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
   /*width:inherit;*/
   width:60%;
   height:inherit;
   /* To center horizontally */
   margin: 0 auto;
   border-radius: 5px;
+}
+
+
+::-ms-clear{
+  display: none;
+}
+
+.form-control-clear{
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#clear-nomeCompleto{
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#clear-avalista{
+  z-index: 12;
+  margin-right: 6px;
+  pointer-events: auto;
+  cursor: pointer;
 }

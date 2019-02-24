@@ -11,14 +11,10 @@
     <div class="tab-content" style="background-color: transparent">
         <div class="tab-pane active p-3" id="dados-pessoas" >
             <div class="row margin-bottom">
-                <div class="col-sm-3">
-                    <label class="form-label" for="apelido">Apelido</label>
-                    <input type="text" name="apelido" id="apelido" class="form-control">
+                <div class="col-sm-6">
+                    <label class="form-label" for="apelido">Nome Completo</label>
+                    <input type="text" name="fader.nome" id="apelido" class="form-control" value="Fader Azevedo">
                     <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
-                </div>
-                <div class="col-sm-3">
-                    <label class="form-label" for="nome">Nomes</label>
-                    <input type="text" name="nome" id="nome" class="form-control dis" />
                 </div>
 
                 <div class="col-sm-3">
@@ -50,13 +46,13 @@
                 </div>
                 <div class="col-sm-3">
                     <label class="form-label" for="dataEmissao">Data de Emissão</label>
-                    <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select" />
+                    <input type="date" name="dataEmissao" id="dataEmissao" class="form-control select data-hoje" />
                 </div>
             </div>
             <div class="row margin-bottom">
                 <div class="col-sm-3">
                     <label class="form-label" for="dataValidade">Data de validade</label>
-                    <input type="date" name="dataValidade" id="dataValidade" class="form-control select" />
+                    <input type="date" name="dataValidade" id="dataValidade" class="form-control select data-hoje" />
                 </div>
                 <div class="col-sm-3">
                     <label class="form-label" for="tipoContrato">Tipo de Contrato de Trabaho</label>
@@ -111,6 +107,22 @@
                 <div class="col-sm-3" id="div-Distrito-2">
                     %{--<select id="distrito" name="distrito" class="form-control"></select>--}%
                 </div>
+
+                <div class="col-sm-3">
+                    <label class="form-label" for="amplitude">Amplitude</label>
+                    <input type="text" id="amplitude" name="amplitude"   class="form-control">
+                </div>
+
+                <div class="col-sm-3">
+                    <label class="form-label" for="longitude">Longitude</label>
+                    <input type="text" name="longitude" id="longitude"  class="form-control">
+                </div>
+            </div>
+            <div class="row margin-bottom">
+                <div class="col-sm-9">
+                    <label class="form-label" for="endereco">Morada</label>
+                    <input type="text" name="endereco" id="endereco"  class="form-control" value="bairro polana case">
+                </div>
                 <div class="col-sm-3">
                     <label class="form-label" for="tipoCasa">Casa</label>
                     <g:select id="tipoCasa" name="tipoCasa" optionKey="descricao"  optionValue="descricao"
@@ -118,26 +130,12 @@
                     />
                 </div>
             </div>
-            <div class="row margin-bottom">
-                <div class="col-sm-12">
-                    <label class="form-label" for="endereco">Morada</label>
-                    <input type="text" name="endereco" id="endereco"  class="form-control" value="bairro polana case">
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
-%{--<fieldset>--}%
-    %{--<h4 class="wizzard-title"><i class="fa fa-user"></i>&nbsp;Dados Pessoais</h4>--}%
-    %{--<hr class="hr">--}%
-    %{--<div class="fieldset-content">--}%
-        %{----}%
-%{--</fieldset>--}%
-
-%{--<fieldset>--}%
-    %{--<h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Contacto e Endereço</h4>--}%
-    %{--<hr class="hr">--}%
-    %{--<div class="fieldset-content">--}%
-        %{----}%
-%{--</fieldset>--}%
+%{--<script type="text/javascript">--}%
+    %{--$(document).ready(function () {--}%
+        %{--$('#distrito').selectpicker()--}%
+    %{--});--}%
+%{--</script>--}%

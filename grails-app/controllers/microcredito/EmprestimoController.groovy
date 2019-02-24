@@ -121,74 +121,73 @@ class EmprestimoController {
     }
 
     def salvar() {
-//        Emprestimo emprestimo = salvarEmprestimo()
-////        Emprestimo emprestimo = Emprestimo.get(1)
-//        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
-        def rs = [:], cont = 0, nrDias = 0
-//
-//        while (cont < emprestimo.nrPrestacoes){
-//            Prestacao prestacao = new Prestacao()
-//            prestacao.valor = params.valorPorPrestacao.toDouble()
-//            prestacao.estado = "Pendente"
-//            prestacao.numero = "Pre_"+emprestimo.id+"_"+cont
-//            prestacao.emprestimo = emprestimo
-//            prestacao.dataRegisto = new Date()
-//            prestacao.dataModif = new Date()
-//            prestacao.userRegisto = emprestimo.userRegisto
-//            prestacao.userModif = emprestimo.userRegisto
-//            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
-//            prestacao.save()
-//            cont+=1                                             //incrmenta o contador
-//            nrDias+= emprestimo.modalidadePagamento.nrDias      //adicona dia diferenca
-//            emprestimo.prazoPagamento = prestacao.dataLimite
-//        }
-//        emprestimo.dataInicioPagamento = dataInicial
-//        emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
-//        emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
-//        salvarGarantia(emprestimo)                              //salva as garantias
-//        emprestimo.save(flush:true)
+        Emprestimo emprestimo = salvarEmprestimo()
 
-        rs["msg"]=params.kkk
+        def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+        def rs = [:], cont = 0, nrDias = 0
+        while (cont < emprestimo.nrPrestacoes){
+            Prestacao prestacao = new Prestacao()
+            prestacao.valor = params.valorPorPrestacao.toDouble()
+            prestacao.estado = "Pendente"
+            prestacao.numero = "Pre_"+emprestimo.id+"_"+cont
+            prestacao.emprestimo = emprestimo
+            prestacao.dataRegisto = new Date()
+            prestacao.dataModif = new Date()
+            prestacao.userRegisto = emprestimo.userRegisto
+            prestacao.userModif = emprestimo.userRegisto
+            prestacao.dataLimite = Date.parse("yyyy-MM-dd", (dataInicial+nrDias).format("yyyy-MM-dd"));
+            prestacao.save()
+            cont+=1                                             //incrmenta o contador
+            nrDias+= emprestimo.modoPagamento.nrDias      //adicona dia diferenca
+            emprestimo.prazoPagamento = prestacao.dataLimite
+        }
+        emprestimo.dataInicioPagamento = dataInicial
+        emprestimo.nrProcesso =  numeroProcesso(emprestimo)     //gerar numero de processo
+        emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
+        salvarGarantia(emprestimo)                              //salva as garantias
+        emprestimo.save(flush:true)
+//
+        rs["msg"]="Done"
         render rs as JSON
     }
 
     def salvarEmprestimo(){
         Cliente cliente = new ClienteController().salvarCliente()
 //        Cliente cliente = Cliente.get(1)
-        ModoPagamento modoPagamento = ModoPagamento.findByDescricao(params.modalidadePagamento)
-        Emprestimo emprestimo1 = new Emprestimo()
-        emprestimo1.nrProcesso = "nr"
-        emprestimo1.valorPedido=params.valorPedido.toDouble()
-        emprestimo1.taxaJuros=params.taxaJuros.toDouble()
-        emprestimo1.valorApagar = params.valorApagar.toDouble()
-        emprestimo1.nrPrestacoes = params.nrPrestacoes.toInteger()
-        emprestimo1.userRegisto = cliente.userRegisto
-        emprestimo1.userModif = cliente.userModif
-        emprestimo1.dataInicioPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
-        emprestimo1.prazoPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
-        emprestimo1.dataModif = new Date()
-        emprestimo1.dataRegisto = new Date()
-        emprestimo1.contaBancaria = params.contaBancaria.toBoolean()
-        emprestimo1.outroCredito = params.outroCredito.toBoolean()
-        emprestimo1.instituicoescredito = params.instituicoescredito
-        emprestimo1.bancos = params.bancos
-        emprestimo1.experienciaNegocio = params.experienciaNegocio
-        emprestimo1.destinoCredito = params.destinoCredito
-        emprestimo1.localNegocio = params.localNegocio
-        emprestimo1.tipoNegocio = params.tipoNegocio
-        emprestimo1.estado = "Aberto"
-        emprestimo1.relecaoBens = params.relacaoBens
-        emprestimo1.cliente = cliente
-        emprestimo1.modoPagamento = modoPagamento
+        ModoPagamento modoPagamento = ModoPagamento.findByDescricao(params.modoPagamento)
+        Emprestimo emprestimo = new Emprestimo()
+        emprestimo.nrProcesso = "nr"
+        emprestimo.valorPedido=params.valorPedido.toDouble()
+        emprestimo.taxaJuros=params.taxaJuros.toDouble()
+        emprestimo.valorApagar = params.valorApagar.toDouble()
+        emprestimo.nrPrestacoes = params.nrPrestacoes.toInteger()
+        emprestimo.userRegisto = cliente.userRegisto
+        emprestimo.userModif = cliente.userModif
+        emprestimo.dataInicioPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+        emprestimo.prazoPagamento = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
+        emprestimo.dataModif = new Date()
+        emprestimo.dataRegisto = new Date()
+        emprestimo.contaBancaria = params.contaBancaria.toBoolean()
+        emprestimo.outroCredito = params.outroCredito.toBoolean()
+        emprestimo.instituicoescredito = params.instituicoescredito
+        emprestimo.bancos = params.bancos
+        emprestimo.experienciaNegocio = params.experienciaNegocio
+        emprestimo.destinoCredito = params.destinoCredito
+        emprestimo.localNegocio = params.localNegocio
+        emprestimo.tipoNegocio = params.tipoNegocio
+        emprestimo.estado = "Aberto"
+        emprestimo.relecaoBens = params.relacaoBens
+        emprestimo.cliente = cliente
+        emprestimo.modoPagamento = modoPagamento
 
-        if(!emprestimo1.hasErrors()){
-            emprestimo1.save()
+        if(!emprestimo.hasErrors()){
+            emprestimo.save()
         }
-        return emprestimo1
+        return emprestimo
     }
 
     def numeroProcesso(Emprestimo emp){
-        def letraInicial= emp.modalidadePagamento.descricao.toUpperCase().take(1)
+        def letraInicial= emp.modoPagamento.descricao.toUpperCase().take(1)
         return letraInicial+emp.cliente.id+letraInicial+emp.nrPrestacoes
     }
 
