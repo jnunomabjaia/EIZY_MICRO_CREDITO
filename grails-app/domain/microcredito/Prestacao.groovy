@@ -21,7 +21,7 @@ class Prestacao {
     static constraints = {
         numero(blank: false, maxSize: 45)
         valor(blank: false)
-        estado(inList: ["Pendente", "Vencido", "Pago"])
+        estado(inList: ["Pendente", "Vencido", "Pago","Anulado"])
         prestacao(nullable: true)
         tipoPrestacao(nullable: true, blank: true)
         meioPagamento(nullable: true, blank: true)
@@ -30,4 +30,9 @@ class Prestacao {
         dataParcela(nullable: true, blank: true)
         observacao(nullable: true, blank: true)
     }
+
+    static mapping = {
+        observacao type: "text"
+    }
+
 }

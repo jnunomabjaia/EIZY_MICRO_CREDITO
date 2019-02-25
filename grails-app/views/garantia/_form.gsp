@@ -1,4 +1,4 @@
-<div class="col-sm-4" id="box-garantia-${params.index}">
+<div class="col-sm-4" id="box-garantia-${params.index} box-garantia">
     <div class="box box-warning">
         <div class="box-header with-border">
             <h3 class="box-title"><strong id="box-title-nr-${params.index}">${params.index}ª</strong> Garantia</h3>

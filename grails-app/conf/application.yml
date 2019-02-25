@@ -101,7 +101,7 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: none
+            dbCreate: create-drop
             url: jdbc:mysql://localhost/micro_credito
         uploadFolder: "D:/My Bag/upload/"
     test:

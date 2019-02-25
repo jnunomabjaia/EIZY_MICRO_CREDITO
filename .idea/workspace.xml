@@ -2,33 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8634c9-ab4b-4d5f-b85a-89837da24759" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/jquery-editable-select/jquery-editable-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/jquery-editable-select/jquery-editable-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15506554081811.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15506579818241.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15506584334961.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15506593829461.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15507218311931.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15507218312902.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/conf/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/conf/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/ModalidadePagamentoController.groovy" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/services/microcredito/ModalidadePagamentoService.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/cliente/index.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/cliente/index.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/distrito/_comboDistritos.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/distrito/_comboDistritos.gsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/modalidadePagamento/create.gsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/modalidadePagamento/edit.gsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/modalidadePagamento/index.gsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/modalidadePagamento/show.gsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -67,16 +52,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="231" column="13" lean-forward="true" selection-start-line="231" selection-start-column="13" selection-end-line="231" selection-end-column="13" />
+              <folding>
+                <element signature="e#22#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="166" column="23" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="455" column="62" selection-start-line="455" selection-start-column="62" selection-end-line="455" selection-end-column="62" />
-              <folding>
-                <element signature="e#21915#21953#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#21756#21762#0#HTML" expanded="true" />
-              </folding>
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -84,45 +106,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="85">
+              <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/jquery-editable-select/jquery-editable-select.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="858" column="72" selection-start-line="858" selection-start-column="72" selection-end-line="858" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="408">
+              <caret line="752" column="11" lean-forward="true" selection-start-line="752" selection-start-column="11" selection-end-line="752" selection-end-column="11" />
               <folding>
-                <element signature="e#105#134#0#HTML" expanded="true" />
-                <element signature="e#412#449#0#HTML" expanded="true" />
+                <element signature="n#fieldset#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#21915#21953#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#21756#21762#0#HTML" expanded="true" />
+                <element signature="e#32860#33582#0#HTML" />
+                <element signature="e#34760#34849#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="105" selection-start-line="5" selection-start-column="105" selection-end-line="5" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -130,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="2622" column="20" lean-forward="true" selection-start-line="2622" selection-start-column="20" selection-end-line="2622" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="179" column="1" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -140,20 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data</find>
-      <find>data-hoje</find>
-      <find>nrPrestacoes</find>
-      <find>modoPagamento</find>
-      <find>amplitude</find>
-      <find>div-distrito-1</find>
-      <find>div-distrito</find>
-      <find>provincia</find>
-      <find>input-group-sm</find>
-      <find>input-group-lg</find>
-      <find>.input-lg</find>
-      <find>.input-group-lg</find>
-      <find>input-group-btn</find>
-      <find>.input-group-sm</find>
       <find>.input-group</find>
       <find>btn-testemunhas</find>
       <find>btn-open-modal</find>
@@ -170,6 +167,20 @@
       <find>has-clear</find>
       <find>form-control-clear</find>
       <find>clear-nomeCompleto</find>
+      <find>forma</find>
+      <find>anoAdmissao</find>
+      <find>btn-save-avalista</find>
+      <find>btnSuccess</find>
+      <find>margin-left:</find>
+      <find>.actions</find>
+      <find>#btn-remove-1</find>
+      <find>btn-add-garantia</find>
+      <find>box-garantia-</find>
+      <find>nrGarantias</find>
+      <find>estado</find>
+      <find>first</find>
+      <find>last</find>
+      <find>label</find>
     </findStrings>
     <replaceStrings>
       <replace>content-wizzard</replace>
@@ -209,7 +220,6 @@
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/TipoCasa.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/MicroCredito.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/TipoGarantia.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/MeioPagamento.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/TipoDocumento.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/microcredito/User.groovy" />
@@ -224,19 +234,20 @@
         <option value="$PROJECT_DIR$/grails-app/assets/javascripts/main-wizzard.js" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/sweetalert/dialogs.js" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/select2/select2.css" />
-        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/cliente/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/distrito/_comboDistritos.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
-        <option value="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
+        <option value="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" />
       </list>
     </option>
@@ -271,6 +282,13 @@
               <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicroCredito" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicroCredito" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="grails-app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="garantia" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -349,7 +367,7 @@
       <workItem from="1550041729455" duration="37035000" />
       <workItem from="1550126560413" duration="21008000" />
       <workItem from="1550174702328" duration="225095000" />
-      <workItem from="1550830836441" duration="106070000" />
+      <workItem from="1550830836441" duration="118463000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de form de testemunhas">
       <created>1550042486383</created>
@@ -442,11 +460,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550900162062</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="sessao modal">
+      <created>1551038943213</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551038943213</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463458000" />
+    <option name="totallyTimeSpent" value="475851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -472,7 +497,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.4605475" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Grails Console" order="12" weight="0.4299517" />
+      <window_info anchor="bottom" id="Grails Console" order="12" weight="0.3252818" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32850242" />
@@ -489,7 +514,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -509,7 +534,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.4605475" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Grails Console" order="12" weight="0.4299517" />
+      <window_info anchor="bottom" id="Grails Console" order="12" weight="0.3252818" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32850242" />
@@ -825,13 +850,10 @@
     <MESSAGE value="upload with ajax begin" />
     <MESSAGE value="upload with ajax success" />
     <MESSAGE value="remame modo de pagamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="remame modo de pagamento" />
+    <MESSAGE value="sessao modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="sessao modal" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/bootstrap-daterangepicker/example/amd/main.js" />
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/ionicons.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/ionicons.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -898,13 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ModoPagamentoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/modoPagamento/create.gsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -960,14 +975,6 @@
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/images/upload/IMG_15509269721871.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -976,16 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="149" column="24" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-          <folding>
-            <element signature="e#22#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,13 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/AdminLTE.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1064,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="95" column="19" lean-forward="true" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-mvc/3.3.9/d1f4ec8a7d02c0cf075c72e3994a3fd57d546860/grails-web-mvc-3.3.9-sources.jar!/org/grails/web/filters/HiddenHttpMethodFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1078,22 +1061,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/jquery-editable-select/jquery-editable-select.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
@@ -1117,10 +1085,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ModoPagamentoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="323">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
             <element signature="e#105#134#0#HTML" expanded="true" />
             <element signature="e#412#449#0#HTML" expanded="true" />
@@ -1130,26 +1105,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="2622" column="20" lean-forward="true" selection-start-line="2622" selection-start-column="20" selection-end-line="2622" selection-end-column="20" />
+        <state relative-caret-position="238">
+          <caret line="179" column="1" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="85">
+          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/PrestacaoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/garantia/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="105" selection-start-line="5" selection-start-column="105" selection-end-line="5" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="231" column="13" lean-forward="true" selection-start-line="231" selection-start-column="13" selection-end-line="231" selection-end-column="13" />
+          <folding>
+            <element signature="e#22#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="166" column="23" lean-forward="true" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="455" column="62" selection-start-line="455" selection-start-column="62" selection-end-line="455" selection-end-column="62" />
+          <caret line="752" column="11" lean-forward="true" selection-start-line="752" selection-start-column="11" selection-end-line="752" selection-end-column="11" />
           <folding>
+            <element signature="n#fieldset#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="e#21915#21953#0#HTML" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#21756#21762#0#HTML" expanded="true" />
+            <element signature="e#32860#33582#0#HTML" />
+            <element signature="e#34760#34849#0#HTML" />
           </folding>
         </state>
       </provider>

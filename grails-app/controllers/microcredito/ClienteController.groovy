@@ -124,7 +124,7 @@ class ClienteController {
     }
 
     def salvarCliente(){
-        Cliente cliente = new Cliente()
+        def cliente = new Cliente()
         cliente.nome = params.nomeCompleto
         cliente.codigo = "codigo"
         cliente.estadoCivil = params.estadoCivil
@@ -134,8 +134,6 @@ class ClienteController {
         cliente.nrDependentes = retornaInt(params.nrDependentes)
         cliente.nrFilhos = retornaInt(params.nrFihos)
         cliente.estado = "Activo"
-        TipoDocumento tipoDocumento = TipoDocumento.get(params.tipoDocumento)
-        cliente.tipoDocumento = tipoDocumento
         cliente.nrDocumento = params.nrDocumento
         cliente.localEmissao = params.localEmissao
         cliente.dataEmissao =  Date.parse("yyyy-MM-dd", params.dataEmissao)
@@ -143,23 +141,21 @@ class ClienteController {
         cliente.contacto1 = params.contacto1
         cliente.contacto2 = params.contacto2
         cliente.email = params.email
-        cliente.testemunhas = params.testemunhas
         cliente.endereco = params.endereco
         cliente.tipoCasa = params.tipoCasa
         cliente.amplitude = retornaDouble(params.amplitude)
         cliente.longitude = retornaDouble(params.longitude)
+        def tipoDocumento = TipoDocumento.get(params.tipoDocumento)
+        cliente.tipoDocumento = tipoDocumento
 
-        Distrito dist = Distrito.get(params.distrito)
-        cliente.distrito = dist
+        def distrito = Distrito.get(params.distrito)
+        cliente.distrito = distrito
 
-        User user = User.get(1)
+        def user = User.get(1)
         cliente.userModif = user
         cliente.userRegisto = user
         cliente.dataRegisto = new Date()
         cliente.dataModif = new Date()
-
-        Cliente avalista = Cliente.get(params.avalista)
-        cliente.avalista = avalista
 
         if(!cliente.hasErrors()) {
             cliente.save()
@@ -168,12 +164,7 @@ class ClienteController {
     }
 
     def salvarAvalista(){
-//        salvarCliente()
-//        render(template: "avalistaCombo", model: ['cliente': Cliente])
-
-        def cliente = Cliente.get(1)
-        bindData(cliente, params,[exclude:['nome','nrFilhos','nrDependentes']])
-        println cliente.nome
-        render "ssss"
+        salvarCliente()
+        render(template: "avalistaCombo", model: ['cliente': Cliente])
     }
 }

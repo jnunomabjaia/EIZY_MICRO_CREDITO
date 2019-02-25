@@ -12,8 +12,8 @@
         <div class="tab-pane active p-3" id="dados-pessoas" >
             <div class="row margin-bottom">
                 <div class="col-sm-6">
-                    <label class="form-label" for="apelido">Nome Completo</label>
-                    <input type="text" name="fader.nome" id="apelido" class="form-control" value="Fader Azevedo">
+                    <label class="form-label" for="nome">Nome Completo</label>
+                    <input type="text" name="nomeCompleto" id="nome" class="form-control">
                     <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
                 </div>
 
@@ -63,7 +63,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
-                            <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control"/>
+                            <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control anoAdmissao"/>
                         </div>
                         <div class="col-sm-4">
                             <label class="form-label" for="nrDependentes">Nº de Dependentes</label>

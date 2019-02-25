@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'emprestimo.label', default: 'Emprestimo')}" />
-    %{--<%@ page import="microcredito.Cliente" %>--}%
-
     <title>Registar Emprestimo</title>
 </head>
 <body>
-<h6>${status}</h6>
-<div class="js-sweetalert hidden">
-    %{--<button class="btn btn-primary" id="btnSuccess" data-type="success"></button>--}%
-    <button class="btn btn-primary" id="btnSuccess" data-type="ajax-loader"></button>
-</div>
+
 <div class="row">
-    <div class="col-md-6">
-        <div class="main">
+    <div class="col-md-12">
+        %{--<div class="main">--}%
             <div class="container">
-                <form id="signup-form" class="signup-form" action="salvar" method="POST" autocomplete="off" enctype="multipart/form-data">
+                <form id="signup-form" class="signup-form" autocomplete="off" enctype="multipart/form-data">
                     <input type="hidden" name="codigo" id="codigo"  class="form-control" value="12342">
                     <g:hiddenField name="testemunhas" id="testemunhas"/>
                     <g:hiddenField name="idCliente" id="idCliente" value="0"/>
                     <div>
-                        <h3>Cliente</h3>
+                        <h3>Dados Pessoais</h3>
                         <fieldset id="fieldset-cliente">
                             <h4 class="wizzard-title"><i class="fa fa-user"></i>&nbsp;Dados Pessoais</h4>
                             <hr class="hr">
@@ -113,24 +107,13 @@
 
                                             <div class="col-sm-6 pr-0">
                                                 <label class="form-label" for="anoAdmissao">Ano de Admissão</label>
-                                                <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control" title="Ano de admissao no trabalho"/>
+                                                <input type="text" name="anoAdmissao" id="anoAdmissao" class="form-control anoAdmissao" title="Ano de admissao no trabalho"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <label class="form-label" for="tipoContrato">Tipo de Contrato de Trabaho</label>
                                         <input type="text" name="tipoContrato" id="tipoContrato" class="form-control"/>
-                                    </div>
-                                </div>
-                                <div class="row margin-bottom">
-                                    <div class="col-sm-6 pr-0" id="div-avalista">
-                                        <g:render template="/cliente/avalistaCombo"/>
-                                    </div>
-                                    <div class="col-sm-6 ">
-                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
-                                        <button type="button" class="btn btn-warning pl-0 btn-open-modal" data-modal="modal-testemunhas"style="width: 100%" id="btn-testemunhas" title="Adicionar Testemunhas">
-                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -266,35 +249,36 @@
 
                                 <div class="row margin-bottom">
                                     <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="col-sm-12 mb-4">
-                                                <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
-                                                    </span>
-                                                    <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
-                                                           placeholder="Nomes das Instituições">
-                                                </div>
-                                                <input type="hidden" id="outroCredito" name="outroCredito">
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <label class="form-label" for="bancos">Conta Bancária</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
-                                                    </span>
-                                                    <input type="text" id="bancos" name="bancos" class="form-control" placeholder="Em que bancos">
-                                                </div>
-                                                <input type="hidden" id="contaBancaria" name="contaBancaria">
-                                            </div>
+                                        <label class="form-label" for="instituicoescredito">Crédito Em Outras Instituições</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input data-id="outroCredito" type="checkbox" class="flat-red form-check" data-input="instituicoescredito">
+                                            </span>
+                                            <input type="text" name="instituicoescredito" id="instituicoescredito" class="form-control"
+                                                   placeholder="Nomes das Instituições">
                                         </div>
+                                        <input type="hidden" id="outroCredito" name="outroCredito">
                                     </div>
-
                                     <div class="col-sm-6">
-                                        <label class="form-label" for="relacaoBens">Relação de bens</label>
-                                        <textarea name="relacaoBens" id="relacaoBens" class="form-control select" rows="5">
-                                        </textarea>
+                                        <label class="form-label" for="bancos">Conta Bancária</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <input data-id="contaBancaria" type="checkbox" class="flat-red form-check" data-input="bancos">
+                                            </span>
+                                            <input type="text" id="bancos" name="bancos" class="form-control" placeholder="Em que bancos">
+                                        </div>
+                                        <input type="hidden" id="contaBancaria" name="contaBancaria">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6" id="div-avalista">
+                                        <g:render template="/cliente/avalistaCombo"/>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <label class="form-label" for="btn-testemunhas">&nbsp;</label>
+                                        <button type="button" class="btn btn-warning pl-0 btn-open-modal" data-modal="modal-testemunhas"style="width: 100%" id="btn-testemunhas" title="Adicionar Testemunhas">
+                                            <i class="fa fa-users"></i>&nbsp;Testemunhas
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -306,20 +290,24 @@
                              <h4 class="wizzard-title"><i class="fa fa-phone-square"></i>&nbsp;Garantia</h4>
                              <hr class="hr">
                              <div class="fieldset-content">
+                                 <div class="row margin-bottom">
+                                     <div class="col-sm-12">
+                                         <label class="form-label" for="relacaoBens">Relação de bens</label>
+                                         <textarea name="relacaoBens" id="relacaoBens" class="form-control select" rows="3">
+                                         </textarea>
+                                     </div>
+                                 </div>
+
                                  <div class="row" id="div-garantias">
                                      %{--as divs de garantias estarao aqui--}%
                                  </div>
                                  <input type="hidden" id="nrGarantias" name="nrGarantias">
-                                 %{--<button type="submit" class="btn btn-primary" id="btnTest">TesteForm</button>--}%
                              </div>
-                         </fieldset>
+                        </fieldset>
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <p>sadddddddddddd</p>
+        %{--</div>--}%
     </div>
 </div>
 
@@ -407,6 +395,7 @@
     $(document).ready(function () {
         $('.select2').select2();
         // $('#nomeCompleto').editableSelect();
+        $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
 
         $.fn.inputFilter = function(inputFilter) {
             return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
@@ -420,8 +409,6 @@
                 }
             });
         };
-
-        $('#caminho').append('<li><a href="/emprestimo">Emprestimo</a></li><li><a href="/emprestimo/create">Registar</a></li>');
 
         $('.btn-open-modal').click(function () {               //open testemunhas pop-up
             $('#'+$(this).attr('data-modal')).modal({
@@ -450,10 +437,10 @@
         $('#clear-nomeCompleto').click(function () {
             $(this).siblings('input[type="text"]').val('').trigger('propertychange').focus();   //limpa o testo
 
-            if(parseInt($('#idCliente').val()) !== 0){              //quando ja foi selecionado um cliente antes
+            if(parseInt($('#idCliente').val()) !== 0){                                      //quando ja foi selecionado um cliente antes
                 console.log('limpa cliente selected');
-                $('#idCliente').val(0);                             //esvazia o input id do cliente
-                $('#nomeCompleto').removeAttr('readOnly');          //abilita o input
+            $('#idCliente').val(0);                                                         //esvazia o input id do cliente
+                $('#nomeCompleto').removeAttr('readOnly');                                  //abilita o input
             }
         });
 
@@ -487,6 +474,7 @@
             if(rowCount >=1) {
                 $('#testemunhas').val(JSON.stringify(myRows)); //prenche o input de testemunhas com dados da tabela no formato JSON
             }
+            // alert(JSON.stringify(myRows));
         });
 
         /*buscar distritos de uma determinada provincia*/
@@ -575,8 +563,9 @@
                 minimo = 3; maximo =4;
                 nrPrestacoesElement.removeAttr('readOnly');
             }else {                                         //prestacao mensal
-                nrPrestacoesElement.prop('readOnly',true);
-                nrPrestacoesElement.val('')
+                // nrPrestacoesElement.prop('readOnly',true);
+                nrPrestacoesElement.val(1);
+                minimo = 1; maximo = 6;
             }
             nrPrestacoesElement.inputFilter(function(value) {
                 return /^\d*$/.test(value) && (value === "" || (parseInt(value) <= maximo && parseInt(value) >=minimo ))
@@ -611,7 +600,7 @@
                     data: form_data,
                     type: 'POST',
                     success: function(data){
-                        $('#div-avalista').html(data);
+                        // $('#div-avalista').html(data);
                         setTimeout(function () {
                             swal({
                                 title: "Certo!",
@@ -620,11 +609,15 @@
                                 type:  "success",
                                 showConfirmButton: false
                             });
+                            removeAllGarantia();
+                            appendGarantia();
                             $('#signup-form').trigger('reset');
+                            $('#nomeCompleto').removeAttr('readOnly');
+
                             for (var r=1; r < 4; r++) {
-                                $('.actions ul li:first-child a').trigger('click');
+                                $('.actions ul li:first-child a').trigger('click');     // clicks no btn previous
                             }
-                        }, 4000);
+                        }, 2000);
                     },
                     error: function () {
                         swal("Erro", "Ocorreu algum erro ao salvar Emprestimo", "error");
@@ -635,8 +628,8 @@
 
         /*Funcao que adiciona div de nova garantia*/
         function appendGarantia(){
-            index = $('.btn-add-garantia').length+1; //conta divs de garantia que ja existem
-            if(index === 4) return;                     //apenas so aceita 3 divs de garantia
+            index = $('.box-garantia').length+1;        //conta divs de garantia que ja existem
+            if(index === 4) return;                         //apenas so aceita 3 divs de garantia
             $.ajax({
                 method: 'POST',
                 url: 'addGarantiaForm',
@@ -648,7 +641,13 @@
             });
             $('#nrGarantias').val(index)
         }
-
+        function removeAllGarantia() {
+            var nrGarantias = parseInt($('#nrGarantias').val());      //busca nr de garantia k pretende-se salvar
+            for(i=1;i<nrGarantias+1;i++){
+                $('#box-garantia-'+i).remove()
+            }
+        }
+        appendGarantia();                                            //adiciona primeira div de garantia na inicializacao
         $(document).on('click','.btn-add-garantia',function () {
             appendGarantia() //adicona outra div de garantia
         });
@@ -664,7 +663,6 @@
             }
             $('#box-garantia-'+boxId).remove();                     //remove o box de garantia usando id da div mae
         });
-        appendGarantia();                                            //adiciona primeira div de garantia na inicializacao
 
         $(document).on('change','.input-upload',function () {       //acao de input file depois de selecioonar o file
             labelUpload =  $('#label-'+$(this).attr('id'));
@@ -688,7 +686,7 @@
             return /^\d*$/.test(value) && (value === "" || value.length <= 9)
         });
 
-        $('#anoAdmissao').inputFilter(function(value) {
+        $('.anoAdmissao').inputFilter(function(value) {
             return /^\d*$/.test(value) && (value === "" || parseInt(value) <= new Date().getFullYear())
         });
 
@@ -696,7 +694,6 @@
         $('input').on('focusin', function () {
             $('#'+$(this).attr('id')+'-error').remove();
         });
-
 
        $('#nomeCompleto').on('input',function () {
            // alert($(this).val());
@@ -738,22 +735,32 @@
                 type: 'POST',
                 success: function (data) {
                     // console.log(data)
-                    // $('#div-avalista').html(data);
-                    // $('#avalista').val($('#avalista option:last').val()).trigger('change');
-                    // $('#modal-avalista').modal('toggle');       //fecha o modal principal
-                    // swal({
-                    //     title: "Certo!",
-                    //     text: "Avalista Salvo com Sucesso!",
-                    //     timer: 2500,
-                    //     type:  "success",
-                    //     showConfirmButton: false
-                    // });
+                    $('#div-avalista').html(data);                                              //actualiza o select de avalista
+                    $('#avalista').val($('#avalista option:last').val()).trigger('change');         //poe o ultiomo o avalista criado no select ja selecionado
+                    $('#modal-avalista').modal('toggle');       //fecha o modal principal
+                    swal({
+                        title: "Certo!",
+                        text: "Avalista Salvo com Sucesso!",
+                        timer: 2500,
+                        type:  "success",
+                        showConfirmButton: false
+                    });
                 },
                 error: function () {
                     swal("Erro", "Ocorreu algum erro ao salvar Avalista", "error");
                 }
             })
         });
+
+        $('#estadoCivil').on('change',function () {
+            estadoCivil = $('#estadoCivil option:selected').text();
+            if(estadoCivil === "Casado"){
+                $('#nomeConjuge').prop('required',true)
+            }else{
+                $('#nomeConjuge-error').remove();
+                $('#nomeConjuge').removeAttr('required')
+            }
+        })
     });
 </script>
 </body>

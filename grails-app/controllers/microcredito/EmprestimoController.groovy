@@ -109,7 +109,7 @@ class EmprestimoController {
     }
 
     def getDistrito(){
-        Provincia provincia = Provincia.get(params.id)
+        def provincia = Provincia.get(params.id)
         def distritos = Distrito.findAllByProvincia(provincia)
         render(template: "/distrito/comboDistritos", model: ['distritos': distritos])
     }
@@ -121,8 +121,7 @@ class EmprestimoController {
     }
 
     def salvar() {
-        Emprestimo emprestimo = salvarEmprestimo()
-
+        def emprestimo = salvarEmprestimo()
         def dataInicial = Date.parse('yyyy-MM-dd', params.dataInicioPagamento)
         def rs = [:], cont = 0, nrDias = 0
         while (cont < emprestimo.nrPrestacoes){
@@ -146,16 +145,20 @@ class EmprestimoController {
         emprestimo.cliente.codigo = "00"+emprestimo.cliente.id  //atribui codigod de cliente
         salvarGarantia(emprestimo)                              //salva as garantias
         emprestimo.save(flush:true)
-//
+
         rs["msg"]="Done"
         render rs as JSON
     }
 
     def salvarEmprestimo(){
-        Cliente cliente = new ClienteController().salvarCliente()
-//        Cliente cliente = Cliente.get(1)
-        ModoPagamento modoPagamento = ModoPagamento.findByDescricao(params.modoPagamento)
-        Emprestimo emprestimo = new Emprestimo()
+        def cliente
+        def idCliente = params.idCliente.toInteger()
+        if(idCliente == 0){
+            cliente = new ClienteController().salvarCliente()
+        }else{
+            cliente = Cliente.get(idCliente)
+        }
+        def emprestimo = new Emprestimo()
         emprestimo.nrProcesso = "nr"
         emprestimo.valorPedido=params.valorPedido.toDouble()
         emprestimo.taxaJuros=params.taxaJuros.toDouble()
@@ -178,7 +181,13 @@ class EmprestimoController {
         emprestimo.estado = "Aberto"
         emprestimo.relecaoBens = params.relacaoBens
         emprestimo.cliente = cliente
+        emprestimo.testemunhas = params.testemunhas
+
+        def modoPagamento = ModoPagamento.findByDescricao(params.modoPagamento)
         emprestimo.modoPagamento = modoPagamento
+
+        def avalista = Cliente.get(params.avalista)
+        emprestimo.avalista = avalista
 
         if(!emprestimo.hasErrors()){
             emprestimo.save()
@@ -200,8 +209,8 @@ class EmprestimoController {
         def index = 1
         while(nrGarantia > index){
             def indexString = index.toString()
-            Garantia garantia = new Garantia()
-            TipoGarantia tipoGarantia = TipoGarantia.findByDescricao(params.get('tipoGarantia'+indexString).toString())
+            def garantia = new Garantia()
+            def tipoGarantia = TipoGarantia.findByDescricao(params.get('tipoGarantia'+indexString).toString())
             garantia.tipoGarantia = tipoGarantia
             garantia.descricao = params.get('descricao'+indexString)
             garantia.localizacao = params.get('localizacao'+indexString)
@@ -217,11 +226,9 @@ class EmprestimoController {
                 def extensao = fullNameQuebra[fullNameQuebra.length-1]                                      //leva a extensao da foto que fica na ultima posicao
                 def nomeFoto = 'IMG_' + System.currentTimeMillis()+indexString+'.'+extensao
                 File destino = grailsApplication.mainContext.getResource(fileUpload.originalFilename).file  //indica o diretorio dentro do project
-//                if(destino.exists()) {
                     fileUpload.transferTo(destino)                                                      //transfere o file para diretorio statico
                     destino.renameTo(new File('grails-app/assets/images/upload/' + nomeFoto))           //transfere o file para diretorio dinamico(especificada por mim)
                     garantia.foto = nomeFoto
-//                }
             }
             garantia.save()
             index+=1
