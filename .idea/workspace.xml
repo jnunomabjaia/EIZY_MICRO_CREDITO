@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd8634c9-ab4b-4d5f-b85a-89837da24759" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/assets/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/conf/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/conf/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/microcredito/ClienteController.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/microcredito/EmprestimoController.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Cliente.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Emprestimo.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/microcredito/Prestacao.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/cliente/_avalista.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/cliente/_avalistaCombo.gsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/views/garantia/_form.gsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -115,14 +105,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="752" column="11" lean-forward="true" selection-start-line="752" selection-start-column="11" selection-end-line="752" selection-end-column="11" />
+            <state relative-caret-position="445">
+              <caret line="32" column="73" lean-forward="true" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
               <folding>
                 <element signature="n#fieldset#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#21915#21953#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#21756#21762#0#HTML" expanded="true" />
                 <element signature="e#32860#33582#0#HTML" />
+                <element signature="e#33768#34705#0#HTML" />
                 <element signature="e#34760#34849#0#HTML" />
               </folding>
             </state>
@@ -151,8 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.input-group</find>
-      <find>btn-testemunhas</find>
       <find>btn-open-modal</find>
       <find>modal-testemunhas</find>
       <find>modal-cliente</find>
@@ -181,6 +170,8 @@
       <find>first</find>
       <find>last</find>
       <find>label</find>
+      <find>valor</find>
+      <find>valorPedido</find>
     </findStrings>
     <replaceStrings>
       <replace>content-wizzard</replace>
@@ -367,7 +358,7 @@
       <workItem from="1550041729455" duration="37035000" />
       <workItem from="1550126560413" duration="21008000" />
       <workItem from="1550174702328" duration="225095000" />
-      <workItem from="1550830836441" duration="118463000" />
+      <workItem from="1550830836441" duration="119377000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de form de testemunhas">
       <created>1550042486383</created>
@@ -467,11 +458,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551038943213</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changing some attr domain">
+      <created>1551088299155</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551088299155</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="475851000" />
+    <option name="totallyTimeSpent" value="476765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -851,7 +849,8 @@
     <MESSAGE value="upload with ajax success" />
     <MESSAGE value="remame modo de pagamento" />
     <MESSAGE value="sessao modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="sessao modal" />
+    <MESSAGE value="changing some attr domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing some attr domain" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/ionicons.min.css">
@@ -1181,14 +1180,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/emprestimo/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="752" column="11" lean-forward="true" selection-start-line="752" selection-start-column="11" selection-end-line="752" selection-end-column="11" />
+        <state relative-caret-position="445">
+          <caret line="32" column="73" lean-forward="true" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
           <folding>
             <element signature="n#fieldset#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="e#21915#21953#0#HTML" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#21756#21762#0#HTML" expanded="true" />
             <element signature="e#32860#33582#0#HTML" />
+            <element signature="e#33768#34705#0#HTML" />
             <element signature="e#34760#34849#0#HTML" />
           </folding>
         </state>

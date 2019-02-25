@@ -28,7 +28,7 @@
                                         <label class="form-label" for="nomeCompleto">Nome Completo</label>
                                         <div class="input-group">
                                             <div class="has-feedback has-clear">
-                                                <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto">
+                                                <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" required>
                                                 <span id="clear-nomeCompleto" class="form-control-feedback fa fa-times"
                                                     title="Limpar campo">
                                                 </span>
@@ -193,7 +193,7 @@
                                 <div class="row margin-bottom">
                                     <div class="col-sm-3 pr-0">
                                         <label class="form-label" for="valorPedido">Valor Pretendido</label>
-                                        <input type="text" name="valorPedido" id="valorPedido" class="form-control" />
+                                        <input type="text" name="valorPedido" id="valorPedido" class="form-control" required />
                                     </div>
                                     <div class="col-sm-3 pr-0">
                                         <label class="form-label" for="taxaJuros">Taxa de Juros (%)</label>
